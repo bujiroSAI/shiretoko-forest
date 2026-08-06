@@ -396,6 +396,10 @@ body.lock{overflow:hidden;}
 .pband{margin:44px 0 8px;}
 .pband img{width:100%;height:clamp(220px,34vw,380px);object-fit:cover;border-radius:4px;border:1px solid var(--line);display:block;}
 .pband figcaption{font-size:11px;color:var(--fg-faint);letter-spacing:.08em;margin-top:8px;}
+.slide{margin:30px 0 8px;}
+.slide img{width:100%;border-radius:4px;border:1px solid var(--line);display:block;transition:border-color .2s var(--ease);}
+.slide a:hover img{border-color:rgba(192,97,77,.5);}
+.slide figcaption{font-size:11px;color:var(--fg-faint);letter-spacing:.08em;margin-top:8px;text-align:right;}
 .axis{margin:40px 0 6px;}
 .axis img{width:100%;border-radius:4px;border:1px solid var(--line);display:block;background:#f7f4ec;}
 .axis .lbl{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:12px;margin-top:12px;font-size:12.5px;line-height:1.8;}
@@ -668,8 +672,9 @@ body.lock{overflow:hidden;}
 <figcaption>北こぶしの森（2026年6月・現地視察）</figcaption>
 </figure>
 <div class="subhead reveal"><span class="sl">Zoning</span><div class="st">ゾーニング — 4つのゾーンで綴る。</div></div>
-<figure class="axis reveal" style="margin-top:34px;">
-<img src="assets/zoning_sketch.jpg" alt="地形と植生の断面スケッチ">
+<figure class="slide reveal">
+<a href="assets/journey_map.jpg" target="_blank" rel="noopener"><img src="assets/journey_map.jpg" alt="ジャーニーマップ: ホテルから森のラウンジへ、4つのゾーンを通る道"></a>
+<figcaption>タップで拡大 ↗</figcaption>
 </figure>
 <div class="zones stag reveal">
 <div class="zone"><div class="zn en">Zone 01</div><div class="zt">別れ</div><div class="zr"></div><p>人里との別れ。ゼロ地点。シェフが収穫する有用植物の里山。</p></div>
