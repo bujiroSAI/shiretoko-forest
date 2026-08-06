@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>知床北こぶしの森 体験 ｜ 野生の哲学の道</title>
 <meta name="robots" content="noindex, nofollow">
-
 <style>
 /* ============================================================
    Frontier Cream — design system（白ベース・落ち着いたトーン）
@@ -25,6 +24,8 @@
   --acc-2:#6a86a6;
   --warn:rgba(185,112,90,.26);
   --warn-ink:#a8624a;
+  --hi:#c0614d;
+  --hi-soft:rgba(192,97,77,.10);
   --ease:cubic-bezier(.2,.7,.2,1);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -59,7 +60,7 @@ b{font-weight:700;color:#1f1c15;}
 .sub{color:var(--fg-weak);font-size:13px;line-height:1.95;}
 .weak{color:var(--fg-weak);}
 
-.grad{background:var(--aurora);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.grad{color:var(--hi);}
 .mark{background:linear-gradient(transparent 62%,var(--warn) 62%);padding:0 2px;}
 .rule{height:1px;background:var(--aurora);opacity:.75;border:0;}
 
@@ -147,7 +148,7 @@ nav a.act::after{transform:scaleX(1);}
 .definition .deny{font-size:clamp(17px,2.6vw,26px);line-height:1.9;color:var(--fg-weak);margin-bottom:40px;letter-spacing:-.005em;}
 .definition .deny b{color:var(--fg);}
 .definition .core{font-size:clamp(25px,4.6vw,52px);font-weight:700;line-height:1.35;letter-spacing:-.025em;margin-bottom:44px;}
-.definition .core .u{background:var(--aurora);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.definition .core .u{color:var(--hi);}
 .definition .so{font-size:15px;color:var(--fg-weak);line-height:2.2;max-width:720px;}
 .definition .so b{color:var(--fg);}
 .wd{color:var(--fg-faint);transition:color .5s var(--ease);}
@@ -203,8 +204,8 @@ nav a.act::after{transform:scaleX(1);}
 .creed{background:#efe7d6;padding:120px 0;}
 .creed h2{font-size:clamp(21px,3vw,30px);margin-bottom:10px;}
 .creed .catch{font-size:clamp(20px,3.2vw,32px);font-weight:700;letter-spacing:-.015em;margin-bottom:44px;color:var(--acc);}
-.creed .body{max-width:700px;font-size:15px;line-height:2.4;color:#4a4438;}
-.creed .body p::first-line{font-size:19px;color:#1f1c15;}
+.creed .body{max-width:770px;font-size:17px;line-height:2.35;color:#3e392f;}
+.creed .body p::first-line{font-size:22px;color:#1f1c15;}
 
 /* ============================================================
    cards
@@ -325,6 +326,68 @@ footer{background:#efe7d6;color:var(--fg-weak);font-size:10.5px;letter-spacing:.
 .jr-tall{display:none;}
 @media(max-width:860px){.jr-wide{display:none;}.jr-tall{display:block;}}
 
+
+/* ============================================================
+   v6 additions
+   ============================================================ */
+.subhead{margin-top:120px;margin-bottom:28px;}
+.subhead .sl{display:inline-block;font-size:11px;letter-spacing:.28em;color:var(--hi);border:1px solid rgba(192,97,77,.4);border-radius:999px;padding:5px 16px;margin-bottom:18px;background:var(--hi-soft);text-transform:uppercase;font-weight:700;}
+.subhead .st{font-size:clamp(21px,3vw,30px);font-weight:700;line-height:1.55;letter-spacing:-.01em;}
+.hi{color:var(--hi);}
+.sl{display:inline-block;font-size:11px;letter-spacing:.28em;color:var(--hi);border:1px solid rgba(192,97,77,.4);border-radius:999px;padding:5px 16px;background:var(--hi-soft);text-transform:uppercase;font-weight:700;}
+.refbox{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:30px 28px 24px;margin:14px 0;}
+.refbox .tag{display:inline-block;background:var(--hi);color:#fff;font-size:10.5px;letter-spacing:.32em;padding:5px 16px 5px 19px;border-radius:2px;margin-bottom:18px;}
+.refbox h3{font-size:clamp(18px,2.4vw,24px);margin-bottom:8px;}
+.refbox .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:20px 0 6px;}
+.refbox .cols .c{border:1px solid var(--line-soft);border-radius:3px;background:var(--bg-a);padding:16px;}
+.refbox .cols .l{font-size:10px;letter-spacing:.22em;color:var(--hi);margin-bottom:8px;font-weight:700;}
+.refbox .cols p{font-size:12px;line-height:1.9;color:#4f4a3e;margin-bottom:8px;}
+.refbox .imp{border-top:1px solid var(--line);margin-top:16px;padding-top:16px;font-size:13.5px;line-height:2;}
+.igrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:36px 0;}
+.icard{display:block;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:20px 20px 16px;transition:transform .2s var(--ease),border-color .2s var(--ease),box-shadow .2s var(--ease);}
+.icard:hover{transform:translateY(-4px);border-color:rgba(192,97,77,.5);box-shadow:0 10px 30px rgba(58,50,38,.10);}
+.icard .k{display:flex;justify-content:space-between;align-items:baseline;font-size:10px;letter-spacing:.2em;color:var(--fg-faint);text-transform:uppercase;margin-bottom:10px;}
+.icard .k em{font-style:normal;font-size:26px;font-weight:700;letter-spacing:0;color:transparent;-webkit-text-stroke:1px rgba(192,97,77,.6);}
+.icard h4{font-size:15px;margin-bottom:8px;line-height:1.65;}
+.icard p{font-size:12.5px;color:var(--fg-weak);line-height:1.9;margin:0;}
+.icard .pol{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:12.5px;color:#1f1c15;line-height:1.85;}
+.vtl{position:relative;margin:46px 0 10px;padding-left:34px;max-width:640px;}
+.vtl::before{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:2px;background:linear-gradient(rgba(58,50,38,.3),rgba(192,97,77,.55));}
+.vtl .vi{position:relative;padding:0 0 36px 16px;}
+.vtl .vi:last-child{padding-bottom:0;}
+.vtl .vi::before{content:"";position:absolute;left:-32px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--surface);border:2px solid rgba(58,50,38,.5);}
+.vtl .vi.now::before{border-color:var(--hi);background:rgba(192,97,77,.16);}
+.vtl .era{font-size:10.5px;letter-spacing:.24em;color:var(--fg-faint);text-transform:uppercase;margin-bottom:4px;}
+.vtl h4{font-size:17.5px;margin-bottom:4px;}
+.vtl .vi.now h4{color:var(--hi);}
+.vtl p{font-size:13px;color:var(--fg-weak);line-height:1.95;margin:0;}
+.pgh{font-size:14.5px;font-weight:700;letter-spacing:.04em;margin:34px 0 12px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
+.pgh small{font-weight:400;font-size:11px;color:var(--fg-faint);letter-spacing:.08em;}
+.plants{display:grid;grid-template-columns:repeat(auto-fill,minmax(106px,1fr));gap:8px;}
+.pcard{background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:13px 6px 11px;text-align:center;cursor:pointer;font-family:inherit;font-size:13px;line-height:1.5;color:var(--fg);transition:transform .18s var(--ease),border-color .18s var(--ease),box-shadow .18s var(--ease);}
+.pcard small{display:block;color:var(--fg-faint);font-size:9px;letter-spacing:.02em;margin-top:4px;font-style:italic;}
+.pcard:hover{transform:translateY(-3px);border-color:rgba(192,97,77,.5);box-shadow:0 8px 22px rgba(58,50,38,.09);}
+.pmodal{position:fixed;inset:0;z-index:90;display:none;align-items:center;justify-content:center;padding:18px;}
+.pmodal.open{display:flex;}
+.pmodal .bk{position:absolute;inset:0;background:rgba(46,43,36,.5);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);}
+.pm{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:6px;max-width:520px;width:100%;max-height:84svh;overflow:auto;padding:24px 24px 20px;box-shadow:0 28px 90px rgba(46,43,36,.3);}
+.pm .close{position:absolute;top:10px;right:12px;font-size:26px;line-height:1;background:rgba(250,247,240,.85);border:0;border-radius:50%;width:34px;height:34px;cursor:pointer;color:var(--fg-weak);z-index:2;}
+.pm .ph{width:100%;height:210px;background:var(--bg-b);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--fg-faint);font-size:12px;overflow:hidden;margin-bottom:16px;}
+.pm .ph img{width:100%;height:100%;object-fit:cover;}
+.pm h4{font-size:21px;margin-bottom:2px;}
+.pm .kana{font-size:12px;color:var(--fg-weak);}
+.pm .sci{font-style:italic;color:var(--fg-faint);font-size:13px;margin-bottom:14px;}
+.pm .tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;}
+.pm .tags span{font-size:10.5px;letter-spacing:.08em;border:1px solid var(--line);border-radius:999px;padding:3px 12px;color:var(--fg-weak);}
+.pm .tags span.z{color:var(--hi);border-color:rgba(192,97,77,.4);background:var(--hi-soft);}
+.pm .desc{font-size:13.5px;line-height:2;color:#4a4438;margin-bottom:12px;}
+.pm .wx{font-size:13px;line-height:1.95;color:var(--fg-weak);border-top:1px dashed var(--line);padding-top:12px;margin-bottom:10px;}
+.pm .src{font-size:11px;color:var(--fg-faint);}
+.pm .src a{color:var(--acc-2);}
+body.lock{overflow:hidden;}
+@media(max-width:860px){.igrid{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.igrid{grid-template-columns:1fr;}.subhead{margin-top:84px;}}
+
 /* ============================================================
    responsive
    ============================================================ */
@@ -383,8 +446,8 @@ footer{background:#efe7d6;color:var(--fg-weak);font-size:10.5px;letter-spacing:.
 <a href="#concept"><span class="no">01</span>コンセプト</a>
 <a href="#reference"><span class="no">02</span>参照事例</a>
 <a href="#experience"><span class="no">03</span>森の体験</a>
-<a href="#illustration"><span class="no">04</span>絵の方向</a>
-<a href="#implementation"><span class="no">05</span>森の実装</a>
+<a href="#implementation"><span class="no">04</span>森づくりの論点</a>
+<a href="#illustration"><span class="no">05</span>絵の方向</a>
 <a href="#closing"><span class="no">06</span>結び</a>
 <a href="#appendix"><span class="no">07</span>備考</a>
 </div>
@@ -439,11 +502,15 @@ footer{background:#efe7d6;color:var(--fg-weak);font-size:10.5px;letter-spacing:.
 </div>
 <div class="cycle-cap reveal">この循環が、新しい観光資源をうむ。</div>
 
+<div class="subhead reveal"><span class="sl">Meaning</span><div class="st">この場所の意味は何か</div></div>
+
 <div class="eq stag reveal">
 <div class="row"><b>知床らしさ</b><span class="eqm">＝</span><span>世界有数の自然資源</span></div>
 <div class="row"><b>北こぶしらしさ</b><span class="eqm">＝</span><span>生活者と自然の結節点</span></div>
 </div>
 <p class="sub reveal">ホテルは、人間と野生をつなぐ結節点に立っている。公共だけではできないチャレンジ性がある。</p>
+
+<div class="subhead reveal"><span class="sl">対応する社会課題</span><div class="st">人と自然の距離感が、<span class="hi">わからなくなってきている</span>。</div></div>
 
 <div class="twocol reveal">
 <div class="box">
@@ -502,51 +569,16 @@ footer{background:#efe7d6;color:var(--fg-weak);font-size:10.5px;letter-spacing:.
 </div>
 
 <div style="padding:44px 0 0;">
-<div class="reveal">
-<div class="eyebrow en"><span class="bar"></span>Reference 01 ∕ Tono</div>
-<h2>遠野 — 物語を核に、<br>人と資本が集まり続ける町。</h2>
-<p class="weak">柳田國男『遠野物語』の町（人口約2.4万人）。この10年、外部からクリエイターと資本が集まり続けている。<b>何が起きていて、誰がやっていて、どういう仕組みなのか。</b></p>
+<div class="refbox reveal">
+<span class="tag">参 考</span>
+<h3>遠野 — 物語を核に、人と資本が集まり続ける町。</h3>
+<p class="sub">柳田國男『遠野物語』の町（人口約2.4万人）。この10年、外部からクリエイターと資本が集まり続けている。</p>
+<div class="cols">
+<div class="c"><div class="l">何が起きているか</div><p><b>二枚看板</b>——ホップ×ビール（産業）と、遠野物語×郷土芸能（文化）。移住者が醸造所やプロデュース会社を起こし、道の駅は年80万人・全国5位。</p><p>アーティストは観客ではなく<b>「踊り手」として参加</b>する。コムアイはしし踊りを稽古して奉納し、2025年にはK-BALLET×横尾忠則『踊る。遠野物語』が全国巡演へ。</p></div>
+<div class="c"><div class="l">誰がやっているか</div><p><b>富川岳</b>（元広告会社→2016年29歳で移住）。文化事業「to know」を営み、自らしし踊りの踊り手となり、市の文化機関の運営委員も務める——外部人材が土地の文化の<b>内側</b>に入った例。</p><p>入口は<b>Next Commons Lab</b>（2016年・全国第1号拠点）。公募約500件から15名が移住し、醸造・デザイン・プロデュースの担い手に。</p></div>
+<div class="c"><div class="l">どういう仕組みか</div><p>三層構造。<b>需要を保証する企業</b>（キリン: 1963年からホップ全量買取・1.5億円出資）が上にいて、<b>市</b>が協力隊とふるさと納税で人と金の入口を作り、<b>民間法人群</b>が実装する。</p><p>「作れば売れる」状態が先にあるから、高リスクの挑戦に人が入れる。</p></div>
 </div>
-
-<!-- 図: 遠野の三層構造 -->
-<svg class="dg dg-m reveal" viewBox="0 0 460 312" role="img" aria-label="遠野の三層構造: 需要保証層キリン、調整層遠野市、実装層民間法人群">
-<defs><linearGradient id="g1" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#8aab8c"/><stop offset=".5" stop-color="#5d7f68"/><stop offset="1" stop-color="#6a86a6"/></linearGradient></defs>
-<rect class="pn" x="10" y="10" width="440" height="76" rx="3"/>
-<rect x="10" y="10" width="3" height="76" fill="url(#g1)"/>
-<text x="30" y="40" font-size="15" class="t-dim">需要保証層</text>
-<text x="30" y="70" font-size="24" class="t-hi">キリン</text>
-<text x="185" y="70" font-size="15">ホップ全量買取・1.5億円出資</text>
-<line class="ln-soft" x1="230" y1="88" x2="230" y2="108"/><polygon class="ar" points="230,116 225,105 235,105"/>
-<rect class="pn" x="10" y="118" width="440" height="76" rx="3"/>
-<text x="30" y="148" font-size="15" class="t-dim">調整層</text>
-<text x="30" y="178" font-size="24" class="t-hi">遠野市</text>
-<text x="185" y="178" font-size="15">協力隊・ふるさと納税</text>
-<line class="ln-soft" x1="230" y1="196" x2="230" y2="216"/><polygon class="ar" points="230,224 225,213 235,213"/>
-<rect class="pn" x="10" y="226" width="440" height="76" rx="3"/>
-<text x="30" y="256" font-size="15" class="t-dim">実装層</text>
-<text x="30" y="286" font-size="24" class="t-hi">民間法人群</text>
-<text x="185" y="286" font-size="15">醸造・デザイン・プロデュース</text>
-</svg>
-
-<div class="grid3 stag reveal">
-<div class="card"><div class="l">何が起きているか</div>
-<p><b>二枚看板</b>——ホップ×ビール（産業）と、遠野物語×郷土芸能（文化）。移住者が醸造所やプロデュース会社を起こし、道の駅は年80万人・全国5位。</p>
-<p>アーティストは観客ではなく<b>「踊り手」として参加する</b>。コムアイはしし踊りを稽古して奉納し、2025年にはK-BALLET×横尾忠則の『踊る。遠野物語』が全国巡演へ。</p>
-</div>
-<div class="card"><div class="l">誰がやっているか</div>
-<p><b>富川岳</b>（元広告会社→2016年29歳で移住）。文化事業「to know」を営み、自らしし踊りの踊り手となり、市の文化機関の運営委員も務める——外部人材が土地の文化の<b>内側</b>に入った例。</p>
-<p>入口は<b>Next Commons Lab</b>（2016年・全国第1号拠点）。10テーマの公募に約500件の応募、15名が移住。醸造・デザイン・プロデュースの担い手になった。</p>
-</div>
-<div class="card"><div class="l">どういう仕組みか</div>
-<p>三層構造。<b>需要を保証する企業</b>（キリン: 1963年からホップ全量買取・1.5億円出資）が上にいて、<b>市</b>が協力隊とふるさと納税で人と金の入口を作り、<b>民間法人群</b>が実装する。</p>
-<p>「作れば売れる」状態が先にあるから、高リスクの挑戦に人が入れる。</p>
-</div>
-</div>
-
-<div class="imply reveal"><b>知床への翻訳: 北こぶしリゾートが「キリン」の位置に立つ。</b><br>ホテルという確実な需要（宿泊者・レストラン・バー）が、フォレジング・アート・ガイドの供給側リスクを吸収する。遠野は<b>物語</b>でそれをやった。知床は<b>身体</b>でやる。</div>
-
-<!-- 図: 遠野 ⇔ 知床 の対応写像 -->
-<svg class="dg dg-m reveal" viewBox="0 0 440 316" role="img" aria-label="遠野と知床の対応図: キリンの位置に北こぶしリゾートが立つ">
+<svg class="dg dg-s" viewBox="0 0 440 316" role="img" aria-label="遠野と知床の対応図: キリンの位置に北こぶしリゾートが立つ">
 <defs><linearGradient id="g2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#8aab8c"/><stop offset=".5" stop-color="#5d7f68"/><stop offset="1" stop-color="#6a86a6"/></linearGradient></defs>
 <text x="24" y="26" font-size="17" class="t-hi">遠野</text>
 <text x="250" y="26" font-size="17" class="t-hi">知床</text>
@@ -578,6 +610,8 @@ footer{background:#efe7d6;color:var(--fg-weak);font-size:10.5px;letter-spacing:.
 <text x="250" y="290" font-size="24" fill="url(#g2)" font-weight="700">身体</text>
 <line class="ln-soft" x1="206" y1="266" x2="226" y2="266"/><polygon class="ar" points="234,266 223,261 223,271"/>
 </svg>
+<div class="imp"><b>知床への翻訳: 北こぶしリゾートが「キリン」の位置に立つ。</b> ホテルという確実な需要（宿泊者・レストラン・バー）が、フォレジング・アート・ガイドの供給側リスクを吸収する。遠野は<b>物語</b>でそれをやった。知床は<b>身体</b>でやる。</div>
+</div>
 
 <div class="reveal" style="margin-top:80px;">
 <div class="eyebrow en"><span class="bar"></span>Reference 02 ∕ World Cases</div>
@@ -585,12 +619,12 @@ footer{background:#efe7d6;color:var(--fg-weak);font-size:10.5px;letter-spacing:.
 </div>
 
 <div class="grid2 stag reveal">
-<div class="card"><div class="pl en">Alaska, USA</div><h4>Silver Salmon Creek Lodge</h4><p>武器を持たずにヒグマのそばを歩く運用で40年間人身事故ゼロ。「不便」そのものを思想として売る。</p><div class="take">→ 柵で守り切るのではなく、作法で共存する運用の実在証明。</div></div>
-<div class="card"><div class="pl en">Newfoundland, Canada</div><h4>Fogo Island Inn</h4><p>北大西洋の辺境の島に29室、1泊US$2,000超。利益は100%島に還流する社会企業モデル。</p><div class="take">→ 辺境であること自体がラグジュアリーになる、の最良例。</div></div>
-<div class="card"><div class="pl en">British Columbia, Canada</div><h4>Knight Inlet Lodge</h4><p>グリズリー観察の名門ロッジを先住民5部族が共同所有（2017〜）。</p><div class="take">→ 土地の文化の担い手が経営の中心にいる形。</div></div>
-<div class="card"><div class="pl en">軽井沢, 日本</div><h4>ピッキオ</h4><p>ベアドッグと研究者常駐でクマを追い払い、リゾート地で人身事故ほぼゼロ。国内での実証。</p><div class="take">→ 「クマ対応の専門チーム」は日本でも成立している。</div></div>
-<div class="card"><div class="pl en">Copenhagen, Denmark</div><h4>New Nordic 宣言（Noma）</h4><p>12人のシェフの共同署名から始まった宣言が、北欧の食を世界ブランドに変えた。</p><div class="take">→ 「北方ラグジュアリー宣言」の雛形。共同署名で出す。</div></div>
-<div class="card"><div class="pl en">知床, 日本</div><h4>知床財団</h4><p>半島全体のヒグマ対応プロトコルとデータを持つ隣人。すでに紹介の伝手あり。</p><div class="take">→ 競合ではなく連携先。着工前にヒアリングする。</div></div>
+<div class="card"><div class="pl en">Alaska, USA</div><h4><a href="https://www.silversalmoncreek.com/" style="text-decoration:none;border-bottom:1px solid rgba(106,134,166,.4);">Silver Salmon Creek Lodge ↗</a></h4><p>武器を持たずにヒグマのそばを歩く運用で40年間人身事故ゼロ。「不便」そのものを思想として売る。</p><div class="take">→ 柵で守り切るのではなく、作法で共存する運用の実在証明。</div></div>
+<div class="card"><div class="pl en">Newfoundland, Canada</div><h4><a href="https://fogoislandinn.ca/" style="text-decoration:none;border-bottom:1px solid rgba(106,134,166,.4);">Fogo Island Inn ↗</a></h4><p>北大西洋の辺境の島に29室、1泊US$2,000超。利益は100%島に還流する社会企業モデル。</p><div class="take">→ 辺境であること自体がラグジュアリーになる、の最良例。</div></div>
+<div class="card"><div class="pl en">British Columbia, Canada</div><h4><a href="https://grizzlytours.com/" style="text-decoration:none;border-bottom:1px solid rgba(106,134,166,.4);">Knight Inlet Lodge ↗</a></h4><p>グリズリー観察の名門ロッジを先住民5部族が共同所有（2017〜）。</p><div class="take">→ 土地の文化の担い手が経営の中心にいる形。</div></div>
+<div class="card"><div class="pl en">軽井沢, 日本</div><h4><a href="https://picchio.co.jp/" style="text-decoration:none;border-bottom:1px solid rgba(106,134,166,.4);">ピッキオ ↗</a></h4><p>ベアドッグと研究者常駐でクマを追い払い、リゾート地で人身事故ほぼゼロ。国内での実証。</p><div class="take">→ 「クマ対応の専門チーム」は日本でも成立している。</div></div>
+<div class="card"><div class="pl en">Copenhagen, Denmark</div><h4><a href="https://www.norden.org/en/information/new-nordic-food-manifesto" style="text-decoration:none;border-bottom:1px solid rgba(106,134,166,.4);">New Nordic 宣言（Noma） ↗</a></h4><p>12人のシェフの共同署名から始まった宣言が、北欧の食を世界ブランドに変えた。</p><div class="take">→ 「北方ラグジュアリー宣言」の雛形。共同署名で出す。</div></div>
+<div class="card"><div class="pl en">知床, 日本</div><h4><a href="https://www.shiretoko.or.jp/" style="text-decoration:none;border-bottom:1px solid rgba(106,134,166,.4);">知床財団 ↗</a></h4><p>半島全体のヒグマ対応プロトコルとデータを持つ隣人。すでに紹介の伝手あり。</p><div class="take">→ 競合ではなく連携先。着工前にヒアリングする。</div></div>
 </div>
 </div>
 </div>
@@ -620,7 +654,7 @@ footer{background:#efe7d6;color:var(--fg-weak);font-size:10.5px;letter-spacing:.
 </div>
 </div>
 
-<h3 class="reveal" style="margin-top:80px;">4つのゾーンで綴る。</h3>
+<div class="subhead reveal"><span class="sl">Zoning</span><div class="st">ゾーニング — 4つのゾーンで綴る。</div></div>
 <div class="zones stag reveal">
 <div class="zone"><div class="zn en">Zone 01</div><div class="zt">別れ</div><div class="zr"></div><p>人里との別れ。ゼロ地点。シェフが収穫する有用植物の里山。</p></div>
 <div class="zone"><div class="zn en">Zone 02</div><div class="zt">出逢い</div><div class="zr"></div><p>入植の記憶と出逢う。井戸を覗き、一斗缶を叩いて森へ入る。</p></div>
@@ -628,151 +662,256 @@ footer{background:#efe7d6;color:var(--fg-weak);font-size:10.5px;letter-spacing:.
 <div class="zone"><div class="zn en">Zone 04</div><div class="zt">結ぶ</div><div class="zr"></div><p>天然林へ。獣道を観るラウンジ、香木バー、森の展示室。結び直しの終点。</p></div>
 </div>
 
-<!-- 図: ジャーニー断面図（横断・デスクトップ） -->
-<svg class="dg dg-l jr-wide reveal" viewBox="0 0 900 336" role="img" aria-label="ホテルから渓谷のラウンジまでの体験断面図">
-<defs>
-<linearGradient id="g3" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#8aab8c"/><stop offset=".5" stop-color="#5d7f68"/><stop offset="1" stop-color="#6a86a6"/></linearGradient>
-</defs>
 
-<!-- 下部の帯: 人の場所 / 境界 / あちらの森 -->
-<rect x="24" y="280" width="232" height="42" rx="2" fill="rgba(58,50,38,0.041)" stroke="rgba(58,50,38,0.135)"/>
-<rect x="260" y="280" width="348" height="42" rx="2" fill="rgba(93,127,104,.05)" stroke="rgba(93,127,104,.2)"/>
-<rect x="612" y="280" width="264" height="42" rx="2" fill="rgba(106,134,166,.06)" stroke="rgba(106,134,166,.24)"/>
-<text x="140" y="306" font-size="15" text-anchor="middle" class="t-hi">人の場所</text>
-<text x="434" y="299" font-size="15" text-anchor="middle" class="t-hi">人と獣の境界</text>
-<text x="434" y="317" font-size="13" text-anchor="middle" class="t-dim">こちらの森</text>
-<text x="744" y="299" font-size="15" text-anchor="middle" class="t-hi">獣たちの森</text>
-<text x="744" y="317" font-size="13" text-anchor="middle" class="t-dim">あちらの森</text>
-
-<!-- 地形 -->
-<path fill="rgba(58,50,38,0.041)" d="M24,198 L76,198 L130,192 L194,188 L250,184 L318,182 L380,178 L440,174 L500,176 L560,178 L620,170 L680,166 L730,178 L770,212 L800,240 L846,232 L876,228 L876,268 L24,268 Z"/>
-<path class="ln" d="M24,198 L76,198 L130,192 L194,188 L250,184 L318,182 L380,178 L440,174 L500,176 L560,178 L620,170 L680,166 L730,178 L770,212 L800,240 L846,232 L876,228"/>
-
-<!-- ラベルへの引き出し線 -->
-<g stroke="rgba(58,50,38,0.162)" stroke-width="1">
-<line x1="76" y1="106" x2="76" y2="192"/><line x1="194" y1="106" x2="194" y2="182"/>
-<line x1="318" y1="106" x2="318" y2="176"/><line x1="440" y1="106" x2="440" y2="168"/>
-<line x1="560" y1="106" x2="560" y2="172"/><line x1="680" y1="106" x2="680" y2="160"/>
-<line x1="800" y1="106" x2="800" y2="234"/>
-</g>
-
-<!-- 里山の低木 -->
-<g class="tree"><circle cx="152" cy="182" r="6"/><circle cx="170" cy="180" r="5"/><circle cx="228" cy="177" r="6"/><circle cx="246" cy="176" r="5"/></g>
-<!-- 人工林（均質なトドマツ） -->
-<g class="tree"><polygon points="392,177 400,147 408,177"/><polygon points="418,177 426,147 434,177"/><polygon points="444,177 452,147 460,177"/><polygon points="470,177 478,147 486,177"/><polygon points="496,177 504,147 512,177"/><polygon points="522,177 530,147 538,177"/><polygon points="548,177 556,147 564,177"/><polygon points="574,177 582,147 590,177"/></g>
-<!-- 天然林（不均質） -->
-<g class="tree-n"><circle cx="632" cy="150" r="11"/><circle cx="660" cy="144" r="13"/><circle cx="690" cy="140" r="12"/><circle cx="718" cy="156" r="10"/><circle cx="746" cy="176" r="11"/><circle cx="832" cy="206" r="10"/><circle cx="860" cy="202" r="9"/></g>
-<!-- 獣道 -->
-<path class="ln-dash" stroke="rgba(93,127,104,.5)" d="M876,212 C 842,204 812,214 788,226"/>
-
-<!-- 境界の縦線 -->
-<line class="ln-dash" x1="256" y1="46" x2="256" y2="272" stroke="rgba(58,50,38,0.216)"/>
-<line class="ln-dash" x1="608" y1="46" x2="608" y2="272" stroke="rgba(93,127,104,.45)"/>
-
-<!-- 地点マーカー -->
-<rect class="nd" x="66" y="190" width="20" height="14" rx="2"/>
-<circle class="nd" cx="194" cy="188" r="5.5"/><circle class="nd" cx="318" cy="182" r="5.5"/>
-<circle class="nd" cx="440" cy="174" r="5.5"/><circle class="nd" cx="560" cy="178" r="5.5"/>
-<circle class="nd-acc" cx="680" cy="166" r="5.5"/>
-<rect class="nd-acc" x="788" y="233" width="24" height="14" rx="2"/>
-
-<!-- ゾーン帯 -->
-<rect x="24" y="14" width="104" height="26" rx="2" fill="rgba(58,50,38,0.041)" stroke="rgba(58,50,38,0.135)"/>
-<rect x="132" y="14" width="124" height="26" rx="2" fill="rgba(58,50,38,0.068)" stroke="rgba(58,50,38,0.162)"/>
-<rect x="260" y="14" width="124" height="26" rx="2" fill="rgba(58,50,38,0.095)" stroke="rgba(58,50,38,0.189)"/>
-<rect x="388" y="14" width="220" height="26" rx="2" fill="rgba(58,50,38,0.121)" stroke="rgba(58,50,38,0.216)"/>
-<rect x="612" y="14" width="264" height="26" rx="2" fill="rgba(93,127,104,.09)" stroke="rgba(93,127,104,.3)"/>
-<text x="76" y="32" font-size="14" text-anchor="middle" class="t-dim">起点</text>
-<text x="194" y="32" font-size="14" text-anchor="middle">01 別れ</text>
-<text x="322" y="32" font-size="14" text-anchor="middle">02 出逢い</text>
-<text x="498" y="32" font-size="14" text-anchor="middle">03 啓く</text>
-<text x="744" y="32" font-size="14" text-anchor="middle" class="t-acc">04 結ぶ</text>
-
-<!-- 地点ラベル -->
-<g font-size="17" text-anchor="middle" class="t-hi">
-<text x="76" y="72">ホテル</text>
-<text x="194" y="72">里山</text>
-<text x="318" y="72">井戸</text><text x="318" y="94">一斗缶</text>
-<text x="440" y="72">人工林</text><text x="440" y="94">アート</text>
-<text x="560" y="72">人参畑</text><text x="560" y="94">ライン</text>
-<text x="680" y="72">天然林</text><text x="680" y="94">獣道</text>
-<text x="800" y="72">渓谷の</text><text x="800" y="94">ラウンジ</text>
-</g>
-</svg>
-
-<!-- 図: ジャーニー（縦・モバイル） -->
-<svg class="dg jr-tall reveal" style="max-width:400px;" viewBox="0 0 340 546" role="img" aria-label="ホテルから渓谷のラウンジまでの体験の順路">
-<defs><linearGradient id="g3b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5d7f68"/><stop offset="1" stop-color="#6a86a6"/></linearGradient></defs>
-<rect x="4" y="14" width="3" height="146" fill="rgba(58,50,38,0.189)"/>
-<rect x="4" y="160" width="3" height="224" fill="rgba(93,127,104,.4)"/>
-<rect x="4" y="384" width="3" height="156" fill="rgba(106,134,166,.45)"/>
-<text x="18" y="32" font-size="14" class="t-dim">人の場所</text>
-<line class="ln" x1="38" y1="64" x2="38" y2="344"/>
-<line x1="38" y1="344" x2="38" y2="512" stroke="url(#g3b)" stroke-width="1.6"/>
-<line class="ln-dash" x1="14" y1="160" x2="326" y2="160"/>
-<text x="18" y="182" font-size="14" class="t-acc">人と獣の境界</text>
-<text x="18" y="200" font-size="13" class="t-dim">こちらの森</text>
-<line class="ln-dash" x1="14" y1="384" x2="326" y2="384" stroke="rgba(93,127,104,.45)"/>
-<text x="18" y="406" font-size="14" class="t-acc">獣たちの森</text>
-<text x="18" y="424" font-size="13" class="t-dim">あちらの森</text>
-<circle class="nd" cx="38" cy="64" r="5.5"/>
-<text x="62" y="60" font-size="13" class="t-dim">起点</text><text x="62" y="82" font-size="17" class="t-hi">ホテル</text>
-<circle class="nd" cx="38" cy="120" r="5.5"/>
-<text x="62" y="116" font-size="13" class="t-dim">01 別れ</text><text x="62" y="138" font-size="17" class="t-hi">里山</text>
-<circle class="nd" cx="38" cy="232" r="5.5"/>
-<text x="62" y="228" font-size="13" class="t-dim">02 出逢い</text><text x="62" y="250" font-size="17" class="t-hi">井戸／一斗缶</text>
-<circle class="nd" cx="38" cy="288" r="5.5"/>
-<text x="62" y="284" font-size="13" class="t-dim">03 啓く</text><text x="62" y="306" font-size="17" class="t-hi">人工林（アート）</text>
-<circle class="nd" cx="38" cy="344" r="5.5"/>
-<text x="62" y="340" font-size="13" class="t-dim">境界の合図</text><text x="62" y="362" font-size="17" class="t-hi">人参畑ライン</text>
-<circle class="nd-acc" cx="38" cy="456" r="5.5"/>
-<text x="62" y="452" font-size="13" class="t-dim">04 結ぶ</text><text x="62" y="474" font-size="17" class="t-hi">天然林／獣道</text>
-<circle class="nd-acc" cx="38" cy="512" r="5.5"/>
-<text x="62" y="508" font-size="13" class="t-dim">04 結ぶ</text><text x="62" y="530" font-size="17" class="t-hi">渓谷のラウンジ</text>
-</svg>
 
 <div class="refnote reveal">▶ 各ゾーンの詳細設計（ランドマーク・植栽・建築・ラウンジの中身）は、別途「体験設計資料」を参照。</div>
+
+<div class="subhead reveal"><span class="sl">Planting List</span><div class="st">植える・活かす植物</div></div>
+<p class="weak reveal">これまでの資料に登場した植物を、ゾーンごとに整理した。カードを押すと、写真と詳細が開く。</p>
+
+<div class="pgh reveal">ZONE 01 里山 <small>シェフが収穫する有用植物</small></div>
+<div class="plants stag reveal">
+<button class="pcard" data-p="taranoki">タラノキ<small>Aralia elata</small></button>
+<button class="pcard" data-p="udo">ウド<small>Aralia cordata</small></button>
+<button class="pcard" data-p="gyoja">ギョウジャニンニク<small>Allium victorialis</small></button>
+<button class="pcard" data-p="koshiabura">コシアブラ<small>Chengiopanax</small></button>
+<button class="pcard" data-p="hamanasu">ハマナス<small>Rosa rugosa</small></button>
+<button class="pcard" data-p="nemagari">ネマガリダケ<small>Sasa kurilensis</small></button>
+<button class="pcard" data-p="shidoke">シドケ<small>Parasenecio</small></button>
+<button class="pcard" data-p="yabukanzo">ヤブカンゾウ<small>Hemerocallis fulva</small></button>
+<button class="pcard" data-p="yachiyanagi">ヤチヤナギ<small>Myrica gale</small></button>
+<button class="pcard" data-p="byakushin">ミヤマビャクシン<small>Juniperus</small></button>
+<button class="pcard" data-p="cresson">クレソン<small>Nasturtium</small></button>
+<button class="pcard" data-p="hawasabi">葉ワサビ<small>Eutrema japonicum</small></button>
+<button class="pcard" data-p="yamawasabi">山ワサビ<small>Armoracia</small></button>
+<button class="pcard" data-p="itadori">イタドリ<small>Fallopia japonica</small></button>
+<button class="pcard" data-p="warabi">ワラビ<small>Pteridium</small></button>
+<button class="pcard" data-p="shiode">シオデ<small>Smilax riparia</small></button>
+</div>
+
+<div class="pgh reveal">境界のライン <small>ZONE 02–03 ／ 人の森と獣の森のあいだ</small></div>
+<div class="plants stag reveal">
+<button class="pcard" data-p="ninjin">ニンジン<small>Daucus carota</small></button>
+<button class="pcard" data-p="mizubasho">ミズバショウ<small>Lysichiton</small></button>
+</div>
+
+<div class="pgh reveal">ZONE 03 更新の植栽 <small>柵の内側の天然林化</small></div>
+<div class="plants stag reveal">
+<button class="pcard" data-p="mizunara">ミズナラ<small>Quercus crispula</small></button>
+<button class="pcard" data-p="todomatsu">トドマツ<small>Abies sachalinensis</small></button>
+<button class="pcard" data-p="akaezo">アカエゾマツ<small>Picea glehnii</small></button>
+</div>
+
+<div class="pgh reveal">ZONE 04 天然林で活かす <small>香りの体験・香木バーの素材</small></div>
+<div class="plants stag reveal">
+<button class="pcard" data-p="kurumabaso">クルマバソウ<small>Galium odoratum</small></button>
+<button class="pcard" data-p="hitorishizuka">ヒトリシズカ<small>Chloranthus</small></button>
+<button class="pcard" data-p="shirakaba">シラカバ<small>Betula platyphylla</small></button>
+<button class="pcard" data-p="katsura">カツラ<small>Cercidiphyllum</small></button>
+</div>
+
 </div>
 </div>
 </section>
 
-<!-- ============ 04 ILLUSTRATION ============ -->
-<section class="bg-b" id="illustration" data-chap>
-<div class="blob c d2" style="width:52vw;height:52vw;max-width:620px;max-height:620px;left:-16vw;top:2vh;"></div>
+<!-- ============ 04 IMPLEMENTATION ============ -->
+<section class="bg-b" id="implementation" data-chap>
+<div class="blob m d1" style="width:54vw;height:54vw;max-width:650px;max-height:650px;right:-18vw;top:6vh;"></div>
+<div class="blob c d2" style="width:42vw;height:42vw;max-width:500px;max-height:500px;left:-14vw;top:55%;"></div>
 <div class="wrap">
 <div class="chap reveal">
 <span class="num">04</span>
-<div class="eyebrow en"><span class="bar"></span>04 ∕ Illustration Direction</div>
+<div class="eyebrow en"><span class="bar"></span>04 ∕ Forest Implementation</div>
+<div class="ttl">森 づ く り の 論 点</div>
+<hr class="rule line">
+</div>
+
+<div style="padding:44px 0 104px;">
+<div class="reveal">
+<h2>森づくりの論点は、<span class="grad">6つ</span>。</h2>
+<p class="weak">順番に意味がある——<b>まず安全（柵）、つぎに木、それから道と人。</b>アートと建築はこの土台の上に載せる。</p>
+</div>
+
+<div class="igrid stag reveal">
+<a class="icard" href="#i1"><div class="k"><span>柵</span><em>1</em></div><h4>柵を設けるか</h4><p>シカは植えた木を食べ尽くす。ヒグマとの距離は運まかせにできない。</p><div class="pol">安全管理上、必須。<span class="mark">今日決めたい</span></div></a>
+<a class="icard" href="#i2"><div class="k"><span>範囲</span><em>2</em></div><h4>どこまで囲うか</h4><p>小さく囲えば安いが窮屈。大きく囲えば自由だが高い。</p><div class="pol">約1ha〜全域8haの間で、一緒に決める</div></a>
+<a class="icard" href="#i3"><div class="k"><span>更新</span><em>3</em></div><h4>皆伐か、間伐か</h4><p>高密度化した林は、間引くと風倒木のおそれがある。</p><div class="pol">柵の内外で分ける。少しずつ・100年単位</div></a>
+<a class="icard" href="#i4"><div class="k"><span>植栽</span><em>4</em></div><h4>天然林か、トドマツか</h4><p>広葉樹はシカに食われ、柵の内側でしか育たない。</p><div class="pol">柵内＝天然林化・柵外＝トドマツ</div></a>
+<a class="icard" href="#i5"><div class="k"><span>道</span><em>5</em></div><h4>体験と管理を兼ねるか</h4><p>森の手入れは道から始まる。作業道は幅2.5m。</p><div class="pol">作業道を基盤に、核心部のみ分離</div></a>
+<a class="icard" href="#i6"><div class="k"><span>施業と材</span><em>6</em></div><h4>誰と伐り、材をどうするか</h4><p>「少しずつ」は森林組合の枠組みと合わない。</p><div class="pol">組合以外の長期パートナー探し。材はホテルで使う</div></a>
+</div>
+
+<div class="issue reveal" id="i1">
+<span class="no ask">論点 1 ∕ 柵 — 今日決めたい</span>
+<h3>コンセプト上は不要。安全管理上は、絶対に必要。</h3>
+<dl class="rows">
+<dt>論点</dt><dd>柵を設けるか。</dd>
+<dt>事実</dt><dd>シカは植えた木を食べ尽くす。ヒグマとの距離は運まかせにできない。</dd>
+<dt>方針</dt><dd><b>設ける。</b>コンセプトで柵を正当化しない——安全の土台として率直に。種類は電気柵・熊柵仕様（羅臼で冬季運用の実績あり）。ゲート管理と草刈りが継続することも込みで。</dd>
+</dl>
+</div>
+
+<div class="issue reveal" id="i2">
+<span class="no">論点 2 ∕ 範囲 — 一緒に決めたい</span>
+<h3>小さく囲えば安いが窮屈。大きく囲えば自由だが高い。</h3>
+<div class="tw">
+<table>
+<tr><th>案</th><th>範囲</th><th>特徴</th></tr>
+<tr><td>ミニマム</td><td>散歩道まわり（約1ha）</td><td>最も安い。「囲われてる感」は出る</td></tr>
+<tr><td>中間</td><td>人の森ぜんぶ</td><td>ゾーン設計と整合</td></tr>
+<tr><td>マックス</td><td>敷地全域（約8ha）</td><td>森の再生まで守れる。最も高い</td></tr>
+</table>
+</div>
+<!-- 図: 柵範囲の入れ子 -->
+<svg class="dg dg-s reveal" viewBox="0 0 360 392" role="img" aria-label="柵範囲の入れ子図: ミニマム、中間、マックス">
+<rect x="16" y="20" width="328" height="200" rx="3" fill="none" stroke="rgba(58,50,38,0.297)" stroke-width="1.4" stroke-dasharray="2 5"/>
+<rect x="48" y="48" width="264" height="148" rx="3" fill="rgba(58,50,38,0.047)" stroke="rgba(58,50,38,0.567)" stroke-width="1.6" stroke-dasharray="6 4"/>
+<rect x="86" y="78" width="188" height="92" rx="3" fill="rgba(93,127,104,.07)" stroke="#5d7f68" stroke-width="2"/>
+<path class="ln" d="M70,186 L110,168 L150,152 L196,132 L238,116 L286,100"/>
+<circle cx="286" cy="100" r="5" fill="#5d7f68"/>
+<rect class="nd" x="24" y="196" width="20" height="14" rx="2"/>
+<rect x="18" y="238" width="18" height="18" rx="2" fill="rgba(93,127,104,.07)" stroke="#5d7f68" stroke-width="2"/>
+<text x="46" y="246" font-size="15" class="t-hi">ミニマム</text>
+<text x="46" y="266" font-size="13.5" class="t-dim">散歩道まわり 約1ha ／ 最も安い</text>
+<rect x="18" y="280" width="18" height="18" rx="2" fill="rgba(58,50,38,0.047)" stroke="rgba(58,50,38,0.567)" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="46" y="288" font-size="15" class="t-hi">中間</text>
+<text x="46" y="308" font-size="13.5" class="t-dim">人の森ぜんぶ ／ ゾーン設計と整合</text>
+<rect x="18" y="322" width="18" height="18" rx="2" fill="none" stroke="rgba(58,50,38,0.297)" stroke-width="1.4" stroke-dasharray="2 5"/>
+<text x="46" y="330" font-size="15" class="t-hi">マックス</text>
+<text x="46" y="350" font-size="13.5" class="t-dim">敷地全域 約8ha ／ 最も高い</text>
+<line class="ln" x1="18" y1="372" x2="38" y2="372"/>
+<text x="46" y="377" font-size="13.5" class="t-dim">＝道</text>
+<circle cx="96" cy="372" r="4" fill="#5d7f68"/>
+<text x="106" y="377" font-size="13.5" class="t-dim">＝ラウンジ</text>
+<rect class="nd" x="176" y="366" width="14" height="10" rx="2"/>
+<text x="198" y="377" font-size="13.5" class="t-dim">＝ホテル</text>
+</svg>
+<dl class="rows">
+<dt>方針</dt><dd>広く囲うほど天然林に戻せる面積が増える——<b>範囲は費用と植栽の野心のバランス。</b>概算延長・費用を図面と共に提示し、一緒に決める。</dd>
+</dl>
+</div>
+
+<div class="issue reveal" id="i3">
+<span class="no">論点 3 ∕ 更新 — 考え方を共有したい</span>
+<h3>「間伐でゆっくり育てる」は、全域には使えないとわかった。</h3>
+<dl class="rows">
+<dt>事実</dt><dd>長年間伐されず高密度化した林は、いま間引くと風の通り道ができ、残った木が倒れるおそれ（森林組合の見解）。</dd>
+<dt>方針</dt><dd><b>柵の内外で分ける。</b>内側は手を入れず残す（危険木処理のみ）。外側は道沿いから少しずつ皆伐→植え替え。原則は「①道をつける ②少しずつやる ③100年で考える」（高野ランドスケープ）。</dd>
+</dl>
+</div>
+
+<!-- 図: 柵の内外分担 -->
+<svg class="dg dg-s reveal" style="max-width:500px;" viewBox="0 0 400 306" role="img" aria-label="柵の内外の分担: 柵内は残して天然林化、柵外は道沿いから少しずつ皆伐してトドマツ再植林">
+<rect x="14" y="26" width="372" height="184" rx="3" fill="none" stroke="rgba(58,50,38,0.216)" stroke-width="1.2" stroke-dasharray="3 5"/>
+<rect x="104" y="52" width="200" height="136" rx="3" fill="rgba(93,127,104,.06)" stroke="#5d7f68" stroke-width="1.6"/>
+<rect x="104" y="52" width="200" height="136" rx="3" fill="none" stroke="#5d7f68" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 9"/>
+<g class="tree-n"><circle cx="128" cy="84" r="12"/><circle cx="168" cy="76" r="14"/><circle cx="212" cy="78" r="13"/><circle cx="254" cy="84" r="12"/><circle cx="286" cy="96" r="11"/><circle cx="126" cy="160" r="12"/><circle cx="166" cy="168" r="13"/><circle cx="212" cy="166" r="14"/><circle cx="256" cy="164" r="12"/><circle cx="288" cy="152" r="11"/></g>
+<text x="204" y="130" font-size="16" text-anchor="middle" class="t-hi">残す → 天然林化</text>
+<path class="ln" d="M24,204 L48,178 L60,140 L72,96 L86,58"/>
+<g fill="rgba(58,50,38,0.297)"><rect x="34" y="172" width="10" height="5" rx="1"/><rect x="48" y="132" width="10" height="5" rx="1"/><rect x="62" y="90" width="10" height="5" rx="1"/><rect x="74" y="52" width="10" height="5" rx="1"/></g>
+<g class="tree"><polygon points="312,116 318,92 324,116"/><polygon points="342,116 348,92 354,116"/><polygon points="372,116 378,92 384,116"/><polygon points="312,160 318,136 324,160"/><polygon points="342,160 348,136 354,160"/><polygon points="372,160 378,136 384,160"/><polygon points="136,206 142,184 148,206"/><polygon points="172,206 178,184 184,206"/><polygon points="208,206 214,184 220,206"/><polygon points="244,206 250,184 256,206"/><polygon points="280,206 286,184 292,206"/></g>
+<text x="56" y="44" font-size="13.5" text-anchor="middle" class="t-dim">皆伐</text>
+<text x="348" y="44" font-size="13.5" text-anchor="middle" class="t-dim">トドマツ</text>
+<text x="204" y="46" font-size="13.5" text-anchor="middle" class="t-acc">柵</text>
+<rect x="16" y="232" width="16" height="16" rx="2" fill="rgba(93,127,104,.1)" stroke="#5d7f68" stroke-width="1.6"/>
+<text x="42" y="238" font-size="14" class="t-hi">柵内</text>
+<text x="42" y="258" font-size="13.5" class="t-dim">手を入れず残す（危険木処理のみ）→ 天然林化</text>
+<rect x="16" y="268" width="16" height="16" rx="2" fill="none" stroke="rgba(58,50,38,0.378)" stroke-width="1.4" stroke-dasharray="3 4"/>
+<text x="42" y="274" font-size="14" class="t-hi">柵外</text>
+<text x="42" y="294" font-size="13.5" class="t-dim">道沿いから少しずつ皆伐 → トドマツ再植林</text>
+</svg>
+
+<div class="issue reveal" id="i4">
+<span class="no">論点 4 ∕ 植栽 — 考え方を共有したい</span>
+<h3>本当は天然の森に戻したい。でも、シカがいる。</h3>
+<dl class="rows">
+<dt>事実</dt><dd>隣の100平方メートル運動地では、植えた広葉樹をシカがほぼ全滅させた。残ったのはシカが食べない木だけの単調な林——40年経っても本物の森の複雑さは戻っていない。</dd>
+<dt>方針</dt><dd><b>広葉樹は柵の内側でしか育たない。</b>柵内＝天然林化（ミズナラ×トドマツの本来の植生へ）、柵外＝トドマツ再植林、の分担を軸に。</dd>
+</dl>
+</div>
+
+<div class="issue reveal" id="i5">
+<span class="no walk">論点 5 ∕ 道 — 現地で見たい</span>
+<h3>森の手入れは、道から始まる。</h3>
+<dl class="rows">
+<dt>論点</dt><dd>体験の道と管理の道を兼ねるか、分けるか。</dd>
+<dt>方針</dt><dd>幅2.5mの作業道を基盤に、<b>体験の核心部だけ分離</b>。柵の線と一緒に図面化し、現地で重なりを確認する。</dd>
+</dl>
+</div>
+
+<div class="issue reveal" id="i6">
+<span class="no">論点 6 ∕ 施業と材 — 方針を共有</span>
+<h3>「少しずつ」は組合の商売に合わない。伐った木は、ホテルで使う。</h3>
+<dl class="rows">
+<dt>事実</dt><dd>森林組合は補助金＋大型機械の皆伐が前提。少しずつ進める方式は受けてもらえない可能性が高い。</dd>
+<dt>方針</dt><dd>長い目で森を育てる<b>組合以外のパートナー</b>（北見方面など）を探す。伐ったトドマツはラウンジの建材・家具やクラフト・薪へ——<b>伐ることが体験と経営に還る回路</b>を作る。</dd>
+</dl>
+</div>
+
+<h3 class="reveal" style="margin-top:70px;">お金のものさし</h3>
+<p class="weak reveal"><b>基準線は、いま入っている森林組合の助成</b>（補助金で皆伐して植え直す＝最も軽いが、森の姿は選べない）。そこからどれだけ離れて、どんな森を手に入れるか——が費用の議論の全体。</p>
+<!-- 図: 費用の基準線 -->
+<svg class="dg dg-w reveal" viewBox="0 0 440 260" role="img" aria-label="基準線からの距離と、持ち出し・森の選択肢の関係">
+<defs>
+<linearGradient id="g8a" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#b9705a" stop-opacity="0"/><stop offset="1" stop-color="#b9705a" stop-opacity=".45"/></linearGradient>
+<linearGradient id="g8b" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5d7f68" stop-opacity="0"/><stop offset="1" stop-color="#5d7f68" stop-opacity=".45"/></linearGradient>
+</defs>
+<path d="M64,122 L412,56 L412,122 Z" fill="url(#g8a)"/>
+<path d="M64,130 L412,196 L412,130 Z" fill="url(#g8b)"/>
+<path fill="none" stroke="#b9705a" stroke-opacity=".6" stroke-width="1.4" d="M64,122 L412,56"/>
+<path fill="none" stroke="#5d7f68" stroke-opacity=".6" stroke-width="1.4" d="M64,130 L412,196"/>
+<line class="ln" x1="30" y1="126" x2="410" y2="126"/><polygon class="ar" points="422,126 409,120 409,132"/>
+<line class="ln-dash" x1="64" y1="44" x2="64" y2="206"/>
+<circle class="nd" cx="64" cy="126" r="5"/>
+<text x="300" y="88" font-size="15.5" text-anchor="middle" class="t-warn">持ち出しが増える</text>
+<text x="300" y="176" font-size="15.5" text-anchor="middle" class="t-acc">森の選択肢が増える</text>
+<text x="14" y="228" font-size="15" class="t-hi">基準線 ＝ 森林組合の助成</text>
+<text x="14" y="248" font-size="14" class="t-dim">補助金で皆伐して植え直す</text>
+<text x="426" y="228" font-size="15" text-anchor="end" class="t-hi">離れるほど</text>
+<text x="426" y="248" font-size="14" text-anchor="end" class="t-dim">どんな森を手に入れるか</text>
+</svg>
+<div class="cost3 stag reveal">
+<div class="r a"><div class="n"><small class="en">Layer A</small>どのみち、かかるお金</div><div class="d">森を持っているだけでかかる費用。人工林の更新・危険木処理・シカ対策。</div></div>
+<div class="r b"><div class="n"><small class="en">Layer B</small>この計画ならでは、のお金</div><div class="d">柵（範囲しだい）・道・植栽・ランドマーク・ラウンジ建築。</div></div>
+<div class="r c"><div class="n"><small class="en">Layer C</small>ずっと続くお金</div><div class="d">草刈り・ゲート管理・冬支度・ガイド・仕込み。<b>ここを続けられるかが勝負。</b></div></div>
+</div>
+<div class="tw reveal">
+<table>
+<tr><th>着手順</th><th>やること</th><th>備考</th></tr>
+<tr><td>第1段</td><td>柵＋道＋最初の植栽・入れ替え着手</td><td>森の都合で先送りできない</td></tr>
+<tr><td>第2段</td><td>ランドマーク＋アート＋散歩道の仕上げ</td><td>建築なしでも体験は成立</td></tr>
+<tr><td>第3段</td><td>ラウンジ建築</td><td>伐った木で建てる</td></tr>
+</table>
+</div>
+<p class="sub reveal">回収は森単体ではなく、宿泊単価・ブランド価値・連泊で見る（滞在型観光への転換と同じ線上）。</p>
+</div>
+</div>
+</section>
+
+<!-- ============ 05 ILLUSTRATION ============ -->
+<section class="bg-0" id="illustration" data-chap>
+<div class="blob c d2" style="width:52vw;height:52vw;max-width:620px;max-height:620px;left:-16vw;top:2vh;"></div>
+<div class="wrap">
+<div class="chap reveal">
+<span class="num">05</span>
+<div class="eyebrow en"><span class="bar"></span>05 ∕ Illustration Direction</div>
 <div class="ttl">絵 の 方 向</div>
 <hr class="rule line">
 </div>
 
 <div style="padding:44px 0 104px;">
 <div class="reveal">
-<div class="eyebrow en"><span class="bar"></span>Illustration ∕ 境界のフロントライン</div>
+<span class="sl" style="margin-bottom:16px;">コンセプト</span>
 <h2>この土地は、境界が<br>入り乱れてきた<span class="grad">フロントライン</span>。</h2>
 <p class="weak">知床の絵を、ひとつの様式では描かない。理由は土地の履歴にある——ここは何度も<b>境界</b>が引かれ、混ざり、塗り替えられてきた場所だから。</p>
 </div>
 
-<!-- 図: 境界の年表 -->
-<svg class="dg dg-m reveal" viewBox="0 0 460 160" role="img" aria-label="境界の年表: オホーツク文化、アイヌ文化、本州からの入植、自然と人間">
-<defs><linearGradient id="g4" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#8aab8c"/><stop offset=".5" stop-color="#5d7f68"/><stop offset="1" stop-color="#6a86a6"/></linearGradient></defs>
-<line class="ln" x1="24" y1="76" x2="428" y2="76"/><polygon class="ar" points="436,76 425,71 425,81"/>
-<g font-size="15" text-anchor="middle" class="t-dim">
-<text x="62" y="50">5–10c</text><text x="174" y="50">–19c</text><text x="286" y="50">1917–</text><text x="398" y="50">Now</text>
-</g>
-<circle class="nd" cx="62" cy="76" r="6"/><circle class="nd" cx="174" cy="76" r="6"/><circle class="nd" cx="286" cy="76" r="6"/><circle class="nd-acc" cx="398" cy="76" r="6"/>
-<g font-size="16.5" text-anchor="middle" class="t-hi">
-<text x="62" y="112">オホーツク文化</text><text x="174" y="112">アイヌ文化</text><text x="286" y="112">本州からの入植</text>
-<text x="398" y="112" fill="url(#g4)">自然と人間</text>
-</g>
-<g font-size="15" text-anchor="middle" class="t-dim">
-<text x="62" y="138">クマ儀礼の源流</text><text x="174" y="138">大地の突端</text><text x="286" y="138">測量の線・畑</text><text x="398" y="138">いまの境界</text>
-</g>
-</svg>
-
-<div class="bounds stag reveal">
-<div class="bnd"><div class="era en">5–10c</div><h4>オホーツク文化</h4><p>海獣狩猟民の文化。クマ儀礼の源流。リゾートの足元の遺跡から出土する。</p></div>
+<div class="vtl stag reveal">
+<div class="vi"><div class="era en">5–10c</div><h4>オホーツク文化</h4><p>海獣狩猟民の文化。クマ儀礼の源流。リゾートの足元の遺跡から出土する。</p></div>
+<div class="vi"><div class="era en">–19c</div><h4>アイヌ文化</h4><p>この半島の名の由来（sir etok＝大地の突端）。人と獣が対等に向き合う世界観。</p></div>
+<div class="vi"><div class="era en">1917–</div><h4>本州からの入植</h4><p>測量の線、畑、人工林。桑島家3世代の歴史はここに連なる。</p></div>
+<div class="vi now"><div class="era en">Now</div><h4>自然と人間</h4><p>いま引かれている境界。この森づくり自体が、その最前線にある。</p></div>
+</div>
 <div class="bnd"><div class="era en">–19c</div><h4>アイヌ文化</h4><p>この半島の名の由来（sir etok＝大地の突端）。人と獣が対等に向き合う世界観。</p></div>
 <div class="bnd"><div class="era en">1917–</div><h4>本州からの入植</h4><p>測量の線、畑、人工林。桑島家3世代の歴史はここに連なる。</p></div>
 <div class="bnd"><div class="era en">Now</div><h4>自然と人間</h4><p>いま引かれている境界。この森づくり自体が、その最前線にある。</p></div>
@@ -834,183 +973,6 @@ footer{background:#efe7d6;color:var(--fg-weak);font-size:10.5px;letter-spacing:.
 <div class="card"><div class="pl en">Direction 03</div><h4>オホーツクの世界 — クマと祭壇</h4><p>イラストは残っていない文化。土器の貼付文・骨角器・クマ骨塚など、リゾートの足元から出土する造形から再構成する。</p><div class="take">事例: <a href="../research/90_preview/okhotsk.html">オホーツク文化ギャラリー（画像51点）</a> ／ <a href="https://www.penn.museum/sites/expedition/fish-skin-legacies/">アムール魚皮衣（ペン博物館）</a></div></div>
 <div class="card"><div class="pl en">Direction 04</div><h4>ランドスケープ×ラグジュアリー — 森と品位</h4><p>植生の描き込みと、余白・気配の品位。世界のリゾートポスター・メゾンの文法。</p><div class="take">事例: <a href="https://59parks.net/">Fifty-Nine Parks</a> ／ <a href="https://scarfsage.com/hermes-scarves/941-into-the-canadian-wild/5346">Hermès「Into the Canadian Wild」</a> ／ <a href="https://www.tokyoartbeat.com/articles/-/gucci-yuko-higuchi-news-202511/page2">Gucci×ヒグチユウコ</a></div></div>
 </div>
-</div>
-</div>
-</section>
-
-<!-- ============ 05 IMPLEMENTATION ============ -->
-<section class="bg-0" id="implementation" data-chap>
-<div class="blob m d1" style="width:54vw;height:54vw;max-width:650px;max-height:650px;right:-18vw;top:6vh;"></div>
-<div class="blob c d2" style="width:42vw;height:42vw;max-width:500px;max-height:500px;left:-14vw;top:55%;"></div>
-<div class="wrap">
-<div class="chap reveal">
-<span class="num">05</span>
-<div class="eyebrow en"><span class="bar"></span>05 ∕ Forest Implementation</div>
-<div class="ttl">森 の 実 装 に つ い て</div>
-<hr class="rule line">
-</div>
-
-<div style="padding:44px 0 104px;">
-<div class="reveal">
-<h2>森づくりの論点は、<span class="grad">6つ</span>。</h2>
-<p class="weak">順番に意味がある——<b>まず安全（柵）、つぎに木、それから道と人。</b>アートと建築はこの土台の上に載せる。</p>
-</div>
-
-<div class="tw reveal">
-<table>
-<tr><th>#</th><th>テーマ</th><th>論点</th><th>方針</th></tr>
-<tr><td>1</td><td>柵</td><td>設けるか</td><td>安全管理上、必須（<span class="mark">今日決めたい</span>）</td></tr>
-<tr><td>2</td><td>範囲</td><td>どこまで囲うか</td><td>約1ha〜全域8haの間で、一緒に決める</td></tr>
-<tr><td>3</td><td>更新</td><td>皆伐か間伐か</td><td>柵の内外で分ける。少しずつ・100年単位</td></tr>
-<tr><td>4</td><td>植栽</td><td>天然林かトドマツか</td><td>天然林は柵内のみ成立。内=天然林・外=トドマツ</td></tr>
-<tr><td>5</td><td>道</td><td>体験と管理の兼用</td><td>作業道2.5mを基盤に、核心部のみ分離</td></tr>
-<tr><td>6</td><td>施業と材</td><td>誰と伐り、材をどうするか</td><td>組合以外の長期パートナー探し。材はホテルで使う</td></tr>
-</table>
-</div>
-
-<div class="issue reveal">
-<span class="no ask">論点 1 ∕ 柵 — 今日決めたい</span>
-<h3>コンセプト上は不要。安全管理上は、絶対に必要。</h3>
-<dl class="rows">
-<dt>論点</dt><dd>柵を設けるか。</dd>
-<dt>事実</dt><dd>シカは植えた木を食べ尽くす。ヒグマとの距離は運まかせにできない。</dd>
-<dt>方針</dt><dd><b>設ける。</b>コンセプトで柵を正当化しない——安全の土台として率直に。種類は電気柵・熊柵仕様（羅臼で冬季運用の実績あり）。ゲート管理と草刈りが継続することも込みで。</dd>
-</dl>
-</div>
-
-<div class="issue reveal">
-<span class="no">論点 2 ∕ 範囲 — 一緒に決めたい</span>
-<h3>小さく囲えば安いが窮屈。大きく囲えば自由だが高い。</h3>
-<div class="tw">
-<table>
-<tr><th>案</th><th>範囲</th><th>特徴</th></tr>
-<tr><td>ミニマム</td><td>散歩道まわり（約1ha）</td><td>最も安い。「囲われてる感」は出る</td></tr>
-<tr><td>中間</td><td>人の森ぜんぶ</td><td>ゾーン設計と整合</td></tr>
-<tr><td>マックス</td><td>敷地全域（約8ha）</td><td>森の再生まで守れる。最も高い</td></tr>
-</table>
-</div>
-<!-- 図: 柵範囲の入れ子 -->
-<svg class="dg dg-s reveal" viewBox="0 0 360 392" role="img" aria-label="柵範囲の入れ子図: ミニマム、中間、マックス">
-<rect x="16" y="20" width="328" height="200" rx="3" fill="none" stroke="rgba(58,50,38,0.297)" stroke-width="1.4" stroke-dasharray="2 5"/>
-<rect x="48" y="48" width="264" height="148" rx="3" fill="rgba(58,50,38,0.047)" stroke="rgba(58,50,38,0.567)" stroke-width="1.6" stroke-dasharray="6 4"/>
-<rect x="86" y="78" width="188" height="92" rx="3" fill="rgba(93,127,104,.07)" stroke="#5d7f68" stroke-width="2"/>
-<path class="ln" d="M70,186 L110,168 L150,152 L196,132 L238,116 L286,100"/>
-<circle cx="286" cy="100" r="5" fill="#5d7f68"/>
-<rect class="nd" x="24" y="196" width="20" height="14" rx="2"/>
-<rect x="18" y="238" width="18" height="18" rx="2" fill="rgba(93,127,104,.07)" stroke="#5d7f68" stroke-width="2"/>
-<text x="46" y="246" font-size="15" class="t-hi">ミニマム</text>
-<text x="46" y="266" font-size="13.5" class="t-dim">散歩道まわり 約1ha ／ 最も安い</text>
-<rect x="18" y="280" width="18" height="18" rx="2" fill="rgba(58,50,38,0.047)" stroke="rgba(58,50,38,0.567)" stroke-width="1.6" stroke-dasharray="6 4"/>
-<text x="46" y="288" font-size="15" class="t-hi">中間</text>
-<text x="46" y="308" font-size="13.5" class="t-dim">人の森ぜんぶ ／ ゾーン設計と整合</text>
-<rect x="18" y="322" width="18" height="18" rx="2" fill="none" stroke="rgba(58,50,38,0.297)" stroke-width="1.4" stroke-dasharray="2 5"/>
-<text x="46" y="330" font-size="15" class="t-hi">マックス</text>
-<text x="46" y="350" font-size="13.5" class="t-dim">敷地全域 約8ha ／ 最も高い</text>
-<line class="ln" x1="18" y1="372" x2="38" y2="372"/>
-<text x="46" y="377" font-size="13.5" class="t-dim">＝道</text>
-<circle cx="96" cy="372" r="4" fill="#5d7f68"/>
-<text x="106" y="377" font-size="13.5" class="t-dim">＝ラウンジ</text>
-<rect class="nd" x="176" y="366" width="14" height="10" rx="2"/>
-<text x="198" y="377" font-size="13.5" class="t-dim">＝ホテル</text>
-</svg>
-<dl class="rows">
-<dt>方針</dt><dd>広く囲うほど天然林に戻せる面積が増える——<b>範囲は費用と植栽の野心のバランス。</b>概算延長・費用を図面と共に提示し、一緒に決める。</dd>
-</dl>
-</div>
-
-<div class="issue reveal">
-<span class="no">論点 3 ∕ 更新 — 考え方を共有したい</span>
-<h3>「間伐でゆっくり育てる」は、全域には使えないとわかった。</h3>
-<dl class="rows">
-<dt>事実</dt><dd>長年間伐されず高密度化した林は、いま間引くと風の通り道ができ、残った木が倒れるおそれ（森林組合の見解）。</dd>
-<dt>方針</dt><dd><b>柵の内外で分ける。</b>内側は手を入れず残す（危険木処理のみ）。外側は道沿いから少しずつ皆伐→植え替え。原則は「①道をつける ②少しずつやる ③100年で考える」（高野ランドスケープ）。</dd>
-</dl>
-</div>
-
-<!-- 図: 柵の内外分担 -->
-<svg class="dg dg-s reveal" style="max-width:500px;" viewBox="0 0 400 306" role="img" aria-label="柵の内外の分担: 柵内は残して天然林化、柵外は道沿いから少しずつ皆伐してトドマツ再植林">
-<rect x="14" y="26" width="372" height="184" rx="3" fill="none" stroke="rgba(58,50,38,0.216)" stroke-width="1.2" stroke-dasharray="3 5"/>
-<rect x="104" y="52" width="200" height="136" rx="3" fill="rgba(93,127,104,.06)" stroke="#5d7f68" stroke-width="1.6"/>
-<rect x="104" y="52" width="200" height="136" rx="3" fill="none" stroke="#5d7f68" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 9"/>
-<g class="tree-n"><circle cx="128" cy="84" r="12"/><circle cx="168" cy="76" r="14"/><circle cx="212" cy="78" r="13"/><circle cx="254" cy="84" r="12"/><circle cx="286" cy="96" r="11"/><circle cx="126" cy="160" r="12"/><circle cx="166" cy="168" r="13"/><circle cx="212" cy="166" r="14"/><circle cx="256" cy="164" r="12"/><circle cx="288" cy="152" r="11"/></g>
-<text x="204" y="130" font-size="16" text-anchor="middle" class="t-hi">残す → 天然林化</text>
-<path class="ln" d="M24,204 L48,178 L60,140 L72,96 L86,58"/>
-<g fill="rgba(58,50,38,0.297)"><rect x="34" y="172" width="10" height="5" rx="1"/><rect x="48" y="132" width="10" height="5" rx="1"/><rect x="62" y="90" width="10" height="5" rx="1"/><rect x="74" y="52" width="10" height="5" rx="1"/></g>
-<g class="tree"><polygon points="312,116 318,92 324,116"/><polygon points="342,116 348,92 354,116"/><polygon points="372,116 378,92 384,116"/><polygon points="312,160 318,136 324,160"/><polygon points="342,160 348,136 354,160"/><polygon points="372,160 378,136 384,160"/><polygon points="136,206 142,184 148,206"/><polygon points="172,206 178,184 184,206"/><polygon points="208,206 214,184 220,206"/><polygon points="244,206 250,184 256,206"/><polygon points="280,206 286,184 292,206"/></g>
-<text x="56" y="44" font-size="13.5" text-anchor="middle" class="t-dim">皆伐</text>
-<text x="348" y="44" font-size="13.5" text-anchor="middle" class="t-dim">トドマツ</text>
-<text x="204" y="46" font-size="13.5" text-anchor="middle" class="t-acc">柵</text>
-<rect x="16" y="232" width="16" height="16" rx="2" fill="rgba(93,127,104,.1)" stroke="#5d7f68" stroke-width="1.6"/>
-<text x="42" y="238" font-size="14" class="t-hi">柵内</text>
-<text x="42" y="258" font-size="13.5" class="t-dim">手を入れず残す（危険木処理のみ）→ 天然林化</text>
-<rect x="16" y="268" width="16" height="16" rx="2" fill="none" stroke="rgba(58,50,38,0.378)" stroke-width="1.4" stroke-dasharray="3 4"/>
-<text x="42" y="274" font-size="14" class="t-hi">柵外</text>
-<text x="42" y="294" font-size="13.5" class="t-dim">道沿いから少しずつ皆伐 → トドマツ再植林</text>
-</svg>
-
-<div class="issue reveal">
-<span class="no">論点 4 ∕ 植栽 — 考え方を共有したい</span>
-<h3>本当は天然の森に戻したい。でも、シカがいる。</h3>
-<dl class="rows">
-<dt>事実</dt><dd>隣の100平方メートル運動地では、植えた広葉樹をシカがほぼ全滅させた。残ったのはシカが食べない木だけの単調な林——40年経っても本物の森の複雑さは戻っていない。</dd>
-<dt>方針</dt><dd><b>広葉樹は柵の内側でしか育たない。</b>柵内＝天然林化（ミズナラ×トドマツの本来の植生へ）、柵外＝トドマツ再植林、の分担を軸に。</dd>
-</dl>
-</div>
-
-<div class="issue reveal">
-<span class="no walk">論点 5 ∕ 道 — 現地で見たい</span>
-<h3>森の手入れは、道から始まる。</h3>
-<dl class="rows">
-<dt>論点</dt><dd>体験の道と管理の道を兼ねるか、分けるか。</dd>
-<dt>方針</dt><dd>幅2.5mの作業道を基盤に、<b>体験の核心部だけ分離</b>。柵の線と一緒に図面化し、現地で重なりを確認する。</dd>
-</dl>
-</div>
-
-<div class="issue reveal">
-<span class="no">論点 6 ∕ 施業と材 — 方針を共有</span>
-<h3>「少しずつ」は組合の商売に合わない。伐った木は、ホテルで使う。</h3>
-<dl class="rows">
-<dt>事実</dt><dd>森林組合は補助金＋大型機械の皆伐が前提。少しずつ進める方式は受けてもらえない可能性が高い。</dd>
-<dt>方針</dt><dd>長い目で森を育てる<b>組合以外のパートナー</b>（北見方面など）を探す。伐ったトドマツはラウンジの建材・家具やクラフト・薪へ——<b>伐ることが体験と経営に還る回路</b>を作る。</dd>
-</dl>
-</div>
-
-<h3 class="reveal" style="margin-top:70px;">お金のものさし</h3>
-<p class="weak reveal"><b>基準線は、いま入っている森林組合の助成</b>（補助金で皆伐して植え直す＝最も軽いが、森の姿は選べない）。そこからどれだけ離れて、どんな森を手に入れるか——が費用の議論の全体。</p>
-<!-- 図: 費用の基準線 -->
-<svg class="dg dg-w reveal" viewBox="0 0 440 260" role="img" aria-label="基準線からの距離と、持ち出し・森の選択肢の関係">
-<defs>
-<linearGradient id="g8a" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#b9705a" stop-opacity="0"/><stop offset="1" stop-color="#b9705a" stop-opacity=".45"/></linearGradient>
-<linearGradient id="g8b" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5d7f68" stop-opacity="0"/><stop offset="1" stop-color="#5d7f68" stop-opacity=".45"/></linearGradient>
-</defs>
-<path d="M64,122 L412,56 L412,122 Z" fill="url(#g8a)"/>
-<path d="M64,130 L412,196 L412,130 Z" fill="url(#g8b)"/>
-<path fill="none" stroke="#b9705a" stroke-opacity=".6" stroke-width="1.4" d="M64,122 L412,56"/>
-<path fill="none" stroke="#5d7f68" stroke-opacity=".6" stroke-width="1.4" d="M64,130 L412,196"/>
-<line class="ln" x1="30" y1="126" x2="410" y2="126"/><polygon class="ar" points="422,126 409,120 409,132"/>
-<line class="ln-dash" x1="64" y1="44" x2="64" y2="206"/>
-<circle class="nd" cx="64" cy="126" r="5"/>
-<text x="300" y="88" font-size="15.5" text-anchor="middle" class="t-warn">持ち出しが増える</text>
-<text x="300" y="176" font-size="15.5" text-anchor="middle" class="t-acc">森の選択肢が増える</text>
-<text x="14" y="228" font-size="15" class="t-hi">基準線 ＝ 森林組合の助成</text>
-<text x="14" y="248" font-size="14" class="t-dim">補助金で皆伐して植え直す</text>
-<text x="426" y="228" font-size="15" text-anchor="end" class="t-hi">離れるほど</text>
-<text x="426" y="248" font-size="14" text-anchor="end" class="t-dim">どんな森を手に入れるか</text>
-</svg>
-<div class="cost3 stag reveal">
-<div class="r a"><div class="n"><small class="en">Layer A</small>どのみち、かかるお金</div><div class="d">森を持っているだけでかかる費用。人工林の更新・危険木処理・シカ対策。</div></div>
-<div class="r b"><div class="n"><small class="en">Layer B</small>この計画ならでは、のお金</div><div class="d">柵（範囲しだい）・道・植栽・ランドマーク・ラウンジ建築。</div></div>
-<div class="r c"><div class="n"><small class="en">Layer C</small>ずっと続くお金</div><div class="d">草刈り・ゲート管理・冬支度・ガイド・仕込み。<b>ここを続けられるかが勝負。</b></div></div>
-</div>
-<div class="tw reveal">
-<table>
-<tr><th>着手順</th><th>やること</th><th>備考</th></tr>
-<tr><td>第1段</td><td>柵＋道＋最初の植栽・入れ替え着手</td><td>森の都合で先送りできない</td></tr>
-<tr><td>第2段</td><td>ランドマーク＋アート＋散歩道の仕上げ</td><td>建築なしでも体験は成立</td></tr>
-<tr><td>第3段</td><td>ラウンジ建築</td><td>伐った木で建てる</td></tr>
-</table>
-</div>
-<p class="sub reveal">回収は森単体ではなく、宿泊単価・ブランド価値・連泊で見る（滞在型観光への転換と同じ線上）。</p>
 </div>
 </div>
 </section>
@@ -1082,7 +1044,7 @@ footer{background:#efe7d6;color:var(--fg-weak);font-size:10.5px;letter-spacing:.
 <table>
 <tr><th>資料</th><th>中身</th></tr>
 <tr><td><a href="../research/90_preview/index.html">リサーチブック</a></td><td>桑島家の100年・知床通史・イラスト4方向・遠野リサーチの全文</td></tr>
-<tr><td><a href="../research/90_preview/proposal_flow.html">8/7 提案の論点整理 v3.1</a></td><td>森の実装9論点の詳細（本資料05章の元）</td></tr>
+<tr><td><a href="../research/90_preview/proposal_flow.html">8/7 提案の論点整理 v3.1</a></td><td>森の実装9論点の詳細（本資料04章の元）</td></tr>
 <tr><td><a href="../research/90_preview/okhotsk.html">オホーツク文化ギャラリー</a></td><td>クマ意匠・土器・遺跡景観など画像51点</td></tr>
 <tr><td><a href="../master-mtg/index.html">マスターMTG資料</a></td><td>案件全体の経緯・決定事項の正本</td></tr>
 </table>
@@ -1125,6 +1087,93 @@ footer{background:#efe7d6;color:var(--fg-weak);font-size:10.5px;letter-spacing:.
     }, { rootMargin: '-42% 0px -50% 0px' });
     Array.prototype.forEach.call(chaps, function(s){ so.observe(s); });
   }
+})();
+</script>
+
+<div class="pmodal" id="pmodal" role="dialog" aria-modal="true" aria-label="植物の詳細">
+<div class="bk" data-close></div>
+<div class="pm">
+<button class="close" data-close aria-label="閉じる">×</button>
+<div class="ph" id="pm-ph"></div>
+<h4 id="pm-name"></h4>
+<div class="kana" id="pm-kana"></div>
+<div class="sci" id="pm-sci"></div>
+<div class="tags" id="pm-tags"></div>
+<div class="desc" id="pm-desc"></div>
+<div class="wx" id="pm-wx" hidden></div>
+<div class="src" id="pm-src"></div>
+</div>
+</div>
+
+<script>
+(function(){
+var P={
+taranoki:{n:"タラノキ",k:"たらのき",s:"Aralia elata",z:"ZONE 01 里山",r:"山菜（タラの芽）",d:"春の山菜「タラの芽」。里山ゾーンでシェフが収穫する有用植物のひとつ。",w:"タラノキ"},
+udo:{n:"ウド",k:"うど",s:"Aralia cordata",z:"ZONE 01 里山",r:"山菜",d:"若い茎と芽を食べる大型の山菜。香りが強く、料理の幅が広い。",w:"ウド"},
+gyoja:{n:"ギョウジャニンニク",k:"ぎょうじゃにんにく",s:"Allium victorialis subsp. platyphyllum",z:"ZONE 01 里山",r:"山菜",d:"北海道を代表する山菜。強い香りをもち、春の短い期間だけ採れる。",w:"ギョウジャニンニク"},
+koshiabura:{n:"コシアブラ",k:"こしあぶら",s:"Chengiopanax sciadophylloides",z:"ZONE 01 里山",r:"山菜",d:"「山菜の女王」とも呼ばれる新芽。天ぷらで香りが立つ。",w:"コシアブラ"},
+hamanasu:{n:"ハマナス",k:"はまなす",s:"Rosa rugosa",z:"ZONE 01 里山",r:"花・実",d:"北の海岸を代表する花。実はローズヒップとして食用・茶に使える。",w:"ハマナス"},
+nemagari:{n:"ネマガリダケ",k:"ねまがりだけ（チシマザサ）",s:"Sasa kurilensis",z:"ZONE 01 里山",r:"山菜",d:"細いタケノコ。北国の初夏の味覚。",w:"チシマザサ"},
+shidoke:{n:"シドケ",k:"しどけ（モミジガサ）",s:"Parasenecio delphiniifolius",z:"ZONE 01 里山",r:"山菜",d:"独特の香りで珍重される山菜。",w:"モミジガサ"},
+yabukanzo:{n:"ヤブカンゾウ",k:"やぶかんぞう",s:"Hemerocallis fulva var. kwanso",z:"ZONE 01 里山",r:"山菜",d:"若芽と蕾を食べる。甘みのある春の味。",w:"ヤブカンゾウ"},
+yachiyanagi:{n:"ヤチヤナギ",k:"やちやなぎ",s:"Myrica gale var. tomentosa",z:"ZONE 01 里山",r:"香りの低木",d:"湿原の香りの低木。北欧ではビールやジンの香料として使われてきた。",w:"ヤチヤナギ"},
+byakushin:{n:"ミヤマビャクシン",k:"みやまびゃくしん",s:"Juniperus chinensis var. sargentii",z:"ZONE 01 里山",r:"香りの針葉",d:"針葉の香り。ジンの香りづけで知られるジュニパーの仲間。",w:"ミヤマビャクシン"},
+cresson:{n:"クレソン",k:"くれそん（オランダガラシ）",s:"Nasturtium officinale",z:"ZONE 01 里山",r:"水辺の野草",d:"清流の水辺で育つ。ピリッとした辛味。",w:"オランダガラシ"},
+hawasabi:{n:"葉ワサビ",k:"はわさび",s:"Eutrema japonicum",z:"ZONE 01 里山",r:"薬味",d:"葉と花芽の辛味を食べる。",w:"ワサビ"},
+yamawasabi:{n:"山ワサビ",k:"やまわさび",s:"Armoracia rusticana",z:"ZONE 01 里山",r:"薬味",d:"北海道の食卓の薬味。西洋ワサビ（ホースラディッシュ）。",w:"セイヨウワサビ"},
+itadori:{n:"イタドリ",k:"いたどり",s:"Fallopia japonica",z:"ZONE 01 里山",r:"山菜",d:"酸味のある若い茎を食べる。",w:"イタドリ"},
+warabi:{n:"ワラビ",k:"わらび",s:"Pteridium aquilinum",z:"ZONE 01 里山",r:"山菜",d:"定番の山菜。あく抜きして食べる。",w:"ワラビ"},
+shiode:{n:"シオデ",k:"しおで",s:"Smilax riparia",z:"ZONE 01 里山",r:"山菜",d:"「山のアスパラガス」と呼ばれる。",w:"シオデ"},
+ninjin:{n:"ニンジン",k:"にんじん",s:"Daucus carota subsp. sativus",z:"境界のライン",r:"境界の作法",d:"かつてお祖父様が熊の森との境界に「お供え物」として植えた作物。人参畑ラインとして、その歴史をトレースし境界の合図にする。",w:"ニンジン"},
+mizubasho:{n:"ミズバショウ",k:"みずばしょう",s:"Lysichiton camtschatcensis",z:"境界のライン",r:"湿地の象徴",d:"境界の湿地に自生。クマも人も訪れる「ドキドキゾーン」の象徴。",w:"ミズバショウ"},
+mizunara:{n:"ミズナラ",k:"みずなら",s:"Quercus crispula",z:"ZONE 03 更新の植栽",r:"天然林化の中心",d:"ウトロ近辺の本来の植生「ミズナラ—トドマツ林」の主。柵内の天然林化の中心樹種。木肌の香りは香木バーでも使う。",w:"ミズナラ"},
+todomatsu:{n:"トドマツ",k:"とどまつ",s:"Abies sachalinensis",z:"ZONE 03 更新の植栽",r:"人工林の主・建材",d:"3世代前に植えられた人工林の主。間伐材はラウンジの建材に、枝葉はリキュールに。",w:"トドマツ"},
+akaezo:{n:"アカエゾマツ",k:"あかえぞまつ",s:"Picea glehnii",z:"ZONE 03 更新の植栽",r:"植え替えの実績種",d:"風に強く、この土地の植え替えで使われてきた樹種。シカが食べないため、単相林化の主でもある——「偽の回復」の教訓と表裏。",w:"アカエゾマツ"},
+kurumabaso:{n:"クルマバソウ",k:"くるまばそう",s:"Galium odoratum",z:"ZONE 04 天然林",r:"香りの体験・シロップ",d:"香りの草。天然林の入口で「探してちぎってみる」体験の主役。シロップとして香木バーへ。",w:"クルマバソウ"},
+hitorishizuka:{n:"ヒトリシズカ",k:"ひとりしずか",s:"Chloranthus japonicus",z:"ZONE 04 天然林",r:"香りの体験",d:"春の林床に咲く。香りの植物として探す対象。",w:"ヒトリシズカ"},
+shirakaba:{n:"シラカバ",k:"しらかば（シラカンバ）",s:"Betula platyphylla",z:"ZONE 04 天然林",r:"香木バー素材",d:"新芽を香木バーの素材に。",w:"シラカンバ"},
+katsura:{n:"カツラ",k:"かつら",s:"Cercidiphyllum japonicum",z:"ZONE 04 天然林",r:"香木バー素材",d:"落ち葉が甘く香る。「カツラ落葉のお茶」に。1954年から残る天然木エリアの主。",w:"カツラ (植物)"}
+};
+var modal=document.getElementById('pmodal');
+if(!modal) return;
+var ph=document.getElementById('pm-ph'),cache={};
+function txt(id,v){document.getElementById(id).textContent=v||'';}
+function openP(id){
+  var p=P[id]; if(!p) return;
+  txt('pm-name',p.n); txt('pm-kana',p.k); txt('pm-sci',p.s); txt('pm-desc',p.d);
+  var tg=document.getElementById('pm-tags');
+  tg.innerHTML='<span class="z"></span><span></span>';
+  tg.children[0].textContent=p.z; tg.children[1].textContent=p.r;
+  var wx=document.getElementById('pm-wx'); wx.hidden=true; wx.textContent='';
+  ph.textContent='写真を読み込み中…';
+  var src=document.getElementById('pm-src');
+  var page='https://ja.wikipedia.org/wiki/'+encodeURIComponent(p.w);
+  src.innerHTML='';
+  var a=document.createElement('a'); a.target='_blank'; a.rel='noopener'; a.href=page;
+  a.textContent='Wikipedia「'+p.w+'」';
+  src.appendChild(document.createTextNode('写真・概要の出典: ')); src.appendChild(a);
+  modal.classList.add('open'); document.body.classList.add('lock');
+  function render(j){
+    if(j&&j.thumbnail&&j.thumbnail.source){
+      var img=document.createElement('img'); img.alt=p.n; img.src=j.thumbnail.source;
+      ph.innerHTML=''; ph.appendChild(img);
+    }else{ ph.textContent='写真は出典リンクから'; }
+    if(j&&j.extract){ wx.textContent=j.extract; wx.hidden=false; }
+    if(j&&j.content_urls&&j.content_urls.desktop){ a.href=j.content_urls.desktop.page; }
+  }
+  if(cache[id]!==undefined){ render(cache[id]); return; }
+  fetch('https://ja.wikipedia.org/api/rest_v1/page/summary/'+encodeURIComponent(p.w))
+    .then(function(r){return r.ok?r.json():null;})
+    .then(function(j){cache[id]=j;render(j);})
+    .catch(function(){cache[id]=null;render(null);});
+}
+function closeP(){ modal.classList.remove('open'); document.body.classList.remove('lock'); }
+document.addEventListener('click',function(e){
+  var b=e.target.closest?e.target.closest('.pcard'):null;
+  if(b&&b.dataset.p){ openP(b.dataset.p); return; }
+  if(e.target.hasAttribute&&e.target.hasAttribute('data-close')) closeP();
+});
+document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeP(); });
 })();
 </script>
 </body>
