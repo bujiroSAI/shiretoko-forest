@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>8/7 提案の論点整理 ｜ 知床北こぶしの森</title>
+<meta name="robots" content="noindex, nofollow">
+
+<style>
+:root{--ink:#1a1a1a;--sub:#666;--line:#e2ddd4;--acc:#8b1a1a;--bg:#fdfcfa;--card:#f6f3ee;--ok:#2d5a3d;--blu:#1a4a8b;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:-apple-system,"Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif;background:var(--bg);color:var(--ink);line-height:1.85;font-size:15px;-webkit-text-size-adjust:100%;}
+.wrap{max-width:720px;margin:0 auto;padding:0 18px 80px;}
+header{padding:44px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:8px;}
+header .eyebrow{font-size:11px;letter-spacing:.22em;color:var(--sub);margin-bottom:10px;}
+h1{font-size:26px;line-height:1.4;font-weight:700;}
+header .meta{font-size:12px;color:var(--sub);margin-top:10px;}
+.back{display:inline-block;font-size:12px;color:var(--blu);text-decoration:none;margin-bottom:18px;}
+nav{padding:16px 0;border-bottom:1px solid var(--line);margin-bottom:12px;}
+nav a{display:block;padding:7px 0;color:var(--ink);text-decoration:none;font-size:14px;border-bottom:1px dashed var(--line);}
+nav a:last-child{border-bottom:none;}
+nav a .no{color:var(--acc);font-weight:700;margin-right:10px;font-size:12px;}
+section{padding-top:34px;}
+h2{font-size:20px;line-height:1.45;padding:10px 0 8px;border-bottom:2px solid var(--ink);margin-bottom:16px;}
+h2 .no{color:var(--acc);font-size:13px;display:block;letter-spacing:.15em;margin-bottom:2px;}
+h3{font-size:16px;margin:26px 0 10px;padding-left:10px;border-left:4px solid var(--acc);line-height:1.5;}
+p{margin-bottom:12px;}
+.lead{font-size:15px;margin-bottom:16px;}
+table{width:100%;border-collapse:collapse;font-size:12.5px;margin:12px 0 16px;}
+th{text-align:left;padding:6px 7px;border-bottom:2px solid var(--ink);font-size:11.5px;}
+td{padding:6px 7px;border-bottom:1px solid var(--line);vertical-align:top;}
+tr.rec td{background:#eef3ee;}
+tr.rec td:first-child{border-left:4px solid var(--ok);font-weight:700;}
+.slide{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 16px 12px;margin:18px 0;box-shadow:0 1px 3px rgba(0,0,0,.05);}
+.slide .sno{display:inline-block;font-size:10px;letter-spacing:.14em;background:var(--ink);color:#fff;border-radius:3px;padding:2px 9px;margin-bottom:8px;}
+.slide.decide .sno{background:var(--acc);}
+.slide.walk .sno{background:var(--blu);}
+.slide.talk .sno{background:var(--ok);}
+.slide h4{font-size:16.5px;line-height:1.55;margin-bottom:8px;}
+.slide p{font-size:13.5px;margin-bottom:8px;}
+.slide ul{margin:0 0 10px 18px;font-size:13.5px;}
+.slide li{margin-bottom:4px;}
+.slide .need{font-size:12px;color:var(--sub);border-top:1px dashed var(--line);padding-top:8px;margin-top:4px;}
+.slide .need b{color:var(--blu);}
+.legend{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0;}
+.legend span{font-size:11px;border-radius:99px;padding:3px 12px;color:#fff;}
+.lg-d{background:var(--acc);}.lg-t{background:var(--ok);}.lg-s{background:var(--ink);}.lg-w{background:var(--blu);}
+.card{background:var(--card);border-radius:10px;padding:16px 16px 12px;margin:14px 0;}
+.card h4{font-size:15px;margin-bottom:6px;}
+.card p{font-size:13.5px;margin-bottom:8px;}
+a{color:var(--blu);text-decoration:none;}
+blockquote{border-left:4px solid var(--line);padding:6px 0 6px 14px;color:var(--sub);font-size:13.5px;margin:12px 0;}
+.note{background:#fbf4e8;border:1px solid #e8d9b8;border-radius:8px;padding:12px 14px;font-size:13px;margin:14px 0;}
+.note b{color:var(--acc);}
+.cost{display:block;margin:14px 0;}
+.cost .row{border-left:6px solid var(--line);padding:10px 12px;margin-bottom:8px;background:var(--card);border-radius:0 8px 8px 0;}
+.cost .row.a{border-left-color:#777;}
+.cost .row.b{border-left-color:var(--acc);}
+.cost .row.c{border-left-color:var(--ok);}
+.cost .row .l{font-size:11px;letter-spacing:.1em;color:var(--sub);display:block;}
+.cost .row .n{font-weight:700;font-size:14.5px;}
+.cost .row .d{font-size:13px;color:#333;display:block;}
+.deck td:first-child{white-space:nowrap;color:var(--sub);}
+.top{position:fixed;right:14px;bottom:20px;background:var(--ink);color:#fff;border-radius:99px;padding:9px 14px;font-size:12px;text-decoration:none;opacity:.85;}
+footer{margin-top:50px;padding-top:14px;border-top:1px solid var(--line);font-size:11px;color:var(--sub);}
+</style>
+</head>
+<body>
+<div class="wrap" id="top-anchor">
+
+<header>
+<a class="back" href="index.html">← リサーチブックへ戻る</a>
+<div class="eyebrow">SHIRETOKO KITAKOBUSHI FOREST ∕ ISSUE MAP FOR PRESENTATION</div>
+<h1>8/7 提案の論点整理</h1>
+<div class="meta">2026-08-06 v3.1（プレゼン用に文言を平易化） ｜ 出典: 8/5作業会議・提案資料20260705版・高野LP「知床の森の話」 ｜ スライド化前提 ｜ 限定共有</div>
+</header>
+
+<nav>
+<a href="#s0"><span class="no">00</span>今日の地図 — 問いは9つ。決めるのは2つだけ</a>
+<a href="#s1"><span class="no">01</span>まず、言葉をそろえる — 「野生」ってなんだろう</a>
+<a href="#s2"><span class="no">02</span>森の本題 — 柵、木、道、そして人</a>
+<a href="#s3"><span class="no">03</span>お金の話 — 高いか安いかではなく、どんな森に払うか</a>
+<a href="#s4"><span class="no">04</span>スライド構成案（18枚）</a>
+<a href="#s5"><span class="no">05</span>今日のおさらいと、あすの準備</a>
+</nav>
+
+<!-- ============ 00 ============ -->
+<section id="s0">
+<h2><span class="no">00 ∕ MAP</span>今日の地図 — 問いは9つ。決めるのは2つだけ</h2>
+<p class="lead">森の話は、コンセプト・柵・木・道・お金が絡まって、難しく見える。今日はそれを<b>9つの問い</b>にほどいて、ひとつずつ見ていく。1つの問いに、スライド1枚。</p>
+
+<div class="card">
+<h4>今日のゴール: 「こういう森を作る」と、言えるようになること</h4>
+<blockquote>「森にお金をかける理由になる提案をしてくれたのは初めて」</blockquote>
+<p>桑島さんは、審査する人ではない。<b>一緒に悩んでくれるパートナー</b>だ。だからこの資料は、説得の道具ではなく、同じテーブルに広げる地図として作る。細かい話には入らない。経営判断に必要な高さで、森の全体を見渡す。</p>
+</div>
+
+<h3>9つの問いの一覧</h3>
+<div class="legend"><span class="lg-d">赤 = 今日決める（2つ）</span><span class="lg-t">緑 = 今日一緒に考える</span><span class="lg-s">黒 = 示して持ち帰る</span><span class="lg-w">青 = 現地を歩いて見る</span></div>
+<table>
+<tr><th>束</th><th>#</th><th>問い</th><th>扱い</th></tr>
+<tr><td rowspan="2">A 言葉</td><td>A-1</td><td>「野生」ってなんだろう</td><td style="color:var(--acc);font-weight:700;">今日決める</td></tr>
+<tr><td>A-2</td><td>森の名前をどうつけるか</td><td>決め方だけそろえる</td></tr>
+<tr><td rowspan="6">B 森</td><td>B-1</td><td>柵は要るか</td><td style="color:var(--acc);font-weight:700;">今日決める</td></tr>
+<tr><td>B-2</td><td>どこまで囲うか</td><td style="color:var(--ok);font-weight:700;">一緒に考える</td></tr>
+<tr><td>B-3</td><td>木をどう入れ替えるか</td><td style="color:var(--ok);font-weight:700;">一緒に考える</td></tr>
+<tr><td>B-4</td><td>何を植えるか</td><td style="color:var(--ok);font-weight:700;">一緒に考える</td></tr>
+<tr><td>B-5</td><td>道をどう引くか</td><td style="color:var(--blu);">現地で見る</td></tr>
+<tr><td>B-6</td><td>誰とやるか。伐った木をどうするか</td><td>方針を示す → 16:30協議へ</td></tr>
+<tr><td>C お金</td><td>C-1</td><td>いくらかかるか。どう考えるか</td><td>構造を示す・数字は概算</td></tr>
+</table>
+
+<div class="note"><b>順番に意味がある。</b>まず安全（柵）。そのうえで木と道。アートや建築は、そのあとのお楽しみ。積み木のように、下から積む。</div>
+</section>
+
+<!-- ============ 01 ============ -->
+<section id="s1">
+<h2><span class="no">01 ∕ 束A</span>まず、言葉をそろえる — 「野生」ってなんだろう</h2>
+<p class="lead">最初にひとつだけ、言葉の話をさせてほしい。ここがそろうと、このあとの問いが全部やさしくなる。</p>
+
+<div class="slide decide">
+<span class="sno">A-1 ∕ 今日決める</span>
+<h4>「野生」って、なんだろう — 提案: 野生とは、自分の身体でわかること</h4>
+<p>森が野生なのではない。<b>人が、野生になる。</b>気づく。こわがる。たしかめる。きめる。——この4つが自分の中で働いているとき、人は野生だ。</p>
+<table>
+<tr><th>もし「野生」をこう決めると…</th><th>こうなってしまう</th></tr>
+<tr><td>手つかずの自然のこと</td><td>この森は3世代かけて人が作った森。「偽物」になってしまう</td></tr>
+<tr><td>危険・スリルのこと</td><td>安全対策をするたびに野生が減っていく。それはおかしい</td></tr>
+<tr class="rec"><td>自分の身体でわかる力のこと</td><td>手入れと両立する。「編み直す」と言える。この定義でいきたい</td></tr>
+</table>
+<ul>
+<li>だから、木を伐っても野生は減らない。守るのは木の本数ではなく、<b>森の読みごたえ</b></li>
+<li>柵の話は、これとは別。柵はコンセプトではなく安全の話——次の束で正直に話す</li>
+</ul>
+<span class="need"><b>決め方:</b> この一文にうなずけるか。「取り戻すのは、失われた自然ではない。自然を前にして、自分の身体で測り、自分で決める力だ」</span>
+</div>
+
+<div class="slide">
+<span class="sno">A-2 ∕ 決め方だけそろえる</span>
+<h4>森の名前は、今日は決めない。決め方だけそろえる</h4>
+<p>「こぶしの森」はホテルの名前としてはいい。でも森の名前としては、少し窮屈。「野生」はそのまま使うと、すぐ消費されてしまう。あせらず、3つのものさしだけ合意したい。</p>
+<ul>
+<li>① 「秘境」「原始」のような、場所自慢の名前にしない</li>
+<li>② 人と森の<b>関係</b>を呼ぶ名前にする</li>
+<li>③ ホテルの下につく名前にしない。森は、森として呼ばれる</li>
+</ul>
+<span class="need"><b>持ち帰り:</b> 名前は絵と一緒に決まるもの。イラスト制作と並行で考える</span>
+</div>
+
+<div class="card">
+<h4>参照事例: 遠野 — 物語を核に、外から人が集まった町</h4>
+<p>『遠野物語』の町・遠野では、いま外からクリエイターや専門家が集まり、土地の物語を活かした事業やコミュニティが生まれている。<b>土地の物語を編み直すと、人と資本が集まる</b>——その先行実証。知床がやるのは、その「感覚」版だ。遠野は物語で、知床は身体で。</p>
+</div>
+</section>
+
+<!-- ============ 02 ============ -->
+<section id="s2">
+<h2><span class="no">02 ∕ 束B</span>森の本題 — 柵、木、道、そして人</h2>
+<p class="lead">ここからが本題。順番に意味がある。<b>まず安全（柵）。つぎに木。それから道と、一緒にやる人。</b>下から積んでいく。</p>
+
+<div class="slide decide">
+<span class="sno">B-1 ∕ 今日決める ∕ すべての土台</span>
+<h4>柵の話から始めたい — 正直に言うと、コンセプト上は柵は要らない。でも、絶対に必要だ</h4>
+<p>野生の思想からいえば、柵なんて無いほうがいい。それは私たちもそう思う。</p>
+<p>けれど、お客さんを森に入れる以上、そうはいかない。シカは植えた木をぜんぶ食べてしまう。ヒグマとの距離を、運まかせにはできない。<b>だから柵は付ける。これを前提にさせてほしい</b>——というのが、今日いちばん最初のお願い。</p>
+<ul>
+<li><b>種類はこちらで選ぶ。</b>電気柵。シカとクマの両方に効かせるなら熊柵仕様。羅臼では電気柵が当たり前に使われていて、冬のノウハウも現地にある</li>
+<li><b>柵は買って終わりではない。</b>ゲートの管理と、まわりの草刈りがずっと続く。それも込みで考える</li>
+</ul>
+<span class="need"><b>伺い方:</b> 「柵は絶対に必要だと思う。それでいいか」。種類は任せてもらい、<b>範囲はこれから一緒に考えたい</b>、と続ける</span>
+</div>
+
+<div class="slide talk">
+<span class="sno">B-2 ∕ 一緒に考える</span>
+<h4>どこまで囲うか — 小さく囲えば安いが窮屈。大きく囲えば自由だが高い</h4>
+<p>範囲は思想の問題ではなく、<b>広さとお金の問題</b>。まず両端を見てから、あいだのどこに置くかを一緒に決めたい。</p>
+<table>
+<tr><th>案</th><th>囲う範囲</th><th>守れるもの</th><th>感じ</th></tr>
+<tr><td>ミニマム</td><td>散歩道のまわりだけ（道から50m）で<b>約1ha</b></td><td>散歩道と山菜の畑</td><td>いちばん安い。ただ「囲われてる感」は出る</td></tr>
+<tr><td>中間</td><td>人の森ぜんぶ</td><td>散歩道＋新しく植える木</td><td>ゾーン分けと相性がいい</td></tr>
+<tr><td>マックス</td><td>敷地ぜんぶ（<b>約8ha</b>）</td><td>森の再生そのもの</td><td>いちばん自由で、いちばん高い</td></tr>
+</table>
+<p>じつは、この線引きが次の「何を植えるか」を決める。<b>広く囲うほど、天然の森に戻せる面積が増える。</b>柵の広さは、夢の広さでもある。</p>
+<span class="need"><b>決めるために:</b> 範囲ごとの延長と概算費用（図面・8/6作成）。沢のどこで柵を閉じるかは、現地を歩いて見る</span>
+</div>
+
+<div class="slide talk">
+<span class="sno">B-3 ∕ 一緒に考える</span>
+<h4>木の入れ替え — 「間伐でゆっくり育てる」だけでは進めない、とわかってきた</h4>
+<p>予定が変わった話を、正直にしたい。このトドマツ林は長いあいだ間伐されておらず、木が密集して<b>互いに支え合って</b>立っている。いま間引くと風の通り道ができて、残った木がバタバタ倒れるおそれがある——というのが森林組合の見方だ。つまり「間伐しながら育てる」を、森ぜんぶには使えない。</p>
+<table>
+<tr><th>手のつけ方</th><th>使いどころ</th><th>気をつけること</th></tr>
+<tr><td>そのまま残す</td><td>柵の内側。体験の核心部</td><td>倒れそうな木だけ処理する</td></tr>
+<tr><td>少しずつ皆伐 → 植え替え</td><td>柵の外側。道沿いから区画ごとに</td><td>伐ったあとは「針葉樹だけ」か「広葉樹＋鹿柵」の二択</td></tr>
+<tr><td>弱い間伐</td><td>様子を見ながら、限定的に</td><td>風倒木のリスクと相談</td></tr>
+</table>
+<p>高野ランドスケープの原則はシンプルだ。<b>①道をつける ②少しずつやる ③100年で考える</b>（50年では足りない）。</p>
+<p>たとえば——<b>柵の内側はそのまま残し、外側を少しずつ入れ替えていく</b>。そんな分け方がありうる。今日はこの考え方の枠を、一緒に眺めたい。</p>
+<span class="need"><b>決めるために:</b> 柵の範囲（B-2）と、木の状態調査（樹齢はいま調べている最中）</span>
+</div>
+
+<div class="slide talk">
+<span class="sno">B-4 ∕ 一緒に考える</span>
+<h4>何を植えるか — 本当は天然の森に戻したい。でも、シカがいる</h4>
+<p>このあたりの本来の森は、<b>ミズナラとトドマツの混じる森</b>。戻すなら、この方向だ。</p>
+<p>ところが、すぐ隣の「100平方メートル運動」の森が、身をもって教えてくれている。広葉樹を植えたら、シカがほぼ全部食べた。残ったのは、シカが食べないアカエゾマツだけの単調な林。一見緑に戻ったようで、じつは<b>シカが作った偽物の回復</b>だ。40年経っても、本物の森の複雑さは戻っていない。</p>
+<p>教訓はひとつ。<b>広葉樹は、柵の内側でしか育たない。</b></p>
+<table>
+<tr><th>パターン</th><th>中身</th><th>含意</th></tr>
+<tr class="rec"><td>①</td><td>柵の内側＝天然の森へ／外側＝トドマツ</td><td>現実的な軸。柵の広さ＝夢の広さ</td></tr>
+<tr><td>②</td><td>ぜんぶトドマツ（いままで通り）</td><td>いちばん安い。ただし森の姿は変わらない</td></tr>
+<tr><td>③</td><td>柵をうんと広げて、天然の森を最大化</td><td>理想形。いちばん高い</td></tr>
+</table>
+<span class="need"><b>今日の到達点:</b> 「天然林がいい。ただし柵の中でしか育たない」を共有できれば十分。樹種の詳細は高野LPと詰めていく</span>
+</div>
+
+<div class="slide walk">
+<span class="sno">B-5 ∕ 現地で見る</span>
+<h4>道 — 森の手入れは、道から始まる</h4>
+<p>幅2.5mほどの作業道。派手さはないが、これがないと「少しずつやる」ができない。道は体験のためだけのものではなく、<b>100年の手入れの背骨</b>だ。</p>
+<table>
+<tr><th>選択肢</th><th>お金</th><th>体験</th></tr>
+<tr><td>a 作業と体験で兼用</td><td>安い</td><td>作業と鉢合わせることがある</td></tr>
+<tr><td>b 別々に引く</td><td>高い</td><td>守られる</td></tr>
+<tr class="rec"><td>c 場所ごとに使い分け</td><td>中間</td><td>核心部だけ分ける。現実的</td></tr>
+</table>
+<span class="need"><b>決めるために:</b> 現地を歩いて、作業と体験がぶつかる場所を見る。柵の線と一緒に図面にする</span>
+</div>
+
+<div class="slide">
+<span class="sno">B-6 ∕ 方針を示す → 16:30協議</span>
+<h4>誰とやるか。伐った木を、どうするか</h4>
+<p>森林組合の仕組みは「補助金＋大型機械で、一気に皆伐」が前提。私たちの「少しずつ」は組合の商売に合わず、受けてもらえない可能性が高い。だから、<b>長い目で森を育てるパートナー</b>（北見方面など、組合以外の林業者）を探す。今日16:30の組合協議は、ケンカの場にしない。先に「どういう森にしたいか」を話してから、分担できることを探る。</p>
+<p>そして、伐ったトドマツは捨てない。<b>ホテルの中で、手に触れられる形にする</b>——ラウンジの建材に。家具や土産のクラフトに。薪やペレットに。伐ることが、体験と経営に還ってくる。</p>
+<span class="need"><b>決めるために:</b> 組合協議の結果と、代わりのパートナー候補探し（フェーズ②）</span>
+</div>
+
+<div class="note"><b>アートと建築は、このあとのお楽しみ。</b>土台（柵と木と道）が決まってから、そのエリアの上に載せていく。今日は方向だけ見せる——獣道と同じ目線に立つ建物。空中廊下で屋根から入る。柱は、この森で伐ったトドマツ。絵で夢を見せて、「これは最後に建てる」と言う。順番を守ること自体が、信頼になる。</div>
+</section>
+
+<!-- ============ 03 ============ -->
+<section id="s3">
+<h2><span class="no">03 ∕ 束C</span>お金の話 — 高いか安いかではなく、どんな森に払うか</h2>
+<p class="lead">総額をどんと見せると、「高い／安い」の二択になってしまう。そうならないように、ものさしを先に置く。</p>
+
+<h3>ものさし① — いまの基準線</h3>
+<div class="card">
+<h4>この森には、いま森林組合の助成が入っている</h4>
+<p>「補助金をもらって、皆伐して、植え直す」——これが費用のいちばん軽い基準線だ。ただしこのルートでは、<b>森の姿は選べない</b>。</p>
+<p>そこから「少しずつ」「組合以外と」「柵を張って」「天然の森へ」と寄っていくほど、持ち出しは増えていく。だから問いはこうなる。<b>基準線からどれだけ離れて、どんな森を手に入れるか。</b>数字はまだ概算で、正直かなりかかりそうだ——それも含めて、今日は構造を共有したい。組合との話し合いは別途行う。</p>
+</div>
+
+<h3>ものさし② — お金の性質で3つに分ける</h3>
+<div class="cost">
+<div class="row a"><span class="l">層A</span><span class="n">どのみち、かかるお金</span><span class="d">この森を持っているだけでかかる費用。成熟した人工林の更新、危険木の処理、シカ対策。プランを選ばなくても、これは消えない</span></div>
+<div class="row b"><span class="l">層B</span><span class="n">この計画ならでは、のお金</span><span class="d">柵（範囲しだい）・道・植栽・ランドマーク・ラウンジ建築。森の姿と体験を作るお金</span></div>
+<div class="row c"><span class="l">層C</span><span class="n">ずっと続くお金</span><span class="d">草刈り、ゲート管理、冬支度、ガイド、ドリンクの仕込み、展示の更新。<b>初期費用より、ここを続けられるかが勝負</b></span></div>
+</div>
+
+<h3>ものさし③ — 着手の順番で3つに分ける</h3>
+<table>
+<tr><th>段</th><th>やること</th><th>ひとこと</th></tr>
+<tr><td>第1段</td><td>柵＋道＋最初の植栽＋区画ごとの入れ替え着手</td><td>森の都合で、先送りできない</td></tr>
+<tr><td>第2段</td><td>ランドマーク＋アート＋散歩道の仕上げ</td><td>建築がなくても「歩く体験」は完成する</td></tr>
+<tr><td>第3段</td><td>ラウンジ建築</td><td>伐った木で建てる。物語がここで閉じる</td></tr>
+</table>
+
+<div class="note"><b>回収について、正直に言うと</b>——森は、単体では稼がない。回収は宿泊単価・ブランド価値・連泊で見る。「滞在型観光への転換」と同じ線の上にある。伐った木の家具や薪は、稼ぎというより<b>払ったお金が体験に変わって返ってくる回路</b>だ。</div>
+</section>
+
+<!-- ============ 04 ============ -->
+<section id="s4">
+<h2><span class="no">04 ∕ DECK</span>スライド構成案 — 18枚・1つの問いに1枚</h2>
+<p class="lead">このページの各ブロックが、そのまま1枚に対応する。問いのスライドはぜんぶ同じ型（問い＝見出し／選択肢の表／判断材料）で組む。型がそろっていること自体が、「整理されている」という安心感になる。</p>
+<table class="deck">
+<tr><th>#</th><th>スライド</th><th>種別</th><th>元</th></tr>
+<tr><td>1</td><td>表紙: 森の哲学の道 — 方針決定の会</td><td>—</td><td>—</td></tr>
+<tr><td>2</td><td>今日のゴール: 「こういう森を作る」と言えるようになる</td><td>ゴール</td><td>§00</td></tr>
+<tr><td>3</td><td>9つの問いの地図（色分け）</td><td>地図</td><td>§00</td></tr>
+<tr><td>4</td><td>A-1 「野生」ってなんだろう</td><td>🔴 決める</td><td>§01</td></tr>
+<tr><td>5</td><td>この土地の履歴（開拓→離農→100㎡運動。航空写真1954〜2016）</td><td>物語</td><td>高野LP＋リサーチブック</td></tr>
+<tr><td>6</td><td>4ゾーンの体験（おさらい。アート・建築は後段と明言）</td><td>おさらい</td><td>既存資料＋8/5</td></tr>
+<tr><td>7</td><td>B-1 柵は要るか: 絶対に必要だと思う。それでいいか</td><td>🔴 決める</td><td>§02</td></tr>
+<tr><td>8</td><td>B-2 どこまで囲うか: 1ha〜8ha。柵の広さ＝夢の広さ</td><td>🟢 一緒に</td><td>§02</td></tr>
+<tr><td>9</td><td>B-3 木の入れ替え: 柵の内と外で分けて考える</td><td>🟢 一緒に</td><td>§02</td></tr>
+<tr><td>10</td><td>B-4 何を植えるか: 天然の森×シカ×柵</td><td>🟢 一緒に</td><td>§02</td></tr>
+<tr><td>11</td><td>B-5 道: 手入れの背骨（幅2.5m）と体験の動線</td><td>🔵 現地</td><td>§02</td></tr>
+<tr><td>12</td><td>B-6 誰とやるか・伐った木をどうするか</td><td>方針</td><td>§02</td></tr>
+<tr><td>13</td><td>建築の方向（獣道目線・空中廊下・伐材の柱）— 最後に建てる</td><td>絵</td><td>8/5</td></tr>
+<tr><td>14</td><td>C-1 お金のものさし: 基準線＋3層×3段（概算記入）</td><td>費用</td><td>§03</td></tr>
+<tr><td>15</td><td>参照事例: 遠野 — 物語を核に人が集まった町</td><td>事例</td><td>§01</td></tr>
+<tr><td>16</td><td>今日決めたこと2つ／一緒に考えたこと3つ／持ち帰ること</td><td>決定</td><td>§05</td></tr>
+<tr><td>17</td><td>この後の段取り（16:30組合協議→財団ヒアリング→イラスト→フェーズ②）</td><td>次</td><td>§05</td></tr>
+<tr><td>18</td><td>結び: いまから、"野生"を編み直そう</td><td>—</td><td>趣意書</td></tr>
+</table>
+<div class="note"><b>組み方のメモ:</b> 選択肢の表は3行まで。名前の議論は始まると止まらないので、#16の「持ち帰り」の枠で封じる。役職名（会長・社長・専務）は当日資料に書かない——公開情報と食い違いがあり、確認前のため。</div>
+</section>
+
+<!-- ============ 05 ============ -->
+<section id="s5">
+<h2><span class="no">05 ∕ DECISION</span>今日のおさらい — 決めるのは2つ。考えるのは3つ</h2>
+
+<div class="card">
+<h4>今日決めること</h4>
+<ul>
+<li><b>① A-1</b> 「野生」の定義——人の側の力、と決める</li>
+<li><b>② B-1</b> 柵を付ける——安全の土台として。種類はこちらで選ぶ</li>
+</ul>
+<h4>今日、一緒に考えること</h4>
+<ul>
+<li><b>③ B-2</b> どこまで囲うか（1ha〜8haのあいだのどこか）</li>
+<li><b>④ B-3</b> 木の入れ替え方（柵の内と外で、どう分けるか）</li>
+<li><b>⑤ B-4</b> 何を植えるか（天然の森を、どの広さで目指すか）</li>
+</ul>
+</div>
+
+<table>
+<tr><th>持ち帰ること</th><th>いつ・何があれば決まるか</th></tr>
+<tr><td>A-2 森の名前</td><td>ものさし3つだけ合意。イラスト制作と並行</td></tr>
+<tr><td>B-2 柵の最終ライン（沢の閉じ方）</td><td>現地の地形を見て（8/7歩行）</td></tr>
+<tr><td>B-4 樹種の詳細</td><td>高野LPの植生検討＋柵の中での試験植栽</td></tr>
+<tr><td>B-5 道の兼用/分離</td><td>柵の線と一緒に図面化</td></tr>
+<tr><td>B-6 施業のパートナー</td><td>16:30協議の結果＋候補リスト</td></tr>
+<tr><td>建築家・実施設計</td><td>フェーズ②。方向（自然素材・岩・伐材）まで</td></tr>
+</table>
+
+<h3>8/6の準備（作業会議で確認済みの段取り）</h3>
+<table>
+<tr><th>項目</th><th>状態</th></tr>
+<tr><td>柵ラインの図面化（ミニマム約1ha／中間／全域の3案）と概算延長</td><td>8/6</td></tr>
+<tr><td>柵の概算費用（電気柵・熊柵仕様・範囲別）→ スライド#14へ記入</td><td>8/6</td></tr>
+<tr><td>ゾーニング方針をプラン図へ書き出し・相互確認</td><td>8/6</td></tr>
+<tr><td>ストーリーラインのテキスト化／ゾーニングマップ描き直し</td><td>添野持ち分・未消化</td></tr>
+<tr><td>井戸の位置特定（ZONE02の起点。未確認）</td><td>現地</td></tr>
+</table>
+
+<div class="note"><b>現地で確かめること:</b> ①井戸の位置 ②沢のどこで柵を閉じるか ③天然木エリアと人工林の境界（1954年航空写真と突き合わせ） ④ラウンジ候補地から獣道が見える高さ ⑤トドマツ林の密度（特に東側）。</div>
+</section>
+
+<footer>8/7 提案の論点整理 v3.1 ｜ 2026-08-06 ｜ 出典: Circleback 8/5作業会議・提案資料20260705版・高野LP「知床の森の話」｜ 限定共有（検索エンジン非掲載）｜検討途中の論点整理</footer>
+</div>
+<a class="top" href="#top-anchor">▲ TOP</a>
+</body>
+</html>
+</content>
+</invoke>

@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>知床北こぶしの森 体験 ｜ 野生の哲学の道</title>
+<meta name="robots" content="noindex, nofollow">
+
+<style>
+/* ============================================================
+   Frontier Cream — design system（白ベース・落ち着いたトーン）
+   ============================================================ */
+:root{
+  --bg:#faf7f0;
+  --bg-a:#f5f0e5;
+  --bg-b:#f0eade;
+  --surface:#fffdf8;
+  --line:rgba(58,50,38,.13);
+  --line-soft:rgba(58,50,38,.07);
+  --fg:#2e2b24;
+  --fg-weak:#6d6759;
+  --fg-faint:#a09884;
+  --aurora:linear-gradient(115deg,#8aab8c,#8fb2ae,#a8a3bd);
+  --acc:#5d7f68;
+  --acc-2:#6a86a6;
+  --warn:rgba(185,112,90,.26);
+  --warn-ink:#a8624a;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  font-family:"Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif;
+  background:var(--bg);color:var(--fg);
+  font-size:15px;line-height:1.9;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  font-feature-settings:"palt" 1;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+[id]{scroll-margin-top:96px;}
+
+.en{letter-spacing:.28em;text-transform:uppercase;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px;position:relative;z-index:2;}
+.wrap-n{max-width:820px;}
+section,.band{position:relative;overflow:hidden;}
+.pad{padding:104px 0;}
+.bg-a{background:var(--bg-a);}
+.bg-b{background:var(--bg-b);}
+.bg-0{background:var(--bg);}
+
+h2{font-size:clamp(25px,3.6vw,40px);font-weight:700;line-height:1.35;letter-spacing:-.01em;margin-bottom:20px;}
+h3{font-size:clamp(18px,2.2vw,22px);font-weight:700;line-height:1.6;letter-spacing:-.005em;margin-bottom:12px;}
+h4{font-size:16px;font-weight:700;line-height:1.6;margin-bottom:8px;}
+p{margin-bottom:13px;}
+p:last-child{margin-bottom:0;}
+b{font-weight:700;color:#1f1c15;}
+.sub{color:var(--fg-weak);font-size:13px;line-height:1.95;}
+.weak{color:var(--fg-weak);}
+
+.grad{background:var(--aurora);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.mark{background:linear-gradient(transparent 62%,var(--warn) 62%);padding:0 2px;}
+.rule{height:1px;background:var(--aurora);opacity:.75;border:0;}
+
+.eyebrow{font-size:11px;letter-spacing:.35em;color:var(--fg-weak);text-transform:uppercase;margin-bottom:14px;}
+.eyebrow .bar{display:inline-block;width:22px;height:1px;background:var(--aurora);vertical-align:middle;margin-right:10px;}
+
+/* ---- pale fog ---- */
+.blob{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:0;}
+.blob.m{background:radial-gradient(circle,#a3c3a6,transparent 70%);opacity:.30;}
+.blob.c{background:radial-gradient(circle,#a6c7c3,transparent 70%);opacity:.26;}
+.blob.s{background:radial-gradient(circle,#c0b8cd,transparent 70%);opacity:.22;}
+@keyframes drift{0%{transform:translate3d(0,0,0) scale(1);}50%{transform:translate3d(4%,-5%,0) scale(1.12);}100%{transform:translate3d(0,0,0) scale(1);}}
+@keyframes drift2{0%{transform:translate3d(0,0,0) scale(1.05);}50%{transform:translate3d(-5%,4%,0) scale(.94);}100%{transform:translate3d(0,0,0) scale(1.05);}}
+.blob.d1{animation:drift 34s ease-in-out infinite;}
+.blob.d2{animation:drift2 44s ease-in-out infinite;}
+
+/* ---- reveal ---- */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
+.reveal.in{opacity:1;transform:none;}
+.stag>*{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
+.stag.in>*{opacity:1;transform:none;}
+.stag.in>*:nth-child(1){transition-delay:0ms}
+.stag.in>*:nth-child(2){transition-delay:80ms}
+.stag.in>*:nth-child(3){transition-delay:160ms}
+.stag.in>*:nth-child(4){transition-delay:240ms}
+.stag.in>*:nth-child(5){transition-delay:320ms}
+.stag.in>*:nth-child(6){transition-delay:400ms}
+.stag.in>*:nth-child(7){transition-delay:480ms}
+.stag.in>*:nth-child(8){transition-delay:560ms}
+.stag.in>*:nth-child(9){transition-delay:640ms}
+.stag.in>*:nth-child(10){transition-delay:720ms}
+
+/* ============================================================
+   nav
+   ============================================================ */
+nav{position:fixed;top:0;left:0;right:0;z-index:60;background:rgba(250,247,240,.84);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
+nav .in{max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:16px;}
+nav .brand{font-size:11.5px;letter-spacing:.22em;font-weight:700;flex:0 0 auto;color:var(--fg);}
+nav .links{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin-left:auto;-webkit-overflow-scrolling:touch;}
+nav .links::-webkit-scrollbar{display:none;}
+nav a{position:relative;flex:0 0 auto;text-decoration:none;color:var(--fg-weak);font-size:11.5px;letter-spacing:.1em;padding:6px 10px;border-radius:999px;border:1px solid transparent;transition:color .25s,border-color .25s,background .25s;white-space:nowrap;}
+nav a .no{font-size:9.5px;letter-spacing:.2em;margin-right:5px;color:var(--fg-faint);transition:color .25s;}
+nav a::after{content:"";position:absolute;left:10px;right:10px;bottom:2px;height:1px;background:var(--aurora);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease);}
+nav a:hover{color:var(--fg);}
+nav a.act{color:var(--fg);border-color:var(--line);background:rgba(93,127,104,.09);}
+nav a.act .no{color:var(--acc);}
+nav a.act::after{transform:scaleX(1);}
+
+/* ============================================================
+   chapter header
+   ============================================================ */
+.chap{position:relative;padding:96px 0 30px;}
+.num{display:block;font-size:clamp(80px,14vw,180px);font-weight:700;line-height:.8;letter-spacing:-.04em;-webkit-text-stroke:1px rgba(58,50,38,.18);color:transparent;margin-bottom:14px;}
+.chap .ttl{font-size:clamp(24px,4.4vw,46px);font-weight:700;line-height:1.25;letter-spacing:-.015em;}
+.chap .line{margin-top:26px;width:120px;}
+
+/* ============================================================
+   hero
+   ============================================================ */
+.hero{position:relative;overflow:hidden;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:132px 0 88px;}
+.mask{overflow:hidden;display:block;}
+.mask>span{display:block;transform:translateY(112%);animation:rise 1s var(--ease) forwards;}
+@keyframes rise{to{transform:translateY(0);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
+.hero .kicker{font-size:11px;letter-spacing:.35em;color:var(--fg-weak);margin-bottom:34px;opacity:0;animation:fadeUp .9s var(--ease) .1s forwards;}
+.hero h1{font-size:clamp(44px,9vw,110px);font-weight:700;line-height:1.06;letter-spacing:-.03em;margin-bottom:34px;}
+.hero h1 .mask:nth-child(1)>span{animation-delay:.15s;}
+.hero h1 .mask:nth-child(2)>span{animation-delay:.27s;}
+.hero .route{font-size:clamp(16px,2.4vw,22px);font-weight:700;letter-spacing:.02em;margin-bottom:30px;color:var(--acc);}
+.hero .desc{font-size:14px;color:var(--fg-weak);line-height:2.1;max-width:640px;opacity:0;animation:fadeUp .9s var(--ease) .62s forwards;}
+.hero .foot{margin-top:64px;font-size:10.5px;letter-spacing:.3em;color:var(--fg-faint);opacity:0;animation:fadeUp .9s var(--ease) .78s forwards;}
+.hero .foot .bar{display:block;width:110px;height:1px;background:var(--aurora);opacity:.8;margin-bottom:14px;}
+.hero .route .mask>span{animation-delay:.42s;}
+.hero .scroll{position:absolute;left:22px;bottom:26px;font-size:10px;letter-spacing:.3em;color:var(--fg-faint);opacity:0;animation:fadeUp .9s var(--ease) 1s forwards;z-index:2;}
+
+/* ============================================================
+   drama panels (Q / definition / closing)
+   ============================================================ */
+.drama{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 22px;}
+.qpage .q{font-size:clamp(27px,5.6vw,62px);font-weight:700;line-height:1.4;letter-spacing:-.02em;}
+.qpage .cap{font-size:11px;letter-spacing:.4em;color:var(--fg-weak);margin-top:30px;}
+
+.definition{background:var(--bg-a);}
+.definition .cap{font-size:11px;letter-spacing:.4em;color:var(--fg-weak);margin-bottom:44px;}
+.definition .deny{font-size:clamp(17px,2.6vw,26px);line-height:1.9;color:var(--fg-weak);margin-bottom:40px;letter-spacing:-.005em;}
+.definition .deny b{color:var(--fg);}
+.definition .core{font-size:clamp(25px,4.6vw,52px);font-weight:700;line-height:1.35;letter-spacing:-.025em;margin-bottom:44px;}
+.definition .core .u{background:var(--aurora);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.definition .so{font-size:15px;color:var(--fg-weak);line-height:2.2;max-width:720px;}
+.definition .so b{color:var(--fg);}
+.wd{color:var(--fg-faint);transition:color .5s var(--ease);}
+.definition.in .wd{animation:lit .8s var(--ease) forwards;}
+.definition.in .wd:nth-of-type(1){animation-delay:.35s}
+.definition.in .wd:nth-of-type(2){animation-delay:.75s}
+.definition.in .wd:nth-of-type(3){animation-delay:1.15s}
+.definition.in .wd:nth-of-type(4){animation-delay:1.55s}
+@keyframes lit{
+  0%{color:var(--fg-faint);}
+  45%{color:var(--acc);}
+  100%{color:#1f1c15;}
+}
+
+.closing{background:var(--bg-a);}
+.closing .num{font-size:clamp(64px,11vw,140px);margin-bottom:8px;}
+.closing .en2{font-size:11px;letter-spacing:.4em;color:var(--fg-weak);margin-bottom:40px;}
+.closing .big{font-size:clamp(25px,4.6vw,52px);font-weight:700;line-height:1.4;letter-spacing:-.025em;margin-bottom:26px;}
+.closing .small{font-size:14px;color:var(--fg-weak);letter-spacing:.04em;margin-bottom:56px;}
+.closing .sig{font-size:12.5px;letter-spacing:.34em;color:var(--fg-faint);}
+
+/* ============================================================
+   01 concept
+   ============================================================ */
+.cycle{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:0 14px;align-items:start;margin:54px 0 6px;}
+.cyc{padding:0 6px;}
+.cyc .n{font-size:clamp(34px,5vw,54px);font-weight:700;line-height:1;letter-spacing:-.03em;background:var(--aurora);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:14px;}
+.cyc .t{font-size:17px;font-weight:700;line-height:1.6;margin-bottom:12px;}
+.cyc .d{font-size:12.5px;color:var(--fg-weak);line-height:1.95;}
+.cyc .hr{height:1px;background:linear-gradient(90deg,rgba(58,50,38,.28),rgba(58,50,38,.06));margin-bottom:18px;}
+.cyc.first .hr{background:var(--aurora);opacity:.9;}
+.cycle .arr{align-self:start;margin-top:14px;color:var(--fg-faint);font-size:18px;}
+.cycle-cap{font-size:clamp(15px,2vw,19px);font-weight:700;letter-spacing:.06em;margin-top:28px;padding-top:22px;border-top:1px solid var(--line);}
+
+.eq{margin:64px 0 14px;}
+.eq .row{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;font-size:clamp(17px,2.6vw,26px);padding:16px 0;border-bottom:1px solid var(--line);}
+.eq .row b{font-weight:700;color:#1f1c15;}
+.eq .row .eqm{background:var(--aurora);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700;}
+.eq .row span:last-child{color:var(--fg-weak);}
+
+.twocol{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:stretch;margin:44px 0 0;}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:26px 24px;transition:transform .2s var(--ease),border-color .2s var(--ease),box-shadow .2s var(--ease);}
+.box h4{font-size:14px;letter-spacing:.06em;color:var(--fg-weak);text-transform:none;margin-bottom:14px;}
+.box li{list-style:none;font-size:13.5px;line-height:1.95;color:var(--fg);padding-left:16px;position:relative;margin-bottom:12px;}
+.box li:last-child{margin-bottom:0;}
+.box li::before{content:"";position:absolute;left:0;top:12px;width:7px;height:1px;background:var(--aurora);}
+.twocol .mid{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;font-size:11.5px;color:var(--fg-weak);text-align:center;line-height:1.7;}
+.twocol .mid .arrow{font-size:26px;background:var(--aurora);-webkit-background-clip:text;background-clip:text;color:transparent;}
+
+/* ============================================================
+   creed
+   ============================================================ */
+.creed{background:#efe7d6;padding:120px 0;}
+.creed h2{font-size:clamp(21px,3vw,30px);margin-bottom:10px;}
+.creed .catch{font-size:clamp(20px,3.2vw,32px);font-weight:700;letter-spacing:-.015em;margin-bottom:44px;color:var(--acc);}
+.creed .body{max-width:700px;font-size:15px;line-height:2.4;color:#4a4438;}
+.creed .body p::first-line{font-size:19px;color:#1f1c15;}
+
+/* ============================================================
+   cards
+   ============================================================ */
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px;margin:36px 0;}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:36px 0;}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:24px 22px;transition:transform .2s var(--ease),border-color .2s var(--ease),box-shadow .2s var(--ease);}
+.card:hover,.box:hover,.zone:hover,.bnd:hover{transform:translateY(-4px);border-color:rgba(93,127,104,.45);box-shadow:0 10px 30px rgba(58,50,38,.10);}
+.card .l{font-size:10.5px;letter-spacing:.26em;color:var(--fg-weak);margin-bottom:14px;text-transform:uppercase;}
+.card p{font-size:13px;line-height:1.95;color:#4f4a3e;margin-bottom:10px;}
+.card .pl{font-size:10px;letter-spacing:.24em;color:var(--fg-faint);margin-bottom:10px;text-transform:uppercase;}
+.card .take{font-size:12.5px;line-height:1.9;border-top:1px solid var(--line);padding-top:10px;margin-top:12px;color:var(--acc);}
+.card .take a{color:var(--acc-2);text-decoration:none;border-bottom:1px solid rgba(106,134,166,.4);transition:color .2s,border-color .2s;}
+.card .take a:hover{color:var(--acc);border-color:var(--acc);}
+
+.imply{background:var(--surface);border:1px solid var(--line);border-left:2px solid transparent;border-image:none;border-radius:3px;padding:26px 28px;margin:34px 0;font-size:14.5px;line-height:2;position:relative;}
+.imply::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--aurora);}
+.imply b{font-size:16px;}
+
+/* zones */
+.zones{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:40px 0 10px;}
+.zone{background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:26px 22px 30px;min-height:206px;position:relative;overflow:hidden;transition:transform .2s var(--ease),border-color .2s var(--ease),box-shadow .2s var(--ease);}
+.zone::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:var(--aurora);opacity:.8;}
+.zone .zn{font-size:10px;letter-spacing:.3em;color:var(--fg-faint);margin-bottom:16px;text-transform:uppercase;}
+.zone .zt{font-size:clamp(22px,3vw,30px);font-weight:700;letter-spacing:-.01em;margin-bottom:16px;}
+.zone .zr{width:22px;height:1px;background:var(--aurora);margin-bottom:16px;}
+.zone p{font-size:12.5px;line-height:2;color:var(--fg-weak);}
+
+.refnote{border:1px dashed rgba(93,127,104,.45);border-radius:3px;color:var(--acc);padding:15px 22px;font-size:13px;letter-spacing:.04em;margin:34px 0 0;background:rgba(93,127,104,.05);}
+
+/* philosophy */
+.philo{display:grid;grid-template-columns:1.35fr .85fr;gap:0 52px;align-items:start;}
+.philo h2{font-size:clamp(24px,4vw,44px);line-height:1.4;}
+.philo .r{border-left:1px solid var(--line);padding-left:32px;}
+.philo .quote{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:clamp(18px,2.4vw,23px);line-height:1.75;letter-spacing:.01em;margin-bottom:18px;color:var(--acc);}
+
+/* boundary (04) */
+.bounds{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:38px 0;}
+.bnd{background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:22px 20px;transition:transform .2s var(--ease),border-color .2s var(--ease),box-shadow .2s var(--ease);}
+.bnd:last-child{background:linear-gradient(160deg,rgba(93,127,104,.10),rgba(106,134,166,.06));}
+.bnd .era{font-size:10px;letter-spacing:.24em;color:var(--fg-faint);margin-bottom:12px;text-transform:uppercase;}
+.bnd p{font-size:12.5px;line-height:1.95;color:var(--fg-weak);margin-bottom:0;}
+.policy{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:30px 32px;margin:36px 0;font-size:clamp(15px,2vw,18px);line-height:2.1;overflow:hidden;}
+.policy::before{content:"";position:absolute;inset:0;background:var(--aurora);opacity:.10;pointer-events:none;}
+.policy b{color:#1f1c15;}
+
+/* issue / consideration cards */
+.issue{background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:30px 30px 26px;margin:18px 0;transition:transform .2s var(--ease),border-color .2s var(--ease),box-shadow .2s var(--ease);}
+.issue:hover{transform:translateY(-4px);border-color:rgba(93,127,104,.4);box-shadow:0 10px 30px rgba(58,50,38,.10);}
+.issue .no{display:inline-block;font-size:10.5px;letter-spacing:.2em;color:var(--fg-weak);border:1px solid var(--line);border-radius:999px;padding:5px 14px;margin-bottom:16px;background:rgba(58,50,38,.035);}
+.issue .no.ask{color:var(--warn-ink);border-color:rgba(168,98,74,.4);background:rgba(168,98,74,.07);}
+.issue .no.walk{color:var(--acc-2);border-color:rgba(106,134,166,.4);background:rgba(106,134,166,.07);}
+.issue h3{font-size:clamp(17px,2.2vw,21px);margin-bottom:12px;}
+.rows{display:grid;grid-template-columns:78px 1fr;gap:8px 20px;font-size:13.5px;margin-top:16px;}
+.rows dt{color:var(--fg-faint);font-size:11px;letter-spacing:.2em;padding-top:6px;}
+.rows dd{line-height:1.95;color:#4a4438;}
+.rows dd b{color:#1f1c15;font-weight:700;}
+
+/* cost layers */
+.cost3{margin:26px 0;}
+.cost3 .r{display:grid;grid-template-columns:230px 1fr;gap:8px 22px;background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:18px 22px;margin-bottom:10px;position:relative;overflow:hidden;transition:transform .2s var(--ease),border-color .2s var(--ease);}
+.cost3 .r::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;}
+.cost3 .r.a::before{background:#a09884;}
+.cost3 .r.b::before{background:#b9705a;}
+.cost3 .r.c::before{background:#7d9e86;}
+.cost3 .r:hover{transform:translateY(-3px);border-color:rgba(93,127,104,.35);}
+.cost3 .n{font-weight:700;font-size:15px;}
+.cost3 .n small{display:block;font-weight:400;font-size:10px;letter-spacing:.24em;color:var(--fg-faint);margin-bottom:4px;text-transform:uppercase;}
+.cost3 .d{font-size:13px;color:var(--fg-weak);line-height:1.95;}
+.cost3 .d b{color:#1f1c15;}
+
+/* ============================================================
+   tables
+   ============================================================ */
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:20px 0;border:1px solid var(--line);border-radius:3px;background:var(--surface);}
+table{width:100%;min-width:560px;border-collapse:collapse;font-size:13px;}
+th{text-align:left;padding:12px 14px;border-bottom:1px solid rgba(58,50,38,.24);font-size:11px;letter-spacing:.16em;color:var(--fg-weak);font-weight:700;white-space:nowrap;text-transform:uppercase;}
+td{padding:12px 14px;border-bottom:1px solid var(--line-soft);vertical-align:top;line-height:1.85;color:#4a4438;}
+tr:last-child td{border-bottom:0;}
+tbody tr:hover td,table tr:hover td{background:rgba(93,127,104,.045);}
+td b{color:#1f1c15;}
+td a{color:var(--acc-2);text-decoration:none;border-bottom:1px solid rgba(106,134,166,.4);}
+td a:hover{color:var(--acc);border-color:var(--acc);}
+
+/* ============================================================
+   appendix / footer
+   ============================================================ */
+.appendix{background:var(--bg-b);}
+.appendix h3{margin-top:52px;font-size:clamp(17px,2.2vw,21px);}
+.appendix h3:first-of-type{margin-top:0;}
+footer{background:#efe7d6;color:var(--fg-weak);font-size:10.5px;letter-spacing:.12em;text-align:center;padding:40px 22px 46px;line-height:2;border-top:1px solid var(--line);}
+
+/* ============================================================
+   diagrams (inline SVG)
+   ============================================================ */
+.dg{display:block;width:100%;height:auto;margin:32px auto;}
+.dg-s{max-width:430px;}
+.dg-m{max-width:580px;}
+.dg-w{max-width:640px;}
+.dg-l{max-width:100%;}
+.issue .dg,.card .dg{margin:22px auto;}
+.dg text{font-family:inherit;fill:var(--fg-weak);}
+.dg .t-hi{fill:#1f1c15;font-weight:700;}
+.dg .t-dim{fill:var(--fg-faint);}
+.dg .t-acc{fill:var(--acc);}
+.dg .t-warn{fill:var(--warn-ink);}
+.dg .ln{stroke:rgba(58,50,38,.34);fill:none;stroke-width:1.2;}
+.dg .ln-soft{stroke:rgba(58,50,38,.17);fill:none;stroke-width:1;}
+.dg .ln-dash{stroke:rgba(58,50,38,.3);fill:none;stroke-width:1.2;stroke-dasharray:5 5;}
+.dg .ln-acc{stroke:var(--acc);fill:none;stroke-width:1.4;opacity:.75;}
+.dg .pn{fill:#fffdf8;stroke:rgba(58,50,38,.2);stroke-width:1.2;}
+.dg .pn-acc{fill:rgba(93,127,104,.09);stroke:rgba(93,127,104,.5);stroke-width:1.4;}
+.dg .nd{fill:#fffdf8;stroke:rgba(58,50,38,.55);stroke-width:1.6;}
+.dg .nd-acc{fill:#fffdf8;stroke:var(--acc);stroke-width:2;}
+.dg .ar{fill:rgba(58,50,38,.5);}
+.dg .tree{fill:rgba(58,50,38,.2);}
+.dg .tree-n{fill:rgba(93,127,104,.3);}
+.jr-tall{display:none;}
+@media(max-width:860px){.jr-wide{display:none;}.jr-tall{display:block;}}
+
+/* ============================================================
+   responsive
+   ============================================================ */
+@media(max-width:860px){
+  .philo{grid-template-columns:1fr;gap:28px;}
+  .philo .r{border-left:0;border-top:1px solid var(--line);padding-left:0;padding-top:24px;}
+}
+@media(max-width:760px){
+  body{font-size:14.5px;}
+  .pad{padding:74px 0;}
+  .chap{padding:70px 0 24px;}
+  .cycle{grid-template-columns:1fr;gap:0;}
+  .cycle .arr{justify-self:start;margin:12px 0 12px 2px;transform:rotate(90deg);}
+  .twocol{grid-template-columns:1fr;}
+  .twocol .mid{flex-direction:row;gap:14px;padding:4px 0;}
+  .twocol .mid .arrow{transform:rotate(90deg);}
+  .cost3 .r{grid-template-columns:1fr;}
+  .rows{grid-template-columns:1fr;gap:2px 0;}
+  .rows dt{padding-top:12px;}
+  .issue{padding:24px 20px 22px;}
+  .creed{padding:80px 0;}
+  .creed .body{line-height:2.2;}
+  nav .in{flex-direction:column;align-items:stretch;gap:8px;padding:9px 14px;}
+  nav .brand{margin:0 8px;}
+  nav .links{margin-left:0;padding-bottom:2px;}
+  [id]{scroll-margin-top:118px;}
+  .hero{padding-top:150px;}
+  .hero .scroll{display:none;}
+}
+
+/* ============================================================
+   reduced motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{animation:none!important;transition:none!important;}
+  .reveal,.stag>*{opacity:1!important;transform:none!important;}
+  .mask>span{transform:none!important;}
+  .hero .kicker,.hero .desc,.hero .foot,.hero .scroll{opacity:1!important;}
+  .wd{color:#1f1c15!important;}
+}
+</style>
+<noscript><style>
+.reveal,.stag>*{opacity:1!important;transform:none!important;}
+.mask>span{transform:none!important;}
+.hero .kicker,.hero .desc,.hero .foot{opacity:1!important;}
+.wd{color:#1f1c15!important;}
+</style></noscript>
+</head>
+<body>
+
+<nav>
+<div class="in">
+<span class="brand">知床北こぶしの森</span>
+<div class="links">
+<a href="#concept"><span class="no">01</span>コンセプト</a>
+<a href="#reference"><span class="no">02</span>参照事例</a>
+<a href="#experience"><span class="no">03</span>森の体験</a>
+<a href="#illustration"><span class="no">04</span>絵の方向</a>
+<a href="#implementation"><span class="no">05</span>森の実装</a>
+<a href="#closing"><span class="no">06</span>結び</a>
+<a href="#appendix"><span class="no">07</span>備考</a>
+</div>
+</div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+<div class="blob m d1" style="width:60vw;height:60vw;max-width:760px;max-height:760px;left:-18vw;top:-6vw;"></div>
+<div class="blob s d2" style="width:52vw;height:52vw;max-width:640px;max-height:640px;right:-12vw;top:18vh;"></div>
+<div class="blob c d1" style="width:38vw;height:38vw;max-width:460px;max-height:460px;left:32vw;bottom:-14vw;animation-delay:-12s;"></div>
+<div class="wrap">
+<div class="kicker en">Shiretoko Kitakobushi Resort ∕ Forest Experience</div>
+<h1><span class="mask"><span>知床北こぶしの森</span></span><span class="mask"><span>体験</span></span></h1>
+<div class="route"><span class="mask"><span class="grad">野生の哲学の道 to 森のラウンジ</span></span></div>
+<p class="desc">きたこぶしリゾートを作ってきた入植者と森の歴史から、<br>今に至るまでの人と森の交わり方について学び、<br>森のラウンジへ誘導するための体験型の散歩道。</p>
+<div class="foot"><span class="bar"></span><span class="en">Concept Proposal ∕</span>　森 の 哲 学 の 道</div>
+</div>
+</header>
+
+<!-- ============ 01 CONCEPT ============ -->
+<div class="band bg-a" id="concept" data-chap>
+<div class="blob c d2" style="width:46vw;height:46vw;max-width:560px;max-height:560px;right:-14vw;top:4vh;"></div>
+<div class="wrap">
+<div class="chap reveal">
+<span class="num">01</span>
+<div class="eyebrow en"><span class="bar"></span>Concept</div>
+<div class="ttl">コ ン セ プ ト</div>
+<hr class="rule line">
+</div>
+</div>
+
+<div class="drama qpage">
+<div class="wrap">
+<div class="q reveal">Q: この森は、<br>何のためにあるのか。</div>
+<div class="cap en reveal">本 事 業 の 目 的</div>
+</div>
+</div>
+
+<div class="wrap" style="padding-bottom:104px;">
+<div class="reveal">
+<h2>A: 知床から世界へ、<span class="grad">新しい観光資源</span>を作ること</h2>
+<p class="weak">体験が資本を呼び、文化として土地に蓄積していく新しい器の創造を目指す。</p>
+</div>
+
+<div class="cycle stag reveal">
+<div class="cyc first"><div class="n">01</div><div class="hr"></div><div class="t">知床らしい<br>体験の器を作る</div><div class="d">快適さではない<br>“意味のあるペイン”。<br>知床にしかない観光体験。</div></div>
+<div class="arr">→</div>
+<div class="cyc"><div class="n">02</div><div class="hr"></div><div class="t">資本が集まる</div><div class="d">その体験を目がけて、<br>人・モノ・投資が<br>外部から集まる。</div></div>
+<div class="arr">→</div>
+<div class="cyc"><div class="n">03</div><div class="hr"></div><div class="t">文化になる</div><div class="d">集まった営みが根づき、<br>文化資源として次の体験を生む。</div></div>
+</div>
+<div class="cycle-cap reveal">この循環が、新しい観光資源をうむ。</div>
+
+<div class="eq stag reveal">
+<div class="row"><b>知床らしさ</b><span class="eqm">＝</span><span>世界有数の自然資源</span></div>
+<div class="row"><b>北こぶしらしさ</b><span class="eqm">＝</span><span>生活者と自然の結節点</span></div>
+</div>
+<p class="sub reveal">ホテルは、人間と野生をつなぐ結節点に立っている。公共だけではできないチャレンジ性がある。</p>
+
+<div class="twocol reveal">
+<div class="box">
+<h4>かつての距離感</h4>
+<ul>
+<li>入植の歴史 — 森と折り合いをつけて生きた。厳しさと距離感があった</li>
+<li>自然崇拝 — 自然観が暮らしの中に当たり前に存在した</li>
+</ul>
+</div>
+<div class="mid"><span class="arrow">→</span><span>失われつつある<br>自然との距離感</span></div>
+<div class="box">
+<h4>現在の距離感</h4>
+<ul>
+<li>鑑賞物となった自然 — 消費されるものになりつつある</li>
+<li>害獣化する熊 — 報道と誤解が、この土地の生き物を歪め始めている</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 野生の定義 — dramatic -->
+<div class="band definition drama reveal">
+<div class="blob m d1" style="width:56vw;height:56vw;max-width:680px;max-height:680px;left:-10vw;top:8vh;"></div>
+<div class="blob s d2" style="width:44vw;height:44vw;max-width:540px;max-height:540px;right:-12vw;bottom:0;"></div>
+<div class="wrap">
+<div class="cap en">Definition of "Wildness"</div>
+<div class="deny">今回の“野生”とは何か。<br>それは<b>原始</b>でも、<b>野蛮</b>でも、<b>危険</b>のことでもない。</div>
+<div class="core">自然との距離感を、<br><span class="u">自分の体で感じ直すこと。</span></div>
+<div class="so">獣の気配に<span class="wd">気づく</span>。<span class="wd">こわがる</span>。<span class="wd">たしかめる</span>。そして、自分で<span class="wd">決める</span>。<br>この森は、感覚を取り戻し、自分を深く知るための——<br><b>自己理解と内面の回復のリトリート</b>である。</div>
+</div>
+</div>
+
+<!-- 趣意書 -->
+<section class="creed">
+<div class="wrap">
+<div class="reveal">
+<h2>こぶしの森設立趣意書</h2>
+<div class="catch">いまから、“野生”を編み直そう。</div>
+</div>
+<div class="body reveal">
+<p>人と森が切り離されてしまった。土の匂いで天気を読み、葉の揺れで獣の気配を察し、食べられるものと食べられないものを身体で判断する。——かつて確かに存在していた感覚や霊性を、現代の人間はもはや持たない。森は管理されるものになり、自然は鑑賞されるものになった。私たちは、その「野生」を編み直すことに挑戦したい。それは快適さや安心を提供する体験ではなく、獣の気配に怯え、名前もわからない植物を口にし、暗い森に一人で踏み込む緊張を伴うようなものだ。ときに不快でおどろおどろしく、しかし確かに身体が啓かれていくだろう。そうした時間の中にこそ、現代の生活が静かに奪い続けてきたものが眠っていると信じている。世界には、整えられた美しさや保証された快適さでは届かない体験がある。今私たちが求めているのは、消費される体験ではなく、自分の中に刻まれるものだ。私たちが知床で作るのは、森を媒介にした一つの器だ。嘘偽りのない自然を土台に、食・文化・芸術といったあらゆる営みが乗ることのできる、新しい森。北方文化圏の入り口に位置するこの地から、その器を通じて、新しい自然体験を世界へ発信することを目指す。いまから、“野生”を編み直そう。</p>
+</div>
+</div>
+</section>
+
+<!-- ============ 02 REFERENCE ============ -->
+<section class="bg-b" id="reference" data-chap>
+<div class="blob c d1" style="width:48vw;height:48vw;max-width:580px;max-height:580px;left:-14vw;top:0;"></div>
+<div class="wrap">
+<div class="chap reveal">
+<span class="num">02</span>
+<div class="eyebrow en"><span class="bar"></span>02 ∕ Reference</div>
+<div class="ttl">参 照 事 例</div>
+<hr class="rule line">
+</div>
+
+<div style="padding:44px 0 0;">
+<div class="reveal">
+<div class="eyebrow en"><span class="bar"></span>Reference 01 ∕ Tono</div>
+<h2>遠野 — 物語を核に、<br>人と資本が集まり続ける町。</h2>
+<p class="weak">柳田國男『遠野物語』の町（人口約2.4万人）。この10年、外部からクリエイターと資本が集まり続けている。<b>何が起きていて、誰がやっていて、どういう仕組みなのか。</b></p>
+</div>
+
+<!-- 図: 遠野の三層構造 -->
+<svg class="dg dg-m reveal" viewBox="0 0 460 312" role="img" aria-label="遠野の三層構造: 需要保証層キリン、調整層遠野市、実装層民間法人群">
+<defs><linearGradient id="g1" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#8aab8c"/><stop offset=".5" stop-color="#5d7f68"/><stop offset="1" stop-color="#6a86a6"/></linearGradient></defs>
+<rect class="pn" x="10" y="10" width="440" height="76" rx="3"/>
+<rect x="10" y="10" width="3" height="76" fill="url(#g1)"/>
+<text x="30" y="40" font-size="15" class="t-dim">需要保証層</text>
+<text x="30" y="70" font-size="24" class="t-hi">キリン</text>
+<text x="185" y="70" font-size="15">ホップ全量買取・1.5億円出資</text>
+<line class="ln-soft" x1="230" y1="88" x2="230" y2="108"/><polygon class="ar" points="230,116 225,105 235,105"/>
+<rect class="pn" x="10" y="118" width="440" height="76" rx="3"/>
+<text x="30" y="148" font-size="15" class="t-dim">調整層</text>
+<text x="30" y="178" font-size="24" class="t-hi">遠野市</text>
+<text x="185" y="178" font-size="15">協力隊・ふるさと納税</text>
+<line class="ln-soft" x1="230" y1="196" x2="230" y2="216"/><polygon class="ar" points="230,224 225,213 235,213"/>
+<rect class="pn" x="10" y="226" width="440" height="76" rx="3"/>
+<text x="30" y="256" font-size="15" class="t-dim">実装層</text>
+<text x="30" y="286" font-size="24" class="t-hi">民間法人群</text>
+<text x="185" y="286" font-size="15">醸造・デザイン・プロデュース</text>
+</svg>
+
+<div class="grid3 stag reveal">
+<div class="card"><div class="l">何が起きているか</div>
+<p><b>二枚看板</b>——ホップ×ビール（産業）と、遠野物語×郷土芸能（文化）。移住者が醸造所やプロデュース会社を起こし、道の駅は年80万人・全国5位。</p>
+<p>アーティストは観客ではなく<b>「踊り手」として参加する</b>。コムアイはしし踊りを稽古して奉納し、2025年にはK-BALLET×横尾忠則の『踊る。遠野物語』が全国巡演へ。</p>
+</div>
+<div class="card"><div class="l">誰がやっているか</div>
+<p><b>富川岳</b>（元広告会社→2016年29歳で移住）。文化事業「to know」を営み、自らしし踊りの踊り手となり、市の文化機関の運営委員も務める——外部人材が土地の文化の<b>内側</b>に入った例。</p>
+<p>入口は<b>Next Commons Lab</b>（2016年・全国第1号拠点）。10テーマの公募に約500件の応募、15名が移住。醸造・デザイン・プロデュースの担い手になった。</p>
+</div>
+<div class="card"><div class="l">どういう仕組みか</div>
+<p>三層構造。<b>需要を保証する企業</b>（キリン: 1963年からホップ全量買取・1.5億円出資）が上にいて、<b>市</b>が協力隊とふるさと納税で人と金の入口を作り、<b>民間法人群</b>が実装する。</p>
+<p>「作れば売れる」状態が先にあるから、高リスクの挑戦に人が入れる。</p>
+</div>
+</div>
+
+<div class="imply reveal"><b>知床への翻訳: 北こぶしリゾートが「キリン」の位置に立つ。</b><br>ホテルという確実な需要（宿泊者・レストラン・バー）が、フォレジング・アート・ガイドの供給側リスクを吸収する。遠野は<b>物語</b>でそれをやった。知床は<b>身体</b>でやる。</div>
+
+<!-- 図: 遠野 ⇔ 知床 の対応写像 -->
+<svg class="dg dg-m reveal" viewBox="0 0 440 316" role="img" aria-label="遠野と知床の対応図: キリンの位置に北こぶしリゾートが立つ">
+<defs><linearGradient id="g2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#8aab8c"/><stop offset=".5" stop-color="#5d7f68"/><stop offset="1" stop-color="#6a86a6"/></linearGradient></defs>
+<text x="24" y="26" font-size="17" class="t-hi">遠野</text>
+<text x="250" y="26" font-size="17" class="t-hi">知床</text>
+<line class="ln-soft" x1="12" y1="36" x2="202" y2="36"/><line class="ln-soft" x1="238" y1="36" x2="428" y2="36"/>
+
+<rect class="pn" x="12" y="48" width="190" height="72" rx="3"/>
+<rect class="pn-acc" x="238" y="48" width="190" height="72" rx="3"/>
+<text x="24" y="74" font-size="14" class="t-dim">需要を保証する</text>
+<text x="24" y="104" font-size="18" class="t-hi">キリン</text>
+<text x="250" y="74" font-size="14" class="t-dim">需要を保証する</text>
+<text x="250" y="104" font-size="18" fill="url(#g2)" font-weight="700">北こぶしリゾート</text>
+<line class="ln-soft" x1="206" y1="84" x2="226" y2="84"/><polygon class="ar" points="234,84 223,79 223,89"/>
+
+<rect class="pn" x="12" y="132" width="190" height="86" rx="3"/>
+<rect class="pn" x="238" y="132" width="190" height="86" rx="3"/>
+<text x="24" y="158" font-size="14" class="t-dim">供給側</text>
+<text x="24" y="186" font-size="15">醸造・芸能・</text>
+<text x="24" y="208" font-size="15">ガイド</text>
+<text x="250" y="158" font-size="14" class="t-dim">供給側</text>
+<text x="250" y="186" font-size="15">フォレジング・</text>
+<text x="250" y="208" font-size="15">アート・ガイド</text>
+<line class="ln-soft" x1="206" y1="175" x2="226" y2="175"/><polygon class="ar" points="234,175 223,170 223,180"/>
+
+<rect class="pn" x="12" y="230" width="190" height="72" rx="3"/>
+<rect class="pn" x="238" y="230" width="190" height="72" rx="3"/>
+<text x="24" y="256" font-size="14" class="t-dim">媒介するもの</text>
+<text x="24" y="290" font-size="24" fill="url(#g2)" font-weight="700">物語</text>
+<text x="250" y="256" font-size="14" class="t-dim">媒介するもの</text>
+<text x="250" y="290" font-size="24" fill="url(#g2)" font-weight="700">身体</text>
+<line class="ln-soft" x1="206" y1="266" x2="226" y2="266"/><polygon class="ar" points="234,266 223,261 223,271"/>
+</svg>
+
+<div class="reveal" style="margin-top:80px;">
+<div class="eyebrow en"><span class="bar"></span>Reference 02 ∕ World Cases</div>
+<h2>世界の先行例 — <br>クマと森と観光は、両立している。</h2>
+</div>
+
+<div class="grid2 stag reveal">
+<div class="card"><div class="pl en">Alaska, USA</div><h4>Silver Salmon Creek Lodge</h4><p>武器を持たずにヒグマのそばを歩く運用で40年間人身事故ゼロ。「不便」そのものを思想として売る。</p><div class="take">→ 柵で守り切るのではなく、作法で共存する運用の実在証明。</div></div>
+<div class="card"><div class="pl en">Newfoundland, Canada</div><h4>Fogo Island Inn</h4><p>北大西洋の辺境の島に29室、1泊US$2,000超。利益は100%島に還流する社会企業モデル。</p><div class="take">→ 辺境であること自体がラグジュアリーになる、の最良例。</div></div>
+<div class="card"><div class="pl en">British Columbia, Canada</div><h4>Knight Inlet Lodge</h4><p>グリズリー観察の名門ロッジを先住民5部族が共同所有（2017〜）。</p><div class="take">→ 土地の文化の担い手が経営の中心にいる形。</div></div>
+<div class="card"><div class="pl en">軽井沢, 日本</div><h4>ピッキオ</h4><p>ベアドッグと研究者常駐でクマを追い払い、リゾート地で人身事故ほぼゼロ。国内での実証。</p><div class="take">→ 「クマ対応の専門チーム」は日本でも成立している。</div></div>
+<div class="card"><div class="pl en">Copenhagen, Denmark</div><h4>New Nordic 宣言（Noma）</h4><p>12人のシェフの共同署名から始まった宣言が、北欧の食を世界ブランドに変えた。</p><div class="take">→ 「北方ラグジュアリー宣言」の雛形。共同署名で出す。</div></div>
+<div class="card"><div class="pl en">知床, 日本</div><h4>知床財団</h4><p>半島全体のヒグマ対応プロトコルとデータを持つ隣人。すでに紹介の伝手あり。</p><div class="take">→ 競合ではなく連携先。着工前にヒアリングする。</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ 03 EXPERIENCE ============ -->
+<section class="bg-0" id="experience" data-chap>
+<div class="blob m d2" style="width:50vw;height:50vw;max-width:600px;max-height:600px;right:-16vw;top:10vh;"></div>
+<div class="blob s d1" style="width:40vw;height:40vw;max-width:480px;max-height:480px;left:-12vw;bottom:6vh;"></div>
+<div class="wrap">
+<div class="chap reveal">
+<span class="num">03</span>
+<div class="eyebrow en"><span class="bar"></span>03 ∕ Forest Experience</div>
+<div class="ttl">森 の 体 験 に つ い て</div>
+<hr class="rule line">
+</div>
+
+<div style="padding:44px 0 104px;">
+<div class="philo reveal">
+<div class="l">
+<h2>人と森の交わりを、<br>ふたたび辿り直す。<br><span class="grad">野性を哲学する。</span></h2>
+<p class="weak" style="margin-top:24px;">入植者たちが切り拓き、人と共存する暮らしの舞台となってきた知床の森。その歴史と現在の森のありようを、歩いてたどってもらう——それが「野生の哲学の道」。</p>
+</div>
+<div class="r">
+<div class="quote">"The path is not to walk on, but to remember with."</div>
+<p class="sub">歩くための道ではない。<br>記憶し、学び、感覚を取り戻すための道。</p>
+</div>
+</div>
+
+<h3 class="reveal" style="margin-top:80px;">4つのゾーンで綴る。</h3>
+<div class="zones stag reveal">
+<div class="zone"><div class="zn en">Zone 01</div><div class="zt">別れ</div><div class="zr"></div><p>人里との別れ。ゼロ地点。シェフが収穫する有用植物の里山。</p></div>
+<div class="zone"><div class="zn en">Zone 02</div><div class="zt">出逢い</div><div class="zr"></div><p>入植の記憶と出逢う。井戸を覗き、一斗缶を叩いて森へ入る。</p></div>
+<div class="zone"><div class="zn en">Zone 03</div><div class="zt">啓く</div><div class="zr"></div><p>間伐林とアートの道。人参畑のラインが「この先は獣の森」と告げる。</p></div>
+<div class="zone"><div class="zn en">Zone 04</div><div class="zt">結ぶ</div><div class="zr"></div><p>天然林へ。獣道を観るラウンジ、香木バー、森の展示室。結び直しの終点。</p></div>
+</div>
+
+<!-- 図: ジャーニー断面図（横断・デスクトップ） -->
+<svg class="dg dg-l jr-wide reveal" viewBox="0 0 900 336" role="img" aria-label="ホテルから渓谷のラウンジまでの体験断面図">
+<defs>
+<linearGradient id="g3" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#8aab8c"/><stop offset=".5" stop-color="#5d7f68"/><stop offset="1" stop-color="#6a86a6"/></linearGradient>
+</defs>
+
+<!-- 下部の帯: 人の場所 / 境界 / あちらの森 -->
+<rect x="24" y="280" width="232" height="42" rx="2" fill="rgba(58,50,38,0.041)" stroke="rgba(58,50,38,0.135)"/>
+<rect x="260" y="280" width="348" height="42" rx="2" fill="rgba(93,127,104,.05)" stroke="rgba(93,127,104,.2)"/>
+<rect x="612" y="280" width="264" height="42" rx="2" fill="rgba(106,134,166,.06)" stroke="rgba(106,134,166,.24)"/>
+<text x="140" y="306" font-size="15" text-anchor="middle" class="t-hi">人の場所</text>
+<text x="434" y="299" font-size="15" text-anchor="middle" class="t-hi">人と獣の境界</text>
+<text x="434" y="317" font-size="13" text-anchor="middle" class="t-dim">こちらの森</text>
+<text x="744" y="299" font-size="15" text-anchor="middle" class="t-hi">獣たちの森</text>
+<text x="744" y="317" font-size="13" text-anchor="middle" class="t-dim">あちらの森</text>
+
+<!-- 地形 -->
+<path fill="rgba(58,50,38,0.041)" d="M24,198 L76,198 L130,192 L194,188 L250,184 L318,182 L380,178 L440,174 L500,176 L560,178 L620,170 L680,166 L730,178 L770,212 L800,240 L846,232 L876,228 L876,268 L24,268 Z"/>
+<path class="ln" d="M24,198 L76,198 L130,192 L194,188 L250,184 L318,182 L380,178 L440,174 L500,176 L560,178 L620,170 L680,166 L730,178 L770,212 L800,240 L846,232 L876,228"/>
+
+<!-- ラベルへの引き出し線 -->
+<g stroke="rgba(58,50,38,0.162)" stroke-width="1">
+<line x1="76" y1="106" x2="76" y2="192"/><line x1="194" y1="106" x2="194" y2="182"/>
+<line x1="318" y1="106" x2="318" y2="176"/><line x1="440" y1="106" x2="440" y2="168"/>
+<line x1="560" y1="106" x2="560" y2="172"/><line x1="680" y1="106" x2="680" y2="160"/>
+<line x1="800" y1="106" x2="800" y2="234"/>
+</g>
+
+<!-- 里山の低木 -->
+<g class="tree"><circle cx="152" cy="182" r="6"/><circle cx="170" cy="180" r="5"/><circle cx="228" cy="177" r="6"/><circle cx="246" cy="176" r="5"/></g>
+<!-- 人工林（均質なトドマツ） -->
+<g class="tree"><polygon points="392,177 400,147 408,177"/><polygon points="418,177 426,147 434,177"/><polygon points="444,177 452,147 460,177"/><polygon points="470,177 478,147 486,177"/><polygon points="496,177 504,147 512,177"/><polygon points="522,177 530,147 538,177"/><polygon points="548,177 556,147 564,177"/><polygon points="574,177 582,147 590,177"/></g>
+<!-- 天然林（不均質） -->
+<g class="tree-n"><circle cx="632" cy="150" r="11"/><circle cx="660" cy="144" r="13"/><circle cx="690" cy="140" r="12"/><circle cx="718" cy="156" r="10"/><circle cx="746" cy="176" r="11"/><circle cx="832" cy="206" r="10"/><circle cx="860" cy="202" r="9"/></g>
+<!-- 獣道 -->
+<path class="ln-dash" stroke="rgba(93,127,104,.5)" d="M876,212 C 842,204 812,214 788,226"/>
+
+<!-- 境界の縦線 -->
+<line class="ln-dash" x1="256" y1="46" x2="256" y2="272" stroke="rgba(58,50,38,0.216)"/>
+<line class="ln-dash" x1="608" y1="46" x2="608" y2="272" stroke="rgba(93,127,104,.45)"/>
+
+<!-- 地点マーカー -->
+<rect class="nd" x="66" y="190" width="20" height="14" rx="2"/>
+<circle class="nd" cx="194" cy="188" r="5.5"/><circle class="nd" cx="318" cy="182" r="5.5"/>
+<circle class="nd" cx="440" cy="174" r="5.5"/><circle class="nd" cx="560" cy="178" r="5.5"/>
+<circle class="nd-acc" cx="680" cy="166" r="5.5"/>
+<rect class="nd-acc" x="788" y="233" width="24" height="14" rx="2"/>
+
+<!-- ゾーン帯 -->
+<rect x="24" y="14" width="104" height="26" rx="2" fill="rgba(58,50,38,0.041)" stroke="rgba(58,50,38,0.135)"/>
+<rect x="132" y="14" width="124" height="26" rx="2" fill="rgba(58,50,38,0.068)" stroke="rgba(58,50,38,0.162)"/>
+<rect x="260" y="14" width="124" height="26" rx="2" fill="rgba(58,50,38,0.095)" stroke="rgba(58,50,38,0.189)"/>
+<rect x="388" y="14" width="220" height="26" rx="2" fill="rgba(58,50,38,0.121)" stroke="rgba(58,50,38,0.216)"/>
+<rect x="612" y="14" width="264" height="26" rx="2" fill="rgba(93,127,104,.09)" stroke="rgba(93,127,104,.3)"/>
+<text x="76" y="32" font-size="14" text-anchor="middle" class="t-dim">起点</text>
+<text x="194" y="32" font-size="14" text-anchor="middle">01 別れ</text>
+<text x="322" y="32" font-size="14" text-anchor="middle">02 出逢い</text>
+<text x="498" y="32" font-size="14" text-anchor="middle">03 啓く</text>
+<text x="744" y="32" font-size="14" text-anchor="middle" class="t-acc">04 結ぶ</text>
+
+<!-- 地点ラベル -->
+<g font-size="17" text-anchor="middle" class="t-hi">
+<text x="76" y="72">ホテル</text>
+<text x="194" y="72">里山</text>
+<text x="318" y="72">井戸</text><text x="318" y="94">一斗缶</text>
+<text x="440" y="72">人工林</text><text x="440" y="94">アート</text>
+<text x="560" y="72">人参畑</text><text x="560" y="94">ライン</text>
+<text x="680" y="72">天然林</text><text x="680" y="94">獣道</text>
+<text x="800" y="72">渓谷の</text><text x="800" y="94">ラウンジ</text>
+</g>
+</svg>
+
+<!-- 図: ジャーニー（縦・モバイル） -->
+<svg class="dg jr-tall reveal" style="max-width:400px;" viewBox="0 0 340 546" role="img" aria-label="ホテルから渓谷のラウンジまでの体験の順路">
+<defs><linearGradient id="g3b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5d7f68"/><stop offset="1" stop-color="#6a86a6"/></linearGradient></defs>
+<rect x="4" y="14" width="3" height="146" fill="rgba(58,50,38,0.189)"/>
+<rect x="4" y="160" width="3" height="224" fill="rgba(93,127,104,.4)"/>
+<rect x="4" y="384" width="3" height="156" fill="rgba(106,134,166,.45)"/>
+<text x="18" y="32" font-size="14" class="t-dim">人の場所</text>
+<line class="ln" x1="38" y1="64" x2="38" y2="344"/>
+<line x1="38" y1="344" x2="38" y2="512" stroke="url(#g3b)" stroke-width="1.6"/>
+<line class="ln-dash" x1="14" y1="160" x2="326" y2="160"/>
+<text x="18" y="182" font-size="14" class="t-acc">人と獣の境界</text>
+<text x="18" y="200" font-size="13" class="t-dim">こちらの森</text>
+<line class="ln-dash" x1="14" y1="384" x2="326" y2="384" stroke="rgba(93,127,104,.45)"/>
+<text x="18" y="406" font-size="14" class="t-acc">獣たちの森</text>
+<text x="18" y="424" font-size="13" class="t-dim">あちらの森</text>
+<circle class="nd" cx="38" cy="64" r="5.5"/>
+<text x="62" y="60" font-size="13" class="t-dim">起点</text><text x="62" y="82" font-size="17" class="t-hi">ホテル</text>
+<circle class="nd" cx="38" cy="120" r="5.5"/>
+<text x="62" y="116" font-size="13" class="t-dim">01 別れ</text><text x="62" y="138" font-size="17" class="t-hi">里山</text>
+<circle class="nd" cx="38" cy="232" r="5.5"/>
+<text x="62" y="228" font-size="13" class="t-dim">02 出逢い</text><text x="62" y="250" font-size="17" class="t-hi">井戸／一斗缶</text>
+<circle class="nd" cx="38" cy="288" r="5.5"/>
+<text x="62" y="284" font-size="13" class="t-dim">03 啓く</text><text x="62" y="306" font-size="17" class="t-hi">人工林（アート）</text>
+<circle class="nd" cx="38" cy="344" r="5.5"/>
+<text x="62" y="340" font-size="13" class="t-dim">境界の合図</text><text x="62" y="362" font-size="17" class="t-hi">人参畑ライン</text>
+<circle class="nd-acc" cx="38" cy="456" r="5.5"/>
+<text x="62" y="452" font-size="13" class="t-dim">04 結ぶ</text><text x="62" y="474" font-size="17" class="t-hi">天然林／獣道</text>
+<circle class="nd-acc" cx="38" cy="512" r="5.5"/>
+<text x="62" y="508" font-size="13" class="t-dim">04 結ぶ</text><text x="62" y="530" font-size="17" class="t-hi">渓谷のラウンジ</text>
+</svg>
+
+<div class="refnote reveal">▶ 各ゾーンの詳細設計（ランドマーク・植栽・建築・ラウンジの中身）は、別途「体験設計資料」を参照。</div>
+</div>
+</div>
+</section>
+
+<!-- ============ 04 ILLUSTRATION ============ -->
+<section class="bg-b" id="illustration" data-chap>
+<div class="blob c d2" style="width:52vw;height:52vw;max-width:620px;max-height:620px;left:-16vw;top:2vh;"></div>
+<div class="wrap">
+<div class="chap reveal">
+<span class="num">04</span>
+<div class="eyebrow en"><span class="bar"></span>04 ∕ Illustration Direction</div>
+<div class="ttl">絵 の 方 向</div>
+<hr class="rule line">
+</div>
+
+<div style="padding:44px 0 104px;">
+<div class="reveal">
+<div class="eyebrow en"><span class="bar"></span>Illustration ∕ 境界のフロントライン</div>
+<h2>この土地は、境界が<br>入り乱れてきた<span class="grad">フロントライン</span>。</h2>
+<p class="weak">知床の絵を、ひとつの様式では描かない。理由は土地の履歴にある——ここは何度も<b>境界</b>が引かれ、混ざり、塗り替えられてきた場所だから。</p>
+</div>
+
+<!-- 図: 境界の年表 -->
+<svg class="dg dg-m reveal" viewBox="0 0 460 160" role="img" aria-label="境界の年表: オホーツク文化、アイヌ文化、本州からの入植、自然と人間">
+<defs><linearGradient id="g4" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#8aab8c"/><stop offset=".5" stop-color="#5d7f68"/><stop offset="1" stop-color="#6a86a6"/></linearGradient></defs>
+<line class="ln" x1="24" y1="76" x2="428" y2="76"/><polygon class="ar" points="436,76 425,71 425,81"/>
+<g font-size="15" text-anchor="middle" class="t-dim">
+<text x="62" y="50">5–10c</text><text x="174" y="50">–19c</text><text x="286" y="50">1917–</text><text x="398" y="50">Now</text>
+</g>
+<circle class="nd" cx="62" cy="76" r="6"/><circle class="nd" cx="174" cy="76" r="6"/><circle class="nd" cx="286" cy="76" r="6"/><circle class="nd-acc" cx="398" cy="76" r="6"/>
+<g font-size="16.5" text-anchor="middle" class="t-hi">
+<text x="62" y="112">オホーツク文化</text><text x="174" y="112">アイヌ文化</text><text x="286" y="112">本州からの入植</text>
+<text x="398" y="112" fill="url(#g4)">自然と人間</text>
+</g>
+<g font-size="15" text-anchor="middle" class="t-dim">
+<text x="62" y="138">クマ儀礼の源流</text><text x="174" y="138">大地の突端</text><text x="286" y="138">測量の線・畑</text><text x="398" y="138">いまの境界</text>
+</g>
+</svg>
+
+<div class="bounds stag reveal">
+<div class="bnd"><div class="era en">5–10c</div><h4>オホーツク文化</h4><p>海獣狩猟民の文化。クマ儀礼の源流。リゾートの足元の遺跡から出土する。</p></div>
+<div class="bnd"><div class="era en">–19c</div><h4>アイヌ文化</h4><p>この半島の名の由来（sir etok＝大地の突端）。人と獣が対等に向き合う世界観。</p></div>
+<div class="bnd"><div class="era en">1917–</div><h4>本州からの入植</h4><p>測量の線、畑、人工林。桑島家3世代の歴史はここに連なる。</p></div>
+<div class="bnd"><div class="era en">Now</div><h4>自然と人間</h4><p>いま引かれている境界。この森づくり自体が、その最前線にある。</p></div>
+</div>
+
+<div class="policy reveal">方針: どれか一つを選ばない。<b>境界に堆積してきた要素をハイブリッド</b>し、体験設計が引き立つ<b>「パーク」全体のイラスト</b>として統合する。</div>
+
+<h3 class="reveal" style="margin-top:60px;">絵の考え方 — 決め方を3つに分ける</h3>
+
+<div class="issue reveal">
+<span class="no">考え方 1 ∕ 視点 — 俯瞰か、断面か</span>
+<h3>俯瞰で描く。</h3>
+<!-- 図: 俯瞰 vs 断面 -->
+<svg class="dg dg-s reveal" viewBox="0 0 400 176" role="img" aria-label="俯瞰と断面の比較">
+<defs><linearGradient id="g5" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#8aab8c"/><stop offset="1" stop-color="#6a86a6"/></linearGradient></defs>
+<line class="ln-soft" x1="200" y1="16" x2="200" y2="150"/>
+<rect x="74" y="8" width="52" height="22" rx="11" fill="rgba(93,127,104,.08)" stroke="#5d7f68" stroke-width="1.2"/>
+<text x="100" y="24" font-size="14" text-anchor="middle" class="t-acc">採用</text>
+<polygon points="40,86 100,52 160,72 100,106" fill="rgba(58,50,38,0.068)" stroke="rgba(58,50,38,0.432)" stroke-width="1.2"/>
+<path class="ln-soft" d="M70,69 L130,89 M130,62 L70,96"/>
+<path fill="none" stroke="url(#g5)" stroke-width="1.6" d="M78,80 L100,78 L122,74"/>
+<circle cx="78" cy="80" r="2.6" fill="#5d7f68"/><circle cx="100" cy="78" r="2.6" fill="#5d7f68"/><circle cx="122" cy="74" r="2.6" fill="#5d7f68"/>
+<path class="ln" d="M240,96 L268,88 L300,84 L332,80 L360,84"/>
+<path class="ln-soft" d="M240,106 L268,98 L300,94 L332,90 L360,94 M240,116 L268,108 L300,104 L332,100 L360,104"/>
+<g class="tree"><polygon points="256,88 262,68 268,88"/><polygon points="290,84 296,58 302,84"/><polygon points="324,80 330,46 336,80"/></g>
+<text x="100" y="140" font-size="17" text-anchor="middle" class="t-hi">俯瞰</text>
+<text x="300" y="140" font-size="17" text-anchor="middle" class="t-dim">断面</text>
+<text x="100" y="162" font-size="15" text-anchor="middle" class="t-dim">全体をひと目で</text>
+<text x="300" y="162" font-size="15" text-anchor="middle" class="t-dim">時間軸を示せる</text>
+</svg>
+<dl class="rows">
+<dt>比較</dt><dd>断面は、植生のゾーニングや森が育つ時間軸を示しやすい。俯瞰は、体験設計の全体をひと目で感じさせる。</dd>
+<dt>方針</dt><dd>この絵のゴールは<b>見た人がワクワクし、土地に関わりたくなること</b>。だから俯瞰。</dd>
+<dt>補足</dt><dd>精緻な俯瞰図は高野ランドスケープが別途作成予定。この絵はあくまで<b>コンセプトを説明するための図</b>。</dd>
+</dl>
+</div>
+
+<div class="issue reveal">
+<span class="no">考え方 2 ∕ 距離と角度</span>
+<h3>やや引きで、少し角度をつけて、立体感を出す。</h3>
+<dl class="rows">
+<dt>幅</dt><dd>距離は「知床全体を包む」から「エリアの中にフォーカス」まで。角度は「真上」から「傾斜をつけた鳥瞰」まで。</dd>
+<dt>方針</dt><dd>現時点では<b>やや引きのイラストに、少し角度をつけて立体感を感じさせる</b>のが良いと考えている。最終はデザイナーと詰めるので、任せてほしい。</dd>
+</dl>
+</div>
+
+<div class="issue reveal">
+<span class="no">考え方 3 ∕ トーン</span>
+<h3>少しのリアルさに、土地のデザインコンテクストをオマージュとして重ねる。</h3>
+<dl class="rows">
+<dt>方針</dt><dd>下の4方向を事例の土台に、デザイナーと詰めていく。<b>ややリアルな描写</b>をベースに、ランドスケープの森のデザイン、入植時代のレトロデザイン、アイヌの雲などの意匠モチーフ、クマと祭壇などオホーツクの世界を織り込み、<b>全体は大和絵のような世界観で統合する</b>（対外的に最も求心力がある）。</dd>
+</dl>
+</div>
+
+<h3 class="reveal" style="margin-top:60px;">トーンの4方向と事例</h3>
+<div class="grid2 stag reveal">
+<div class="card"><div class="pl en">Direction 01</div><h4>大和絵 — 全体を統合する世界観</h4><p>すやり霞と雲で体験を分節しながら、一枚の物語地図として読ませる。海外に対して最も求心力のある日本的様式。</p><div class="take">事例: <a href="https://colbase.nich.go.jp/collection_items/tnm/A-11168?locale=ja">洛中洛外図・舟木本</a> ／ <a href="https://commons.wikimedia.org/wiki/Category:Rakuch%C5%AB-rakugai-zu_(Uesugi)">上杉本</a> ／ <a href="https://online.bunka.go.jp/heritages/detail/254905">那智参詣曼荼羅</a></div></div>
+<div class="card"><div class="pl en">Direction 02</div><h4>入植時代のレトロ — 人が引いた線</h4><p>測量図の格子、五稜星のラベル、記録画の淡彩。桑島家3世代の歴史に直結する視覚言語。</p><div class="take">事例: <a href="https://www.sapporobeer.jp/brewery/s_museum/">開拓使麦酒ラベル</a> ／ <a href="https://www.lib.hokudai.ac.jp/northern-studies/digital-exhibitions/2021/">明治の札幌古地図</a> ／ <a href="https://www.pref.hokkaido.lg.jp/sm/mnj/digital/byouga/byouga.html">公文書挿画</a> ／ <a href="https://www.rokkatei.co.jp/facilities/%E5%85%AD%E8%8A%B1%E3%81%AE%E6%A3%AE-2/">六花亭・坂本直行</a></div></div>
+<div class="card"><div class="pl en">Direction 03</div><h4>オホーツクの世界 — クマと祭壇</h4><p>イラストは残っていない文化。土器の貼付文・骨角器・クマ骨塚など、リゾートの足元から出土する造形から再構成する。</p><div class="take">事例: <a href="../research/90_preview/okhotsk.html">オホーツク文化ギャラリー（画像51点）</a> ／ <a href="https://www.penn.museum/sites/expedition/fish-skin-legacies/">アムール魚皮衣（ペン博物館）</a></div></div>
+<div class="card"><div class="pl en">Direction 04</div><h4>ランドスケープ×ラグジュアリー — 森と品位</h4><p>植生の描き込みと、余白・気配の品位。世界のリゾートポスター・メゾンの文法。</p><div class="take">事例: <a href="https://59parks.net/">Fifty-Nine Parks</a> ／ <a href="https://scarfsage.com/hermes-scarves/941-into-the-canadian-wild/5346">Hermès「Into the Canadian Wild」</a> ／ <a href="https://www.tokyoartbeat.com/articles/-/gucci-yuko-higuchi-news-202511/page2">Gucci×ヒグチユウコ</a></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ 05 IMPLEMENTATION ============ -->
+<section class="bg-0" id="implementation" data-chap>
+<div class="blob m d1" style="width:54vw;height:54vw;max-width:650px;max-height:650px;right:-18vw;top:6vh;"></div>
+<div class="blob c d2" style="width:42vw;height:42vw;max-width:500px;max-height:500px;left:-14vw;top:55%;"></div>
+<div class="wrap">
+<div class="chap reveal">
+<span class="num">05</span>
+<div class="eyebrow en"><span class="bar"></span>05 ∕ Forest Implementation</div>
+<div class="ttl">森 の 実 装 に つ い て</div>
+<hr class="rule line">
+</div>
+
+<div style="padding:44px 0 104px;">
+<div class="reveal">
+<h2>森づくりの論点は、<span class="grad">6つ</span>。</h2>
+<p class="weak">順番に意味がある——<b>まず安全（柵）、つぎに木、それから道と人。</b>アートと建築はこの土台の上に載せる。</p>
+</div>
+
+<div class="tw reveal">
+<table>
+<tr><th>#</th><th>テーマ</th><th>論点</th><th>方針</th></tr>
+<tr><td>1</td><td>柵</td><td>設けるか</td><td>安全管理上、必須（<span class="mark">今日決めたい</span>）</td></tr>
+<tr><td>2</td><td>範囲</td><td>どこまで囲うか</td><td>約1ha〜全域8haの間で、一緒に決める</td></tr>
+<tr><td>3</td><td>更新</td><td>皆伐か間伐か</td><td>柵の内外で分ける。少しずつ・100年単位</td></tr>
+<tr><td>4</td><td>植栽</td><td>天然林かトドマツか</td><td>天然林は柵内のみ成立。内=天然林・外=トドマツ</td></tr>
+<tr><td>5</td><td>道</td><td>体験と管理の兼用</td><td>作業道2.5mを基盤に、核心部のみ分離</td></tr>
+<tr><td>6</td><td>施業と材</td><td>誰と伐り、材をどうするか</td><td>組合以外の長期パートナー探し。材はホテルで使う</td></tr>
+</table>
+</div>
+
+<div class="issue reveal">
+<span class="no ask">論点 1 ∕ 柵 — 今日決めたい</span>
+<h3>コンセプト上は不要。安全管理上は、絶対に必要。</h3>
+<dl class="rows">
+<dt>論点</dt><dd>柵を設けるか。</dd>
+<dt>事実</dt><dd>シカは植えた木を食べ尽くす。ヒグマとの距離は運まかせにできない。</dd>
+<dt>方針</dt><dd><b>設ける。</b>コンセプトで柵を正当化しない——安全の土台として率直に。種類は電気柵・熊柵仕様（羅臼で冬季運用の実績あり）。ゲート管理と草刈りが継続することも込みで。</dd>
+</dl>
+</div>
+
+<div class="issue reveal">
+<span class="no">論点 2 ∕ 範囲 — 一緒に決めたい</span>
+<h3>小さく囲えば安いが窮屈。大きく囲えば自由だが高い。</h3>
+<div class="tw">
+<table>
+<tr><th>案</th><th>範囲</th><th>特徴</th></tr>
+<tr><td>ミニマム</td><td>散歩道まわり（約1ha）</td><td>最も安い。「囲われてる感」は出る</td></tr>
+<tr><td>中間</td><td>人の森ぜんぶ</td><td>ゾーン設計と整合</td></tr>
+<tr><td>マックス</td><td>敷地全域（約8ha）</td><td>森の再生まで守れる。最も高い</td></tr>
+</table>
+</div>
+<!-- 図: 柵範囲の入れ子 -->
+<svg class="dg dg-s reveal" viewBox="0 0 360 392" role="img" aria-label="柵範囲の入れ子図: ミニマム、中間、マックス">
+<rect x="16" y="20" width="328" height="200" rx="3" fill="none" stroke="rgba(58,50,38,0.297)" stroke-width="1.4" stroke-dasharray="2 5"/>
+<rect x="48" y="48" width="264" height="148" rx="3" fill="rgba(58,50,38,0.047)" stroke="rgba(58,50,38,0.567)" stroke-width="1.6" stroke-dasharray="6 4"/>
+<rect x="86" y="78" width="188" height="92" rx="3" fill="rgba(93,127,104,.07)" stroke="#5d7f68" stroke-width="2"/>
+<path class="ln" d="M70,186 L110,168 L150,152 L196,132 L238,116 L286,100"/>
+<circle cx="286" cy="100" r="5" fill="#5d7f68"/>
+<rect class="nd" x="24" y="196" width="20" height="14" rx="2"/>
+<rect x="18" y="238" width="18" height="18" rx="2" fill="rgba(93,127,104,.07)" stroke="#5d7f68" stroke-width="2"/>
+<text x="46" y="246" font-size="15" class="t-hi">ミニマム</text>
+<text x="46" y="266" font-size="13.5" class="t-dim">散歩道まわり 約1ha ／ 最も安い</text>
+<rect x="18" y="280" width="18" height="18" rx="2" fill="rgba(58,50,38,0.047)" stroke="rgba(58,50,38,0.567)" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="46" y="288" font-size="15" class="t-hi">中間</text>
+<text x="46" y="308" font-size="13.5" class="t-dim">人の森ぜんぶ ／ ゾーン設計と整合</text>
+<rect x="18" y="322" width="18" height="18" rx="2" fill="none" stroke="rgba(58,50,38,0.297)" stroke-width="1.4" stroke-dasharray="2 5"/>
+<text x="46" y="330" font-size="15" class="t-hi">マックス</text>
+<text x="46" y="350" font-size="13.5" class="t-dim">敷地全域 約8ha ／ 最も高い</text>
+<line class="ln" x1="18" y1="372" x2="38" y2="372"/>
+<text x="46" y="377" font-size="13.5" class="t-dim">＝道</text>
+<circle cx="96" cy="372" r="4" fill="#5d7f68"/>
+<text x="106" y="377" font-size="13.5" class="t-dim">＝ラウンジ</text>
+<rect class="nd" x="176" y="366" width="14" height="10" rx="2"/>
+<text x="198" y="377" font-size="13.5" class="t-dim">＝ホテル</text>
+</svg>
+<dl class="rows">
+<dt>方針</dt><dd>広く囲うほど天然林に戻せる面積が増える——<b>範囲は費用と植栽の野心のバランス。</b>概算延長・費用を図面と共に提示し、一緒に決める。</dd>
+</dl>
+</div>
+
+<div class="issue reveal">
+<span class="no">論点 3 ∕ 更新 — 考え方を共有したい</span>
+<h3>「間伐でゆっくり育てる」は、全域には使えないとわかった。</h3>
+<dl class="rows">
+<dt>事実</dt><dd>長年間伐されず高密度化した林は、いま間引くと風の通り道ができ、残った木が倒れるおそれ（森林組合の見解）。</dd>
+<dt>方針</dt><dd><b>柵の内外で分ける。</b>内側は手を入れず残す（危険木処理のみ）。外側は道沿いから少しずつ皆伐→植え替え。原則は「①道をつける ②少しずつやる ③100年で考える」（高野ランドスケープ）。</dd>
+</dl>
+</div>
+
+<!-- 図: 柵の内外分担 -->
+<svg class="dg dg-s reveal" style="max-width:500px;" viewBox="0 0 400 306" role="img" aria-label="柵の内外の分担: 柵内は残して天然林化、柵外は道沿いから少しずつ皆伐してトドマツ再植林">
+<rect x="14" y="26" width="372" height="184" rx="3" fill="none" stroke="rgba(58,50,38,0.216)" stroke-width="1.2" stroke-dasharray="3 5"/>
+<rect x="104" y="52" width="200" height="136" rx="3" fill="rgba(93,127,104,.06)" stroke="#5d7f68" stroke-width="1.6"/>
+<rect x="104" y="52" width="200" height="136" rx="3" fill="none" stroke="#5d7f68" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 9"/>
+<g class="tree-n"><circle cx="128" cy="84" r="12"/><circle cx="168" cy="76" r="14"/><circle cx="212" cy="78" r="13"/><circle cx="254" cy="84" r="12"/><circle cx="286" cy="96" r="11"/><circle cx="126" cy="160" r="12"/><circle cx="166" cy="168" r="13"/><circle cx="212" cy="166" r="14"/><circle cx="256" cy="164" r="12"/><circle cx="288" cy="152" r="11"/></g>
+<text x="204" y="130" font-size="16" text-anchor="middle" class="t-hi">残す → 天然林化</text>
+<path class="ln" d="M24,204 L48,178 L60,140 L72,96 L86,58"/>
+<g fill="rgba(58,50,38,0.297)"><rect x="34" y="172" width="10" height="5" rx="1"/><rect x="48" y="132" width="10" height="5" rx="1"/><rect x="62" y="90" width="10" height="5" rx="1"/><rect x="74" y="52" width="10" height="5" rx="1"/></g>
+<g class="tree"><polygon points="312,116 318,92 324,116"/><polygon points="342,116 348,92 354,116"/><polygon points="372,116 378,92 384,116"/><polygon points="312,160 318,136 324,160"/><polygon points="342,160 348,136 354,160"/><polygon points="372,160 378,136 384,160"/><polygon points="136,206 142,184 148,206"/><polygon points="172,206 178,184 184,206"/><polygon points="208,206 214,184 220,206"/><polygon points="244,206 250,184 256,206"/><polygon points="280,206 286,184 292,206"/></g>
+<text x="56" y="44" font-size="13.5" text-anchor="middle" class="t-dim">皆伐</text>
+<text x="348" y="44" font-size="13.5" text-anchor="middle" class="t-dim">トドマツ</text>
+<text x="204" y="46" font-size="13.5" text-anchor="middle" class="t-acc">柵</text>
+<rect x="16" y="232" width="16" height="16" rx="2" fill="rgba(93,127,104,.1)" stroke="#5d7f68" stroke-width="1.6"/>
+<text x="42" y="238" font-size="14" class="t-hi">柵内</text>
+<text x="42" y="258" font-size="13.5" class="t-dim">手を入れず残す（危険木処理のみ）→ 天然林化</text>
+<rect x="16" y="268" width="16" height="16" rx="2" fill="none" stroke="rgba(58,50,38,0.378)" stroke-width="1.4" stroke-dasharray="3 4"/>
+<text x="42" y="274" font-size="14" class="t-hi">柵外</text>
+<text x="42" y="294" font-size="13.5" class="t-dim">道沿いから少しずつ皆伐 → トドマツ再植林</text>
+</svg>
+
+<div class="issue reveal">
+<span class="no">論点 4 ∕ 植栽 — 考え方を共有したい</span>
+<h3>本当は天然の森に戻したい。でも、シカがいる。</h3>
+<dl class="rows">
+<dt>事実</dt><dd>隣の100平方メートル運動地では、植えた広葉樹をシカがほぼ全滅させた。残ったのはシカが食べない木だけの単調な林——40年経っても本物の森の複雑さは戻っていない。</dd>
+<dt>方針</dt><dd><b>広葉樹は柵の内側でしか育たない。</b>柵内＝天然林化（ミズナラ×トドマツの本来の植生へ）、柵外＝トドマツ再植林、の分担を軸に。</dd>
+</dl>
+</div>
+
+<div class="issue reveal">
+<span class="no walk">論点 5 ∕ 道 — 現地で見たい</span>
+<h3>森の手入れは、道から始まる。</h3>
+<dl class="rows">
+<dt>論点</dt><dd>体験の道と管理の道を兼ねるか、分けるか。</dd>
+<dt>方針</dt><dd>幅2.5mの作業道を基盤に、<b>体験の核心部だけ分離</b>。柵の線と一緒に図面化し、現地で重なりを確認する。</dd>
+</dl>
+</div>
+
+<div class="issue reveal">
+<span class="no">論点 6 ∕ 施業と材 — 方針を共有</span>
+<h3>「少しずつ」は組合の商売に合わない。伐った木は、ホテルで使う。</h3>
+<dl class="rows">
+<dt>事実</dt><dd>森林組合は補助金＋大型機械の皆伐が前提。少しずつ進める方式は受けてもらえない可能性が高い。</dd>
+<dt>方針</dt><dd>長い目で森を育てる<b>組合以外のパートナー</b>（北見方面など）を探す。伐ったトドマツはラウンジの建材・家具やクラフト・薪へ——<b>伐ることが体験と経営に還る回路</b>を作る。</dd>
+</dl>
+</div>
+
+<h3 class="reveal" style="margin-top:70px;">お金のものさし</h3>
+<p class="weak reveal"><b>基準線は、いま入っている森林組合の助成</b>（補助金で皆伐して植え直す＝最も軽いが、森の姿は選べない）。そこからどれだけ離れて、どんな森を手に入れるか——が費用の議論の全体。</p>
+<!-- 図: 費用の基準線 -->
+<svg class="dg dg-w reveal" viewBox="0 0 440 260" role="img" aria-label="基準線からの距離と、持ち出し・森の選択肢の関係">
+<defs>
+<linearGradient id="g8a" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#b9705a" stop-opacity="0"/><stop offset="1" stop-color="#b9705a" stop-opacity=".45"/></linearGradient>
+<linearGradient id="g8b" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5d7f68" stop-opacity="0"/><stop offset="1" stop-color="#5d7f68" stop-opacity=".45"/></linearGradient>
+</defs>
+<path d="M64,122 L412,56 L412,122 Z" fill="url(#g8a)"/>
+<path d="M64,130 L412,196 L412,130 Z" fill="url(#g8b)"/>
+<path fill="none" stroke="#b9705a" stroke-opacity=".6" stroke-width="1.4" d="M64,122 L412,56"/>
+<path fill="none" stroke="#5d7f68" stroke-opacity=".6" stroke-width="1.4" d="M64,130 L412,196"/>
+<line class="ln" x1="30" y1="126" x2="410" y2="126"/><polygon class="ar" points="422,126 409,120 409,132"/>
+<line class="ln-dash" x1="64" y1="44" x2="64" y2="206"/>
+<circle class="nd" cx="64" cy="126" r="5"/>
+<text x="300" y="88" font-size="15.5" text-anchor="middle" class="t-warn">持ち出しが増える</text>
+<text x="300" y="176" font-size="15.5" text-anchor="middle" class="t-acc">森の選択肢が増える</text>
+<text x="14" y="228" font-size="15" class="t-hi">基準線 ＝ 森林組合の助成</text>
+<text x="14" y="248" font-size="14" class="t-dim">補助金で皆伐して植え直す</text>
+<text x="426" y="228" font-size="15" text-anchor="end" class="t-hi">離れるほど</text>
+<text x="426" y="248" font-size="14" text-anchor="end" class="t-dim">どんな森を手に入れるか</text>
+</svg>
+<div class="cost3 stag reveal">
+<div class="r a"><div class="n"><small class="en">Layer A</small>どのみち、かかるお金</div><div class="d">森を持っているだけでかかる費用。人工林の更新・危険木処理・シカ対策。</div></div>
+<div class="r b"><div class="n"><small class="en">Layer B</small>この計画ならでは、のお金</div><div class="d">柵（範囲しだい）・道・植栽・ランドマーク・ラウンジ建築。</div></div>
+<div class="r c"><div class="n"><small class="en">Layer C</small>ずっと続くお金</div><div class="d">草刈り・ゲート管理・冬支度・ガイド・仕込み。<b>ここを続けられるかが勝負。</b></div></div>
+</div>
+<div class="tw reveal">
+<table>
+<tr><th>着手順</th><th>やること</th><th>備考</th></tr>
+<tr><td>第1段</td><td>柵＋道＋最初の植栽・入れ替え着手</td><td>森の都合で先送りできない</td></tr>
+<tr><td>第2段</td><td>ランドマーク＋アート＋散歩道の仕上げ</td><td>建築なしでも体験は成立</td></tr>
+<tr><td>第3段</td><td>ラウンジ建築</td><td>伐った木で建てる</td></tr>
+</table>
+</div>
+<p class="sub reveal">回収は森単体ではなく、宿泊単価・ブランド価値・連泊で見る（滞在型観光への転換と同じ線上）。</p>
+</div>
+</div>
+</section>
+
+<!-- ============ CLOSING ============ -->
+<div class="band closing drama reveal" id="closing" data-chap>
+<div class="blob m d1" style="width:64vw;height:64vw;max-width:780px;max-height:780px;left:50%;top:50%;transform:translate(-50%,-50%);"></div>
+<div class="blob s d2" style="width:46vw;height:46vw;max-width:560px;max-height:560px;right:-14vw;bottom:-8vw;"></div>
+<div class="wrap">
+<span class="num">06</span>
+<div class="en2 en">The Path of Forest Philosophy</div>
+<div class="big">平時から、野生との邂逅へ。<br><span class="grad">自身の野性を啓き、結び直す。</span></div>
+<div class="small">知床きたこぶしリゾートの森を、人と森が再び出会い直す場所へ。</div>
+<div class="sig">— 森 の 哲 学 の 道 —</div>
+</div>
+</div>
+
+<!-- ============ APPENDIX ============ -->
+<section class="appendix" id="appendix" data-chap>
+<div class="blob c d2" style="width:44vw;height:44vw;max-width:520px;max-height:520px;right:-16vw;top:4vh;"></div>
+<div class="wrap">
+<div class="chap reveal">
+<span class="num">07</span>
+<div class="eyebrow en"><span class="bar"></span>Appendix ∕ 備考</div>
+<div class="ttl">この土地の年表と、参照資料。</div>
+<hr class="rule line">
+</div>
+
+<div style="padding:44px 0 104px;">
+<div class="reveal">
+<h3>A. シレトコ＝「地の果て」ではなく「大地の突端」</h3>
+<p class="sub">アイヌ語 sir-etok。「終わり」ではなく「大地が海へ差し出した先端」。ウトロ＝ウトゥルチクㇱ「その間を・我々が・通る・所」——巨岩の間の水路を舟で抜けて入る集落だった。</p>
+</div>
+
+<div class="reveal">
+<h3 style="margin-top:50px;">B. 土地の年表</h3>
+<div class="tw">
+<table>
+<tr><th>年代</th><th>出来事</th><th>本プロジェクトへの接続</th></tr>
+<tr><td>5〜9世紀</td><td>オホーツク文化——海獣狩猟民の集落</td><td>足元のチャシコツ岬上遺跡（国史跡）に住居内ヒグマ骨塚＝クマ儀礼の現地証拠</td></tr>
+<tr><td>13世紀〜</td><td>アイヌ文化期——カムイの世界観</td><td>ヒグマ・シマフクロウ・シャチが神。半島の名もアイヌ語</td></tr>
+<tr><td>1807</td><td>津軽藩士殉難事件（越冬100名中72名死亡）</td><td>176年後にねぷた交流へ——「鎮魂が祭りになる」土地内先例（野性祭の思想）</td></tr>
+<tr><td>1858</td><td>松浦武四郎が知床を踏査、ウトロ番屋に一泊</td><td>番屋＝「働く者が集い火を囲み泊まる場所」。ロビーの原型</td></tr>
+<tr><td>1917</td><td>桑島家の曾祖父が香川からウトロへ入植</td><td>字名「ウトロ香川」が現存。3万坪のうち1.5万坪を手で拓く</td></tr>
+<tr><td>1960</td><td>離農し「桑島旅館」創業（5室22名）</td><td>「人の手で拓いた土地は、人の手で森に戻す」——トドマツ約1.5万本を植林。<b>今回の森はこの直系</b></td></tr>
+<tr><td>1970-71</td><td>「知床旅情」ブーム</td><td>宿泊客を毎日断る盛況→55室から140室へ拡大</td></tr>
+<tr><td>1977</td><td>しれとこ100平方メートル運動</td><td>離農跡地を森に戻す世界的先駆。シカ食害と柵の実証データは本計画の根拠（論点4）</td></tr>
+<tr><td>1964 / 2005</td><td>国立公園指定 ∕ 世界自然遺産登録</td><td>入込は1998年の180万人がピークで漸減——「量から質へ」が現地の公式認識＝本プロジェクトの追い風</td></tr>
+<tr><td>2011 / 2023</td><td>知床五湖の利用調整 ∕ ATWS北海道開催</td><td>「レクチャー→立入認定」が体験価値になる先例。AT文脈の中核目的地に</td></tr>
+</table>
+</div>
+</div>
+
+<div class="reveal">
+<h3 style="margin-top:50px;">C. クマと生きた開拓の知恵 — 体験設計の原型（会長証言）</h3>
+<div class="tw">
+<table>
+<tr><th>昔の知恵</th><th>森の哲学の道への翻訳</th></tr>
+<tr><td>熊道側にニンジンを「お供え物」として植えた</td><td>ZONE03の人参畑ライン＝境界の再現</td></tr>
+<tr><td>一斗缶を鳴らして歩いた</td><td>ZONE02のランドマーク。音による存在告知</td></tr>
+<tr><td>「お互い無視していれば何もしない」</td><td>「クマを観に行く」のではなく「クマの世界に入らせてもらう」設計</td></tr>
+</table>
+</div>
+</div>
+
+<div class="reveal">
+<h3 style="margin-top:50px;">D. 参照資料</h3>
+<div class="tw">
+<table>
+<tr><th>資料</th><th>中身</th></tr>
+<tr><td><a href="../research/90_preview/index.html">リサーチブック</a></td><td>桑島家の100年・知床通史・イラスト4方向・遠野リサーチの全文</td></tr>
+<tr><td><a href="../research/90_preview/proposal_flow.html">8/7 提案の論点整理 v3.1</a></td><td>森の実装9論点の詳細（本資料05章の元）</td></tr>
+<tr><td><a href="../research/90_preview/okhotsk.html">オホーツク文化ギャラリー</a></td><td>クマ意匠・土器・遺跡景観など画像51点</td></tr>
+<tr><td><a href="../master-mtg/index.html">マスターMTG資料</a></td><td>案件全体の経緯・決定事項の正本</td></tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer>KITAKOBUSHI RESORT ∕ SHIRETOKO ｜ 2026-08-06 版｜限定共有（検索エンジン非掲載）｜ 出典: 提案資料20260705版・高野LP資料・8/5作業会議・遠野/事例リサーチ</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var targets = document.querySelectorAll('.reveal, .stag');
+  if (reduce || !('IntersectionObserver' in window)) {
+    Array.prototype.forEach.call(targets, function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+    Array.prototype.forEach.call(targets, function(el){ io.observe(el); });
+  }
+
+  var links = Array.prototype.slice.call(document.querySelectorAll('nav a[href^="#"]'));
+  var map = {};
+  links.forEach(function(a){ map[a.getAttribute('href').slice(1)] = a; });
+  var chaps = document.querySelectorAll('[data-chap]');
+  if ('IntersectionObserver' in window && chaps.length) {
+    var so = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (!e.isIntersecting) return;
+        var a = map[e.target.id];
+        if (!a) return;
+        links.forEach(function(l){ l.classList.remove('act'); });
+        a.classList.add('act');
+      });
+    }, { rootMargin: '-42% 0px -50% 0px' });
+    Array.prototype.forEach.call(chaps, function(s){ so.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>知床 森づくりプロジェクト マスターMTG資料</title>
+<meta name="robots" content="noindex, nofollow">
+
+<style>
+  :root{
+    --canvas:#e9e9e6; --paper:#ffffff; --ink:#1a1a1a; --ink2:#4a4a47; --muted:#8a8985;
+    --line:#dcdcd6; --rule:#c9c9c2; --tinthead:#f4f4f0; --box:#f8f8f5;
+    --brand:#2f6b3d;   /* 森の緑 */
+    --ev:#c2410c; --good:#1a7a1a; --warn:#9a6a00; --crit:#c0332f;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--canvas);color:var(--ink);
+    font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,system-ui,sans-serif;
+    line-height:1.7;font-size:14.5px}
+  .paper{max-width:900px;margin:20px auto 60px;background:var(--paper);
+    box-shadow:0 1px 4px rgba(0,0,0,.12);border-radius:3px;padding:52px 60px 60px}
+  .doc-title{border-bottom:3px solid var(--brand);padding-bottom:14px;margin-bottom:6px}
+  .doc-title h1{font-size:23px;margin:0 0 4px;letter-spacing:.01em}
+  .doc-title .meta{font-size:13px;color:var(--ink2)}
+  nav.toc{display:flex;flex-wrap:wrap;gap:4px 6px;margin:14px 0 28px;font-size:12.5px}
+  nav.toc a{color:var(--brand);text-decoration:none;padding:2px 8px;border:1px solid var(--line);border-radius:14px}
+  nav.toc a:hover{background:var(--tinthead)}
+  section{margin:0 0 30px;scroll-margin-top:16px}
+  h2{font-size:18px;margin:0 0 10px;padding-bottom:6px;border-bottom:2px solid var(--rule);
+    display:flex;align-items:center;gap:9px}
+  h2 .num{display:inline-flex;width:25px;height:25px;border-radius:5px;background:var(--brand);
+    color:#fff;font-size:13px;align-items:center;justify-content:center;flex:0 0 auto}
+  h3{font-size:14.5px;margin:16px 0 6px;color:var(--brand)}
+  .lead{color:var(--ink2);font-size:13.5px;margin:0 0 10px}
+  .note{font-size:12px;color:var(--muted)}
+  p{margin:6px 0}
+  ul,ol{margin:6px 0;padding-left:20px}
+  li{margin:3px 0}
+  b{font-weight:700}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
+  .chip{font-size:12px;padding:2px 10px;border-radius:20px;border:1px solid var(--line);color:var(--ink2);background:#fff}
+  .chip.done{color:var(--good);border-color:#bcd8bc;background:#f2f9f2}
+  .chip.warn{color:var(--warn);border-color:#e7d6a6;background:#fbf6e9}
+  .chip.crit{color:var(--crit);border-color:#e6b3b0;background:#fbeeed;font-weight:700}
+  .chip.tbd{color:var(--ev);border-color:#e7c3a6;background:#fbf1e9;font-weight:700}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:680px){.grid2{grid-template-columns:1fr}}
+  .box{border:1px solid var(--line);border-left:3px solid var(--brand);border-radius:4px;
+    padding:12px 15px;background:var(--box)}
+  .box.decide{border-left-color:var(--ev)}
+  .box h4{margin:0 0 6px;font-size:13.5px}
+  table{border-collapse:collapse;width:100%;font-size:13px;margin:4px 0}
+  th,td{border:1px solid var(--line);padding:7px 10px;text-align:left;vertical-align:top}
+  th{color:var(--ink);font-weight:700;background:var(--tinthead)}
+  footer{color:var(--muted);font-size:12px;text-align:center;padding:16px 0 0;border-top:1px solid var(--line);margin-top:30px}
+  @media print{body{background:#fff}.paper{box-shadow:none;margin:0;max-width:none;padding:0}nav.toc{display:none}section{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="paper">
+
+  <div class="doc-title">
+    <h1>知床 森づくりプロジェクト ｜ マスターMTG資料</h1>
+    <div class="meta">定例 <span class="chip tbd">日程要確認</span>　第1版　更新 2026-07-10　｜　Studio Saitama</div>
+  </div>
+  <nav class="toc">
+    <a href="#agenda">0. アジェンダ</a><a href="#status">1. 進捗・状況</a>
+    <a href="#schedule">2. スケジュール</a><a href="#issues">3. 論点・相談</a>
+    <a href="#decided">4. 決定ログ</a>
+  </nav>
+
+  <!-- 0 -->
+  <section id="agenda">
+    <h2><span class="num">0</span>今週のアジェンダ・決めたいこと</h2>
+    <p class="lead">北こぶし知床リゾート（桑島家）× 日本草木研究所「森づくりプロジェクト」。リゾート裏手 約8ha の森を、<b>ヒグマと人が共存する「北方ラグジュアリー」の体験フィールド</b>へ再構築する。現在は<b>フェーズ①（仮マスタープラン・コンセプト設計）</b>。今回の主眼は「<b>クマ前提の安全設計の線引き</b>」「<b>コンセプト図の提出時期の再設定</b>」「<b>間伐計画の根拠図の入手</b>」。</p>
+    <ol>
+      <li>現地視察（6/6 森ウォーク）・散策ルート/アート/森のバー議論（6/8）の振り返り</li>
+      <li>散策ルート案（とどまつ林→川沿い→沢→海の見える丘）の確定</li>
+      <li>クマ安全設計の線引き（最大の未解決論点）</li>
+      <li>コンセプト図の提出時期の再設定（当初7/31・ずれ込み見込み）</li>
+      <li>間伐計画の根拠図（林班図＋地形図）の入手段取り</li>
+    </ol>
+    <div class="box decide" style="margin-top:12px">
+      <h4>今週の「決めたいこと」</h4>
+      <div class="chips">
+        <span class="chip crit">クマ前提の安全設計の線引き</span>
+        <span class="chip warn">コンセプト図の新しい提出時期</span>
+        <span class="chip warn">散策ルート案の確定</span>
+        <span class="chip">間伐計画の根拠図（林班図＋地形図）の入手</span>
+        <span class="chip tbd">アートの方向とテイスト（要確認）</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1 -->
+  <section id="status">
+    <h2><span class="num">1</span>進捗・状況</h2>
+    <p class="lead">フェーズ①進行中。設立趣意書 v1 確定（4/2）、リサーチ3レイヤー完走、コンセプト4案 → 一本に収束済み。6月は現地に入り、森の実態と体験動線の具体化フェーズに移行。</p>
+    <table>
+      <tr><th style="width:38%">ワークストリーム</th><th style="width:22%">状態</th><th>メモ</th></tr>
+      <tr><td>理念整理：設立趣意書</td><td><span class="chip done">✅ v1確定</span></td><td>軸＝「野生化した知性を編み直す」（4/2）</td></tr>
+      <tr><td>リサーチ3レイヤー・コンセプト4案</td><td><span class="chip done">✅ 一本収束</span></td><td>思想的背骨で束ねて宣言化済み</td></tr>
+      <tr><td>現地視察（森ウォーク）</td><td><span class="chip done">✅ 実施</span></td><td>枝打ち・植生（ヨモギ/クレソン）・沢・鹿・滞在の5テーマ確認（6/6）</td></tr>
+      <tr><td>体験設計（散策/アート/バー/入植史）</td><td><span class="chip warn">◐ 議論中</span></td><td>国立公園外の差別化＝境界を体感できる場で合意（6/8）</td></tr>
+      <tr><td>コンセプト図の制作</td><td><span class="chip warn">◐ 着手／ずれ込み</span></td><td>当初7/31期限・6月時点でずれ込み見込み</td></tr>
+      <tr><td>クマ前提の安全設計</td><td><span class="chip crit">🔴 未解決</span></td><td>電気柵 vs「いる気配」の価値／川沿いは柵で囲えない</td></tr>
+      <tr><td>間伐・森林管理</td><td><span class="chip">☐ 秋着手</span></td><td>森林組合の担当決定済・枝打ち/間伐は今秋10月前後〜</td></tr>
+      <tr><td>間伐の根拠図（林班図＋地形図）</td><td><span class="chip tbd">⏳ 入手先決</span></td><td>最も詳細な資料は参加者の父君が保有の可能性（<b>人物特定は要確認</b>）</td></tr>
+    </table>
+  </section>
+
+  <!-- 2 -->
+  <section id="schedule">
+    <h2><span class="num">2</span>スケジュール</h2>
+    <table>
+      <tr><th style="width:40%">マイルストーン</th><th style="width:28%">日程</th><th>状態</th></tr>
+      <tr><td>コンセプト図の提出（フェーズ①成果）</td><td>当初 7/31 → 後ろ倒し</td><td><span class="chip tbd">新期限 要確認</span></td></tr>
+      <tr><td>マスタープラン可視化</td><td>当初7月予定 → 後ろ倒し見込み</td><td><span class="chip warn">◐ 再調整</span></td></tr>
+      <tr><td>枝打ち・間伐の着手</td><td>今秋（10月前後）〜</td><td><span class="chip done">✅ 担当決定・時期合意</span></td></tr>
+    </table>
+    <p class="note">※ 定例の次回日程は未確定（要確認）。日程が決まり次第ヘッダに反映する。</p>
+  </section>
+
+  <!-- 3 -->
+  <section id="issues">
+    <h2><span class="num">3</span>論点・ご相談</h2>
+    <table>
+      <tr><th style="width:5%">#</th><th style="width:30%">論点</th><th>相談したいこと／決めたいこと</th></tr>
+      <tr><td>1</td><td><span style="color:var(--crit)">クマ前提の安全設計</span></td><td>「いる気配」の緊張感の価値を残しつつ、どこまでリスクを管理するかの線引き。電気柵は雰囲気を殺す／川沿いは柵で囲えない。エスケープボックス・鈴の鳴る杖などの組み合わせ。</td></tr>
+      <tr><td>2</td><td>散策ルート・動線</td><td>とどまつ林→川沿い→沢→海の見える丘のシークエンスで確定するか。スタッフ同伴/道整備の要否。</td></tr>
+      <tr><td>3</td><td>森の中のアート</td><td>複数アーティストが現地を見て制作する形／クマのパネル（銅板・メタル）／横長フォーマット。テイストは<b>要確認</b>（Anzai作風・地元画家のミシュラン向けポスターが参照候補）。</td></tr>
+      <tr><td>4</td><td>森のバー・季節イベント</td><td>月1回のバー（K-BAR/Khao Yai事例）／年1回「クマ祭り」的イベント／飲食のアルコール可否は未決定。</td></tr>
+      <tr><td>5</td><td>入植の歴史の展示</td><td>「家族史＝森と人の歴史」か「知床全体の入植史」か（“うちの歴史というより知床の入植史を知ってもらえれば”という声）。会長世代の記録は急ぐべきという認識。郷土誌・航空写真の着色展示が候補。</td></tr>
+      <tr><td>6</td><td>山菜・森での飲食</td><td>シカ柵で囲った採取エリア／収穫体験は年1・シーズン1回のイベント制／「森での朝食」（限定1組・スタッフ同伴）。</td></tr>
+    </table>
+  </section>
+
+  <!-- 4 -->
+  <section id="decided">
+    <h2><span class="num">4</span>決定事項ログ</h2>
+    <table>
+      <tr><th style="width:14%">日付</th><th style="width:54%">決定</th><th>出所</th></tr>
+      <tr><td>2026-06-08</td><td>国立公園内でできない体験（森での飲食・匂い・自由に歩く・アート・滞在）を提供する「人と自然の境界を体感できる場所」として整備する方向で合意</td><td>2_meetings/0608</td></tr>
+      <tr><td>2026-04-02</td><td>設立趣意書 v1 確定（軸＝「野生化した知性を編み直す」）</td><td>3_deliverables/concept/設立趣意書_v1.md</td></tr>
+      <tr><td>2026-03-06</td><td>森を2ゾーン（FOREST.01 獣／FOREST.02 人）に分割。「意味のあるペイン」「北方ラグジュアリー」を核に据える</td><td>2_meetings/0306</td></tr>
+      <tr><td>2026-02-11</td><td>天然林＋人工林併用ゾーニング。初期は小規模（約1ha）から着手。安全とリアルの併置方針</td><td>2_meetings/0210</td></tr>
+    </table>
+  </section>
+
+  <footer>知床 森づくりプロジェクト マスターMTG資料 ／ 毎週更新 ／ 現在: 第1版（2026-07-10 作成）</footer>
+</div>
+</body>
+</html>
