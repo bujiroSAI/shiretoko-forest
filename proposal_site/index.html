@@ -456,9 +456,9 @@ body.lock{overflow:hidden;}
 
 
 /* ============================================================
-   print — A4 landscape (297 x 210mm)
+   print — 16:9 slide (338.7 x 190.5mm)
    ============================================================ */
-@page{size:A4 landscape;margin:0;}
+@page{size:338.66mm 190.5mm;margin:0;}
 @media print{
   *,*::before,*::after{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;animation:none!important;transition:none!important;}
   html{scroll-behavior:auto;}
@@ -469,7 +469,7 @@ body.lock{overflow:hidden;}
   .hero .kicker,.hero .desc,.hero .foot{opacity:1!important;}
   .wd{color:#1f1c15!important;}
   section,.band,.chapband{overflow:visible;}
-  .wrap{max-width:none;padding:0 16mm;}
+  .wrap{max-width:none;padding:0 20mm;}
   .wrap-n{max-width:none;}
 
   /* 段組みを印刷用に固定（印刷ビューポート幅に依存させない） */
@@ -490,19 +490,20 @@ body.lock{overflow:hidden;}
   .rows{grid-template-columns:74px 1fr!important;gap:6px 16px!important;}
   .jr-wide{display:block!important;} .jr-tall{display:none!important;}
 
-  /* 1面 = 1ページ（break-before のみで制御し空白ページを作らない） */
-  .hero{min-height:0;height:209mm;padding:0;justify-content:center;overflow:hidden;}
-  .drama{min-height:0;height:209mm;padding:0 16mm;break-before:page;overflow:hidden;box-shadow:0 3mm 0 0 #16241d;}
-  .chapband{break-before:page;height:209mm;overflow:hidden;box-shadow:0 3mm 0 0 #1b2a22;}
-  .chapband .chap{min-height:0;height:209mm;padding:0;}
-  .creed{break-before:page;height:209mm;padding:0;display:flex;align-items:center;overflow:hidden;box-shadow:0 3mm 0 0 #16241d;}
-  .pad{padding:9mm 0;}
-  #concept>.wrap[style],#reference>div[style],#experience>div[style],#illustration>div[style],#implementation>div[style],#appendix>div[style]{padding:9mm 0!important;}
+  /* 1面 = 1ページ（page height 190.5mm → 189.5mm で実測合わせ） */
+  .hero{min-height:0;height:189.5mm;padding:0;justify-content:center;overflow:hidden;}
+  .drama{min-height:0;height:189.5mm;padding:0 20mm;break-before:page;overflow:hidden;}
+  .definition,.closing{box-shadow:0 3mm 0 0 #16241d;}
+  .chapband{break-before:page;height:189.5mm;overflow:hidden;box-shadow:0 3mm 0 0 #1b2a22;}
+  .chapband .chap{min-height:0;height:189.5mm;padding:0;}
+  .creed{break-before:page;height:189.5mm;padding:0;display:flex;align-items:center;overflow:hidden;box-shadow:0 3mm 0 0 #16241d;}
+  .pad{padding:10mm 0;}
+  #concept>.wrap[style],#reference>div[style],#experience>div[style],#illustration>div[style],#implementation>div[style],#appendix>div[style]{padding:10mm 0!important;}
 
-  /* ブロックを分断しない */
-  .card,.icard,.issue,.zone,.refbox,.box,.bnd,.cost3 .r,.vtl .vi,figure,.imply,.policy,.pgh,.cyc,.eq,.twocol,.cycle,.philo,.igrid,.grid2,.grid3,.zones,.bounds,.cost3{break-inside:avoid;}
+  /* ブロックを分断しない（無理に詰めず、必要ならページを増やす） */
+  .card,.icard,.issue,.zone,.refbox,.box,.bnd,.cost3 .r,.vtl .vi,figure,.imply,.policy,.pgh,.cyc,.eq,.twocol,.cycle,.philo,.igrid,.grid2,.grid3,.zones,.bounds,.cost3,.tw{break-inside:avoid;}
   tr,.pcard{break-inside:avoid;}
-  footer{break-inside:avoid;padding:8mm 16mm 10mm;}
+  footer{break-inside:avoid;height:189.5mm;display:flex;align-items:center;justify-content:center;padding:0 24mm;background:var(--bg-b);}
   p{orphans:2;widows:2;}
   h2,h3,h4,.pgh,.subhead{break-after:avoid;}
   .subhead{margin-top:10mm;margin-bottom:6mm;}
@@ -511,29 +512,31 @@ body.lock{overflow:hidden;}
   h2{font-size:18pt;margin-bottom:4mm;}
   h3{font-size:13.5pt;}
   .chap .ttl{font-size:23pt;}
-  .num{font-size:50pt;}
-  .hero h1{font-size:38pt;}
+  .num{font-size:46pt;}
+  .hero h1{font-size:36pt;}
   .hero .route{font-size:13pt;}
-  .qpage .q{font-size:25pt;}
-  .definition .core{font-size:23pt;}
-  .definition .deny{font-size:14pt;}
-  .closing .big{font-size:23pt;}
-  .creed h2{font-size:14pt;}
-  .creed .catch{font-size:16pt;margin-bottom:6mm;}
-  .creed .body{font-size:9pt;line-height:1.9;max-width:none;}
-  .creed .body p::first-line{font-size:11pt;}
+  .qpage .q{font-size:24pt;}
+  .definition .core{font-size:22pt;}
+  .definition .deny{font-size:13.5pt;}
+  .definition .so{font-size:11pt;}
+  .closing .big{font-size:22pt;}
+  .creed h2{font-size:13pt;}
+  .creed .catch{font-size:15pt;margin-bottom:5mm;}
+  .creed .body{font-size:8.6pt;line-height:1.85;max-width:none;}
+  .creed .body p::first-line{font-size:10.5pt;}
   .icard h4{font-size:12.5pt;}
   .issue h3{font-size:13pt;}
   .card h4{font-size:12pt;}
-  .pcard{font-size:9pt;padding:8px 4px 7px;}
+  .pcard{font-size:9pt;padding:7px 4px 6px;}
+  .pgh{margin:6mm 0 3mm;}
   .pcard small{font-size:7pt;}
 
-  /* 画像・図 */
-  .slide img{max-height:132mm;object-fit:contain;}
-  .axis img{max-height:56mm;object-fit:contain;}
-  .pband img{height:auto!important;max-height:70mm;object-fit:cover;}
-  .refbox .shots img{height:40mm;}
-  .dg{max-height:96mm;height:auto;margin:5mm auto;}
+  /* 画像・図（16:9 は縦が浅いので上限を下げる） */
+  .slide img{width:auto;max-width:100%;max-height:140mm;margin:0 auto;}
+  .axis img{width:auto;max-width:100%;max-height:52mm;margin:0 auto;}
+  .pband img{height:auto!important;max-height:48mm;object-fit:cover;}
+  .refbox .shots img{height:34mm;}
+  .dg{max-height:88mm;height:auto;margin:5mm auto;}
 }
 
 /* ============================================================
@@ -1162,7 +1165,6 @@ body.lock{overflow:hidden;}
 <div class="tw">
 <table>
 <tr><th>資料</th><th>中身</th></tr>
-<tr><td><a href="export/shiretoko-forest-proposal-A4.pdf">本資料のPDF（A4横・35ページ）</a> ／ <a href="export/shiretoko-forest-proposal-A4.pptx">PPTX</a></td><td>印刷・配布用の書き出し</td></tr>
 <tr><td><a href="../research/90_preview/index.html">リサーチブック</a></td><td>桑島家の100年・知床通史・イラスト4方向・遠野リサーチの全文</td></tr>
 <tr><td><a href="../research/90_preview/proposal_flow.html">8/7 提案の論点整理 v3.1</a></td><td>森の実装9論点の詳細（本資料04章の元）</td></tr>
 <tr><td><a href="../research/90_preview/okhotsk.html">オホーツク文化ギャラリー</a></td><td>クマ意匠・土器・遺跡景観など画像51点</td></tr>
