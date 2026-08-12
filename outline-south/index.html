@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>知床 北こぶしの森 ｜ 南アプローチ提案 骨子</title>
+<style>
+:root{
+  --bg:#ffffff;
+  --paper:#faf7f0;
+  --surface:#fffdf8;
+  --line:rgba(58,50,38,.16);
+  --line-soft:rgba(58,50,38,.08);
+  --fg:#22201a;
+  --fg-weak:#6d6759;
+  --fg-faint:#a09884;
+  --acc:#5d7f68;
+  --acc-2:#6a86a6;
+  --hi:#c0614d;
+  --hi-soft:rgba(192,97,77,.08);
+  --ok-soft:rgba(93,127,104,.09);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  font-family:"Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",sans-serif;
+  background:var(--bg);color:var(--fg);
+  font-size:15px;line-height:1.95;
+  -webkit-font-smoothing:antialiased;
+  font-feature-settings:"palt" 1;
+}
+a{color:var(--acc-2);text-decoration:none;border-bottom:1px solid rgba(106,134,166,.35);}
+a:hover{border-bottom-color:var(--acc-2);}
+b,strong{font-weight:700;color:#12100b;}
+[id]{scroll-margin-top:24px;}
+
+.wrap{max-width:840px;margin:0 auto;padding:0 24px;}
+
+/* header */
+header{border-bottom:1px solid var(--line);padding:64px 0 34px;margin-bottom:40px;background:linear-gradient(180deg,var(--paper),var(--bg));}
+.eyebrow{font-size:11px;letter-spacing:.32em;color:var(--fg-weak);text-transform:uppercase;margin-bottom:16px;}
+.eyebrow .bar{display:inline-block;width:22px;height:1px;background:var(--acc);vertical-align:middle;margin-right:10px;}
+h1{font-size:clamp(24px,4.2vw,38px);font-weight:700;line-height:1.35;letter-spacing:-.015em;margin-bottom:18px;}
+.meta{color:var(--fg-weak);font-size:13px;line-height:1.9;}
+.meta div{margin-bottom:2px;}
+
+/* toc */
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:22px 26px;margin-bottom:56px;}
+.toc h2{font-size:11px;letter-spacing:.28em;color:var(--fg-weak);text-transform:uppercase;margin-bottom:14px;border:0;padding:0;}
+.toc ol{list-style:none;counter-reset:toc;}
+.toc li{counter-increment:toc;font-size:13.5px;line-height:1.85;}
+.toc li::before{content:counter(toc,decimal-leading-zero);color:var(--fg-faint);font-size:11px;letter-spacing:.1em;margin-right:12px;}
+.toc a{color:var(--fg);border:0;}
+.toc a:hover{color:var(--acc);}
+
+/* sections */
+section{margin-bottom:60px;}
+h2{font-size:clamp(19px,2.6vw,25px);font-weight:700;line-height:1.5;letter-spacing:-.01em;
+   padding-bottom:12px;margin-bottom:22px;border-bottom:1px solid var(--line);}
+h2 .no{display:block;font-size:11px;letter-spacing:.3em;color:var(--acc);margin-bottom:8px;font-weight:400;}
+h3{font-size:16.5px;font-weight:700;line-height:1.7;margin:30px 0 10px;}
+p{margin-bottom:14px;}
+p:last-child{margin-bottom:0;}
+ul,ol{margin:0 0 16px 1.5em;}
+li{margin-bottom:7px;}
+li>ul,li>ol{margin-top:7px;margin-bottom:4px;}
+.note{color:var(--fg-weak);font-size:13px;line-height:1.9;}
+
+/* callouts */
+.box{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--ok-soft);
+     border-radius:3px;padding:16px 20px;margin:20px 0;}
+.box.warn{border-left-color:var(--hi);background:var(--hi-soft);}
+.box.plain{border-left-color:var(--fg-faint);background:var(--paper);}
+.box .label{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--fg-weak);margin-bottom:6px;}
+.box p:last-child{margin-bottom:0;}
+
+/* steps */
+.steps{list-style:none;margin:0 0 18px;counter-reset:step;}
+.steps li{counter-increment:step;position:relative;padding-left:46px;margin-bottom:16px;}
+.steps li::before{content:counter(step);position:absolute;left:0;top:2px;
+  width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:var(--surface);
+  color:var(--acc);font-size:12px;display:flex;align-items:center;justify-content:center;}
+.steps .t{font-weight:700;}
+
+/* table */
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px;}
+th,td{border:1px solid var(--line);padding:11px 14px;text-align:left;vertical-align:top;line-height:1.8;}
+th{background:var(--paper);font-weight:700;font-size:12.5px;letter-spacing:.04em;}
+td:first-child{white-space:nowrap;font-weight:700;}
+.tblwrap{overflow-x:auto;}
+
+/* option cards */
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:20px 0;}
+.opt{border:1px solid var(--line);border-radius:4px;padding:18px 20px;background:var(--surface);}
+.opt .h{font-weight:700;margin-bottom:8px;}
+.opt .h .n{color:var(--acc);margin-right:6px;}
+.opt p{font-size:14px;margin-bottom:0;}
+
+/* sources */
+.sources{font-size:12.5px;color:var(--fg-weak);border-top:1px solid var(--line-soft);padding-top:18px;}
+.sources li{margin-bottom:4px;}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:26px 0 70px;margin-top:60px;color:var(--fg-faint);font-size:12px;letter-spacing:.04em;}
+
+@media print{
+  body{font-size:12pt;}
+  header{background:none;}
+  section{page-break-inside:auto;}
+  h2{page-break-after:avoid;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow"><span class="bar"></span>北こぶし知床 森づくりプロジェクト</div>
+    <h1>南アプローチ提案 骨子<br><span style="font-size:.62em;color:var(--fg-weak);">——境界の森と、神社の空間構成</span></h1>
+    <div class="meta">
+      <div>2026-08-13 ｜ 検討中ドラフト</div>
+      <div>8/7 フェーズ①プレゼンの振り返りを受けた再設計の提案。map・図版は高野ランドスケープデザイン作成分が入り次第差し込む。</div>
+      <div>※印は編集用の検討メモ。</div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#s1">森の中でプレゼンをした（8/7）</a></li>
+    <li><a href="#s2">歩いたから分かったこと</a></li>
+    <li><a href="#s3">南の道を歩いた（8/8）</a></li>
+    <li><a href="#s4">新しい舞台</a></li>
+    <li><a href="#s5">「野生」を手放す</a></li>
+    <li><a href="#s6">神社という知恵</a></li>
+    <li><a href="#s7">それぞれの場所</a></li>
+    <li><a href="#s8">これから</a></li>
+  </ol>
+</nav>
+
+<section id="s1">
+  <h2><span class="no">01</span>森の中でプレゼンをした（8/7）</h2>
+  <ul>
+    <li>森を歩きながらのプレゼンを実施。自分たちにも過去にないスタイルで楽しかった（一方で虫が多すぎて気が狂いそうになった）。</li>
+    <li>提案内容：コンセプト「野生（野生を紡ぎ直す）」。森に<b>北側の入り口</b>から入り、<b>4つのゾーン</b>で体験し、最終目的地の <b>bar</b> に辿り着く体験設計。</li>
+    <li>本資料はその後の振り返りを受けた再設計の提案——<b>森への入り方を南側に変え、コンセプトを一段深いところから組み直す</b>。</li>
+  </ul>
+</section>
+
+<section id="s2">
+  <h2><span class="no">02</span>歩いたから分かったこと</h2>
+  <p class="note">実際に森を歩き、関係者と話したから得られた収穫。※資料でどこまで言うかは要検討。</p>
+  <ol>
+    <li><b>トドマツ林がやや殺風景</b>。体験の舞台としての魅力が弱い。</li>
+    <li>トドマツ林を体験に使う場合、<b>広範囲な柵などの対策が必要</b>そう。</li>
+    <li><b>林業組合との話し合いの結果</b>：手前の森に伐採できないエリアがある場合、基本的には<b>奥の森から等価面積を差し出す</b>必要がある。その場合<b>沢を渡る道</b>を架ける必要があり、その動線は <b>bar 予定地と重なってしまう</b>。</li>
+    <li>トドマツ林から沢に降りるまでに<b>意外と高低差</b>があり、道の整備に相応のコストがかかりそう。</li>
+    <li>初期は<b>スモールスタート</b>ができる状態が好ましい。</li>
+    <li>利用形態は一般公開よりも<b>クローズドの紹介制</b>のような使い方を想定。</li>
+  </ol>
+  <div class="box">
+    <div class="label">決定した方針</div>
+    <p>南側からのアプローチを確認し、bar の位置を含めて全体の設計を再考する。</p>
+  </div>
+</section>
+
+<section id="s3">
+  <h2><span class="no">03</span>南の道を歩いた（8/8）</h2>
+  <ul>
+    <li>翌8/8、クライアントなしで南側の道を踏査。</li>
+    <li>結論：<b>ロケーションが良い</b>。北ルートの課題（柵の範囲・高低差・道の整備コスト）の多くが南からは発生しない。</li>
+    <li>コスト・実現難易度の面でもこちらが良い。→ <b>南側からのアプローチを基本に、森全体の設計をやり直すことに決定</b>。</li>
+  </ul>
+</section>
+
+<section id="s4">
+  <h2><span class="no">04</span>新しい舞台</h2>
+  <p class="note">南から入ると4つの場面が順に現れる（map：高野ランドスケープデザイン作成中）。</p>
+  <ol class="steps">
+    <li><span class="t">広場</span>——一番入り口・道路寄り。海の見える高い草原の丘で、公園のように開けている。</li>
+    <li><span class="t">天然林の道（約100m）</span>——天然林の間を歩く道。かつて斜里バス用に作られた道と思われる。</li>
+    <li><span class="t">沢との合流点</span>——天然林に囲まれ、左手が沢、右手が傾斜の強い斜面。ここが動線の終点。<b>建築家に土地の形状を生かした bar</b> を設計してもらう。</li>
+    <li><span class="t">裏手の森</span>——直接のアプローチは初期にはつくらない。将来的に繋ぐことも視野に入れつつ、一旦は動線と切り離して考える。<b>ただしこの森が全体のコンセプトの要</b>。</li>
+  </ol>
+  <p class="note">※並びの見せ方（図解・順序）は map が入ってから再検討。</p>
+</section>
+
+<section id="s5">
+  <h2><span class="no">05</span>「野生」を手放す</h2>
+  <ul>
+    <li>新ルートは歩きやすく景色も良く、楽しく活用できそう。一方で当初の「野生を紡ぎ直す」テーマからは離れる。→ <b>このコンセプトは棄却する</b>。</li>
+    <li>この森の役割は何か、もう一段上のレイヤーから考え直す。結論：<b>境界線・接点</b>。</li>
+    <li>キーワード：<b>自然と人間の結束点／境界線／神社／適切な距離感／融ける／融合／フロント／知床ディスタンス／鎮守</b>。</li>
+    <li>「近づきすぎる」ではなく、<b>適切な距離感を考えるアプローチを、こぶしから考え直す場所</b>。知床はヒグマと人間の距離が世界でもっとも近い場所のひとつ——問うべきは「どこまで踏み込めるか」ではなく「<b>どの距離で向き合うのが適切か</b>」。</li>
+    <li>このテーマ性なら、いろんなクリエイターも、今回オーダーしようとしている建築家も乗れるはず。</li>
+  </ul>
+  <div class="box warn">
+    <div class="label">注意</div>
+    <p>間違っても「ラグジュアリーを狙っています」という場所にしたら見透かされる。語るのは距離と境界であって、格ではない。</p>
+  </div>
+</section>
+
+<section id="s6">
+  <h2><span class="no">06</span>神社という知恵</h2>
+  <div class="box plain">
+    <div class="label">前提</div>
+    <p><b>宗教的な意味を持たせるものではない。</b>境内や鳥居を建てたいわけではない。「人間の領域と、人間を超えたものの領域の境界」を作る知恵として日本人が千年以上かけて辿り着いたのが神社空間であり、その構成要素はこの土地の4つの場面と対応している——あくまで「境界のモデル」として参考にする。</p>
+  </div>
+  <div class="tblwrap">
+  <table>
+    <thead><tr><th>この土地</th><th>神社の言葉</th><th>意味</th></tr></thead>
+    <tbody>
+      <tr><td>広場</td><td>境内・公園</td><td>人が集い、遊び、催しをする開かれた場</td></tr>
+      <tr><td>天然林の道</td><td>参道</td><td>境界の内側へ入っていく移行の道</td></tr>
+      <tr><td>bar</td><td>拝殿</td><td>御神体を覗き・感じるための接点</td></tr>
+      <tr><td>裏手の森</td><td>御神体・鎮守の森</td><td>立ち入らず、守り、感じる対象</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <ul>
+    <li><b>公園と神社は日本では地続き</b>。日本最初の公園は明治6年（1873）太政官布達第16号で社寺の境内地を転用して生まれた（上野=寛永寺、浅草=浅草寺、芝=増上寺、深川=富岡八幡宮、飛鳥山=王子権現）。「神社の手前の開かれた広場」は日本の公園の祖形。</li>
+    <li><b>bar は拝殿</b>。拝殿は奥にある御神体を覗き・感じるための接点として建てられた建物。今回の御神体は裏手の森。<b>森を感じながら酒を味わう体験そのものが、本質的に拝殿と同じ</b>。</li>
+  </ul>
+  <div class="box">
+    <div class="label">コラム案：鎮守の森と南方熊楠</div>
+    <p>かつて日本の集落には必ず神社と鎮守の森があった。明治末（1906年頃〜）の一町村一神社の合祀政策で神社林が次々に伐採されたとき、真っ向から反対したのが博物学者・南方熊楠。鎮守の森が信仰のタブーによって数百年守られてきた生態系の宝庫であることを見抜き、日本で初めて「エコロジー」を掲げて森を守る運動を起こした。鎮守の森とは<b>「立ち入らないことで守る」という距離の知恵</b>が天然の自然を現代まで繋いできた装置。裏手の森を、こぶしの創業の地として、この森でもっとも大切な場所——御神体の森——に位置づける。</p>
+  </div>
+</section>
+
+<section id="s7">
+  <h2><span class="no">07</span>それぞれの場所</h2>
+  <p class="note">事例込みで説明する。</p>
+
+  <h3>広場（境内）——ネイチャー×アートの最先端</h3>
+  <ul>
+    <li>神社でいえば境内にあるもの＝神楽殿・土俵。奉納の舞や相撲——境内は聖なるものに向けて<b>表現が行われる場</b>でもあった。神聖さではなく<b>アートとの親和性</b>として引き取る。</li>
+    <li>やりたいこと：<b>ネイチャー×アートの最先端（知床は日本の最先端）を広場に実装する</b>。
+      <ul>
+        <li>参考：<a href="https://www.tokyoartbeat.com/articles/-/kyoto-experiment-2025-news-202507">Kyoto Experiment 2025</a>——京都の国際舞台芸術祭。2025年は超音波・電磁波など「人間以外のものの知覚」で都市を探究するリサーチ等を展開。ポストヒューマン的な表現の潮流はこの森のテーマと正面から重なる。演劇の上演や委嘱作品の制作も良い。</li>
+        <li><b>森のセンシング</b>——奥の森（立ち入らない御神体の森）にセンサーやカメラを置き、広場からその気配を感じられる体験（<a href="https://docs.google.com/document/d/11BCNcatysZHkPDTB-tbU9nkAiCXjJ2S9C6KEB3Fp10g/edit?tab=t.0#heading=h.x47qtld6504n">構想メモ</a>）。ライブビューでも良い。「立ち入らずに感じる」の実装＝拝殿の現代版。</li>
+        <li><b>彫刻</b>の設置——箱根 彫刻の森美術館（1969年開館・日本初の野外美術館）のように、自然の中で作品に出会う形式。</li>
+      </ul>
+    </li>
+    <li>一方で、<b>バギー・BBQ・サウナ</b>などのアクティビティ側もイラストとしては載せておく（公園はみんなの遊び場でもある）。アートとアクティビティのバランスは提案しながら好みを聞く。</li>
+  </ul>
+
+  <h3>参道（天然林の道）</h3>
+  <p>何も足さなくていい。天然林の間を歩く約100mはそれだけで最高の移行体験。歩けば分かる。</p>
+
+  <h3>拝殿（bar）</h3>
+  <ul>
+    <li>沢と斜面に挟まれた地形を生かして建てる（詳細は古谷パート・本資料では割愛）。</li>
+    <li>ネクスト：方向性に合意できたら<b>建築家を交えた検討</b>へ。</li>
+  </ul>
+
+  <h3>森（御神体）</h3>
+  <ul>
+    <li>人がアクティビティをする場ではなく（将来的にはあり得るが）、<b>「残す」姿勢がブランドとしてとても重要</b>。</li>
+    <li>前提：<b>この森は天然更新する</b>。地元の森林組合が実際に天然更新による施業を行っていた実績のある土地。</li>
+  </ul>
+  <div class="opts">
+    <div class="opt">
+      <div class="h"><span class="n">①</span>手前も奥も皆伐する</div>
+      <p>一見乱暴に見えるが、天然更新される以上「森が自らの力で再生する」という最重要ポイントは担保される。更新の全過程を見せる選択。</p>
+    </div>
+    <div class="opt">
+      <div class="h"><span class="n">②</span>天然更新の姿を探る実験の場とする</div>
+      <p>あえて手をかけ、木を選んで間伐するなど複数の方法をテストし続ける。「森を守る方法を探り続けている姿勢」がより打ち出せる。景観の迫力も保ち続けられる。</p>
+    </div>
+  </div>
+  <p class="note">→ 高野ランドスケープデザインと打ち合わせのうえ方向づけ。資料上は両論併記でクライアントと議論する形でも良い。</p>
+</section>
+
+<section id="s8">
+  <h2><span class="no">08</span>これから</h2>
+  <p>まとめ：</p>
+  <ul>
+    <li>森へは<b>南から</b>入る。広場 → 天然林の道 → 沢の bar という動線。</li>
+    <li>コンセプトは「野生」から<b>「境界」</b>へ。適切な距離感を考え直す場所——知床ディスタンス。</li>
+    <li>空間の下敷きは<b>神社の構成</b>（境内・参道・拝殿・御神体）。宗教ではなく境界を作る知恵として。</li>
+    <li>裏手の森は<b>創業の地として、立ち入らずに守る森</b>にする。</li>
+  </ul>
+  <div class="box">
+    <div class="label">議論したいこと</div>
+    <p>1. この方向性（南アプローチ＋境界のコンセプト）で進めて良いか。<br>
+       2. 広場の色——アート寄りか、アクティビティ寄りか、その配合。<br>
+       3. 森の関わり方——①皆伐からの天然更新か、②実験の森か。</p>
+  </div>
+  <p>ネクスト：方向性合意後、建築家を交えた bar の検討と、高野ランドスケープデザインの map をもとにした空間設計の具体化へ。</p>
+  <p class="note">※継続未決：森の名前。コンセプト（境界・鎮守）が決まった今が命名のチャンス。</p>
+
+  <ul class="sources" style="list-style:none;margin:28px 0 0;">
+    <li>出典：公園制度の起点——<a href="https://www.posa.or.jp/wp/wp-content/uploads/2023/01/posa_150th_panel.pdf">日本公園緑地協会 都市公園150年</a></li>
+    <li>南方熊楠の神社合祀反対運動——<a href="https://www.minakatakumagusu-kinenkan.jp/kumagusu/life/goushihantai">南方熊楠記念館</a>／<a href="https://www.minakatakumagusu-kinenkan.jp/exhibition-guide/corner4/corner4-2">同・展示解説</a></li>
+    <li>Kyoto Experiment 2025——<a href="https://www.tokyoartbeat.com/articles/-/kyoto-experiment-2025-news-202507">Tokyo Art Beat</a></li>
+  </ul>
+</section>
+
+<footer>
+  <div>2026-08-13 版｜検討中ドラフト・限定共有（検索エンジン非掲載）</div>
+</footer>
+
+</div>
+</body>
+</html>
