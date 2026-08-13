@@ -89,6 +89,7 @@ th,td{border:1px solid var(--line);padding:11px 14px;text-align:left;vertical-al
 th{background:var(--paper);font-weight:700;font-size:12.5px;letter-spacing:.04em;}
 td:first-child{white-space:nowrap;font-weight:700;}
 .tblwrap{overflow-x:auto;}
+table.loose td:first-child{white-space:normal;font-weight:400;}
 
 /* option cards */
 .opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:20px 0;}
@@ -96,6 +97,12 @@ td:first-child{white-space:nowrap;font-weight:700;}
 .opt .h{font-weight:700;margin-bottom:8px;}
 .opt .h .n{color:var(--acc);margin-right:6px;}
 .opt p{font-size:14px;margin-bottom:0;}
+
+/* terrain illustration (from Furuya deck, palette scoped) */
+.terrain-illust{overflow-x:auto;margin:22px 0 6px;border:1px solid var(--line);border-radius:4px;background:#faf7f0;
+  --forest-deep:#182a1e;--forest:#233c2b;--forest-soft:#3c5a41;--moss:#8a9a78;
+  --gold:#b9945a;--gold-soft:#d8bd8a;--cream-soft:#efe8d8;--f-paper:#faf7f0;--f-line:rgba(32,33,28,0.12);}
+.terrain-illust svg{min-width:780px;width:100%;height:auto;display:block;}
 
 /* sources */
 .sources{font-size:12.5px;color:var(--fg-weak);border-top:1px solid var(--line-soft);padding-top:18px;}
@@ -119,9 +126,9 @@ footer{border-top:1px solid var(--line);padding:26px 0 70px;margin-top:60px;colo
     <div class="eyebrow"><span class="bar"></span>北こぶし知床 森づくりプロジェクト</div>
     <h1>南アプローチ提案 骨子<br><span style="font-size:.62em;color:var(--fg-weak);">——境界の森と、神社の空間構成</span></h1>
     <div class="meta">
-      <div>2026-08-13 ｜ 検討中ドラフト</div>
-      <div>8/7 フェーズ①プレゼンの振り返りを受けた再設計の提案。map・図版は高野ランドスケープデザイン作成分が入り次第差し込む。</div>
-      <div>※印は編集用の検討メモ。</div>
+      <div>2026-08-13 ｜ 検討中ドラフト（統合版）</div>
+      <div>8/7 フェーズ①プレゼンの振り返りを受けた再設計の提案。古谷氏「フォレストヘリテージラウンジ構想」と Khao Yai Art Forest リファレンスを統合。</div>
+      <div>map・図版は高野ランドスケープデザイン作成分が入り次第差し込む。※印は編集用の検討メモ。</div>
     </div>
   </div>
 </header>
@@ -136,9 +143,11 @@ footer{border-top:1px solid var(--line);padding:26px 0 70px;margin-top:60px;colo
     <li><a href="#s3">（翌日）南アプローチの結果</a></li>
     <li><a href="#s4">新しい空間構成について</a></li>
     <li><a href="#s5">全体コンセプトの変更</a></li>
-    <li><a href="#s6">空間コンセプト：神社の空間モデルの転用</a></li>
-    <li><a href="#s7">空間の意味性の再解釈</a></li>
-    <li><a href="#s8">ご相談事項</a></li>
+    <li><a href="#s6">参照事例：Khao Yai Art Forest（タイ）</a></li>
+    <li><a href="#s7">空間コンセプト：神社の空間モデルの転用</a></li>
+    <li><a href="#s8">空間の意味性の再解釈</a></li>
+    <li><a href="#s9">この森がもたらす価値</a></li>
+    <li><a href="#s10">ご相談事項</a></li>
   </ol>
 </nav>
 
@@ -179,13 +188,187 @@ footer{border-top:1px solid var(--line);padding:26px 0 70px;margin-top:60px;colo
 
 <section id="s4">
   <h2><span class="no">04</span>新しい空間構成について</h2>
-  <p class="note">南から入ると4つの場面が順に現れる（map：高野ランドスケープデザイン作成中）。</p>
+  <p class="note">南から入ると5つの場面が順に現れる（map：高野ランドスケープデザイン作成中）。</p>
   <ol class="steps">
-    <li><span class="t">広場</span>——一番入り口・道路寄り。海の見える高い草原の丘で、公園のように開けている。</li>
+    <li><span class="t">広場（集落側）</span>——一番入り口・道路寄り。海の見える高い草原の丘で、公園のように開けている。</li>
     <li><span class="t">天然林の道（約100m）</span>——天然林の間を歩く道。かつて斜里バス用に作られた道と思われる。</li>
-    <li><span class="t">沢との合流点</span>——天然林に囲まれ、左手が沢、右手が傾斜の強い斜面。ここが動線の終点。<b>建築家に土地の形状を生かした bar</b> を設計してもらう。</li>
-    <li><span class="t">裏手の森</span>——直接のアプローチは初期にはつくらない。将来的に繋ぐことも視野に入れつつ、一旦は動線と切り離して考える。<b>ただしこの森が全体のコンセプトの要</b>。</li>
+    <li><span class="t">沢との合流点＝bar（ラウンジ）</span>——天然林に囲まれ、左手が沢、右手が傾斜の強い斜面。ここが主動線の終点。<b>建築家に土地の形状を生かした bar</b> を設計してもらう。</li>
+    <li><span class="t">裏手の森</span>——bar に面する天然林から人工林までの一帯。直接のアプローチは初期にはつくらない。<b>この森が全体のコンセプトの要</b>。</li>
+    <li><span class="t">御神木</span>——bar から沢沿いをしばらく歩いた先にある<b>桂の巨木</b>。建物からは直接見えないが、一体の空間の要。徒歩でしか辿り着けない終着点。</li>
   </ol>
+
+  <div class="terrain-illust">
+    <svg viewBox="0 0 1200 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="海を望む高台の集落・広場から、参道、拝殿、鎮守の森を経て、山を登った先の御神木へと至る断面イメージ図">
+      <defs>
+        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#eef3ec"/>
+          <stop offset="100%" stop-color="#c3d9dc"/>
+        </linearGradient>
+        <linearGradient id="groundGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#d9dfab"/>
+          <stop offset="22%" stop-color="#a9bd86"/>
+          <stop offset="50%" stop-color="var(--forest-soft)"/>
+          <stop offset="78%" stop-color="var(--forest)"/>
+          <stop offset="100%" stop-color="var(--forest-deep)"/>
+        </linearGradient>
+        <radialGradient id="sacredGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="var(--gold-soft)" stop-opacity="0.3"/>
+          <stop offset="100%" stop-color="var(--gold-soft)" stop-opacity="0"/>
+        </radialGradient>
+        <symbol id="treeR" viewBox="0 0 40 60">
+          <line x1="20" y1="60" x2="20" y2="28" stroke="var(--forest-deep)" stroke-width="3"/>
+          <circle cx="20" cy="20" r="18" fill="var(--forest)"/>
+        </symbol>
+        <symbol id="treeC" viewBox="0 0 40 64">
+          <line x1="20" y1="64" x2="20" y2="40" stroke="var(--forest-deep)" stroke-width="3"/>
+          <polygon points="20,6 35,38 5,38" fill="var(--forest-deep)"/>
+          <polygon points="20,20 31,46 9,46" fill="var(--forest)"/>
+        </symbol>
+        <symbol id="shrub" viewBox="0 0 24 18">
+          <ellipse cx="12" cy="13" rx="10" ry="6" fill="var(--moss)"/>
+          <circle cx="7" cy="9" r="1.6" fill="var(--gold)"/>
+          <circle cx="16" cy="8" r="1.6" fill="var(--gold)"/>
+          <circle cx="12" cy="6" r="1.6" fill="var(--gold)"/>
+        </symbol>
+      </defs>
+
+      <rect x="0" y="0" width="1200" height="470" fill="var(--f-paper)"/>
+      <path d="M0,210 Q220,150 440,195 T860,180 T1200,205 L1200,470 L0,470 Z" fill="var(--moss)" opacity="0.1"/>
+      <rect x="0" y="0" width="420" height="300" fill="url(#skyGrad)"/>
+      <path d="M40,262 q30,-8 60,0 t60,0 t60,0" fill="none" stroke="var(--forest-soft)" stroke-width="1.5" opacity="0.35"/>
+      <path d="M20,282 q35,-9 70,0 t70,0 t70,0 t70,0" fill="none" stroke="var(--forest-soft)" stroke-width="1.5" opacity="0.3"/>
+
+      <path d="M0,300 C90,292 130,300 170,300 C240,304 300,312 340,320 C420,325 480,317 560,323 C610,327 650,300 700,280 C750,258 790,242 850,220 C900,202 950,190 1000,175 C1060,157 1130,152 1200,150 L1200,470 L0,470 Z" fill="url(#groundGrad)"/>
+
+      <path d="M55,296 C140,296 250,306 340,316 C420,321 480,318 555,319 C605,322 650,298 700,278 C745,258 790,242 850,218 C900,200 950,188 1000,172 C1050,158 1080,152 1140,148" fill="none" stroke="var(--gold-soft)" stroke-width="2" stroke-dasharray="1 9" stroke-linecap="round" opacity="0.9"/>
+
+      <path d="M230,318 C280,325 300,327 320,328 C370,330 400,331 420,331 C460,332 480,332 500,332 C530,333 545,333 560,333 C590,325 605,320 620,315 C650,305 665,300 680,296 C710,285 725,280 740,274 C770,262 785,256 800,250 C830,238 845,232 860,227 C890,215 905,212 920,209 C950,198 965,195 980,191 C1010,182 1030,180 1050,179 C1070,176 1082,175 1090,174" fill="none" stroke="#8fb6bd" stroke-width="5" stroke-linecap="round" opacity="0.72"/>
+      <path d="M230,318 C280,325 300,327 320,328 C370,330 400,331 420,331 C460,332 480,332 500,332 C530,333 545,333 560,333 C590,325 605,320 620,315 C650,305 665,300 680,296 C710,285 725,280 740,274 C770,262 785,256 800,250 C830,238 845,232 860,227 C890,215 905,212 920,209 C950,198 965,195 980,191 C1010,182 1030,180 1050,179 C1070,176 1082,175 1090,174" fill="none" stroke="#c7dee0" stroke-width="1.4" stroke-linecap="round" opacity="0.8"/>
+
+      <g opacity="0.28">
+        <use href="#treeR" x="640" y="255" width="22" height="32"/>
+        <use href="#treeC" x="760" y="215" width="20" height="30"/>
+        <use href="#treeC" x="880" y="170" width="26" height="38"/>
+        <use href="#treeR" x="960" y="145" width="22" height="32"/>
+        <use href="#treeC" x="1010" y="130" width="20" height="30"/>
+      </g>
+
+      <g>
+        <rect x="30" y="272" width="42" height="26" fill="var(--cream-soft)" stroke="var(--forest-deep)" stroke-width="1.5"/>
+        <polygon points="26,272 76,272 51,254" fill="var(--forest-deep)"/>
+        <rect x="86" y="280" width="30" height="18" fill="var(--cream-soft)" stroke="var(--forest-deep)" stroke-width="1.5"/>
+        <polygon points="83,280 119,280 101,266" fill="var(--forest-deep)"/>
+        <line x1="10" y1="300" x2="150" y2="308" stroke="var(--gold)" stroke-width="1.5" stroke-dasharray="2 5" opacity="0.7"/>
+      </g>
+
+      <g>
+        <ellipse cx="155" cy="303" rx="34" ry="9" fill="var(--gold-soft)" opacity="0.5" stroke="var(--gold)" stroke-width="1"/>
+        <path d="M124,299 q3,-9 0,-16" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" opacity="0.75"/>
+        <path d="M186,299 q-3,-9 0,-16" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" opacity="0.75"/>
+        <circle cx="155" cy="269" r="5" fill="var(--forest-deep)"/>
+        <g stroke="var(--forest-deep)" stroke-width="2.5" fill="none" stroke-linecap="round">
+          <path d="M155,274 L155,289"/>
+          <path d="M155,278 C146,271 140,262 134,257"/>
+          <path d="M155,278 C165,269 172,259 179,253"/>
+          <path d="M155,289 C147,296 138,299 128,298"/>
+          <path d="M155,289 C164,294 173,291 181,297"/>
+        </g>
+      </g>
+
+      <use href="#treeR" x="188" y="272" width="22" height="32"/>
+      <use href="#treeC" x="222" y="280" width="24" height="36"/>
+      <use href="#treeR" x="262" y="288" width="26" height="38"/>
+      <use href="#treeR" x="302" y="296" width="28" height="40"/>
+      <use href="#treeC" x="344" y="302" width="30" height="42"/>
+      <use href="#treeR" x="388" y="308" width="28" height="40"/>
+
+      <ellipse cx="490" cy="320" rx="102" ry="25" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-dasharray="3 6" opacity="0.85"/>
+      <use href="#shrub" x="395" y="312" width="18" height="14"/>
+      <use href="#shrub" x="412" y="325" width="16" height="13"/>
+      <use href="#shrub" x="440" y="332" width="18" height="14"/>
+      <use href="#shrub" x="470" y="335" width="16" height="13"/>
+      <use href="#shrub" x="500" y="335" width="18" height="14"/>
+      <use href="#shrub" x="530" y="331" width="16" height="13"/>
+      <use href="#shrub" x="558" y="324" width="18" height="14"/>
+      <use href="#shrub" x="577" y="311" width="16" height="13"/>
+      <use href="#shrub" x="402" y="300" width="16" height="13"/>
+      <use href="#shrub" x="572" y="298" width="16" height="13"/>
+
+      <g>
+        <ellipse cx="490" cy="325" rx="46" ry="8" fill="var(--forest-deep)" opacity="0.18"/>
+        <rect x="456" y="288" width="68" height="34" fill="var(--cream-soft)" stroke="var(--forest-deep)" stroke-width="2"/>
+        <polygon points="450,288 530,288 490,262" fill="var(--forest-deep)"/>
+        <rect x="486" y="262" width="8" height="10" fill="var(--gold-soft)"/>
+        <line x1="440" y1="322" x2="540" y2="322" stroke="var(--gold)" stroke-width="2"/>
+      </g>
+
+      <use href="#treeR" x="592" y="308" width="30" height="44"/>
+      <use href="#treeR" x="628" y="295" width="34" height="50"/>
+      <use href="#treeR" x="608" y="290" width="18" height="26"/>
+      <use href="#treeR" x="665" y="282" width="28" height="42"/>
+      <use href="#treeR" x="700" y="273" width="36" height="52"/>
+      <use href="#treeR" x="682" y="269" width="18" height="26"/>
+      <use href="#treeR" x="730" y="261" width="30" height="44"/>
+
+      <use href="#treeC" x="775" y="245" width="32" height="48"/>
+      <use href="#treeC" x="798" y="230" width="24" height="36"/>
+      <use href="#treeC" x="822" y="225" width="32" height="48"/>
+      <use href="#treeC" x="848" y="210" width="24" height="36"/>
+      <use href="#treeC" x="872" y="207" width="30" height="44"/>
+      <use href="#treeC" x="898" y="195" width="22" height="32"/>
+      <use href="#treeC" x="922" y="192" width="30" height="44"/>
+      <use href="#treeC" x="942" y="184" width="22" height="32"/>
+      <use href="#treeC" x="962" y="181" width="28" height="40"/>
+
+      <use href="#treeR" x="978" y="188" width="22" height="32"/>
+      <use href="#treeC" x="1018" y="170" width="26" height="38"/>
+
+      <ellipse cx="1090" cy="120" rx="150" ry="120" fill="url(#sacredGlow)"/>
+      <g>
+        <path d="M1075,164 C1068,136 1078,110 1090,88" fill="none" stroke="var(--forest-deep)" stroke-width="7" stroke-linecap="round"/>
+        <path d="M1102,164 C1108,138 1100,112 1090,88" fill="none" stroke="var(--forest-deep)" stroke-width="6" stroke-linecap="round"/>
+        <ellipse cx="1055" cy="89" rx="46" ry="34" fill="var(--forest-soft)"/>
+        <ellipse cx="1100" cy="67" rx="58" ry="44" fill="var(--forest)"/>
+        <ellipse cx="1140" cy="95" rx="42" ry="32" fill="var(--forest-soft)"/>
+        <ellipse cx="1090" cy="81" rx="52" ry="38" fill="var(--forest-deep)" opacity="0.55"/>
+      </g>
+      <g>
+        <path d="M1070,150 Q1090,141 1112,150" fill="none" stroke="#c9a86a" stroke-width="9" stroke-linecap="round"/>
+        <g stroke="var(--forest-deep)" stroke-width="1.4" opacity="0.5">
+          <line x1="1076" y1="146" x2="1081" y2="153"/>
+          <line x1="1084" y1="144" x2="1089" y2="152"/>
+          <line x1="1092" y1="143" x2="1097" y2="151"/>
+          <line x1="1100" y1="144" x2="1105" y2="152"/>
+        </g>
+        <path d="M1078,150 L1082,158 L1078,166 L1082,174" fill="none" stroke="#f5f0e6" stroke-width="2" stroke-linecap="round"/>
+        <path d="M1090,148 L1094,157 L1090,166 L1094,175" fill="none" stroke="#f5f0e6" stroke-width="2" stroke-linecap="round"/>
+        <path d="M1102,150 L1106,158 L1102,166 L1106,174" fill="none" stroke="#f5f0e6" stroke-width="2" stroke-linecap="round"/>
+      </g>
+
+      <g font-family="'Hiragino Mincho ProN',serif">
+        <circle cx="90" cy="299" r="4.5" fill="var(--gold)"/>
+        <line x1="90" y1="299" x2="90" y2="424" stroke="var(--f-line)" stroke-width="1"/>
+        <text x="90" y="440" text-anchor="middle" font-size="15" fill="var(--forest-deep)" font-weight="600">集落・広場</text>
+
+        <circle cx="300" cy="315" r="4.5" fill="var(--gold)"/>
+        <line x1="300" y1="315" x2="300" y2="424" stroke="var(--f-line)" stroke-width="1"/>
+        <text x="300" y="440" text-anchor="middle" font-size="15" fill="var(--forest-deep)" font-weight="600">参道</text>
+
+        <circle cx="490" cy="322" r="4.5" fill="var(--gold)"/>
+        <line x1="490" y1="322" x2="490" y2="424" stroke="var(--f-line)" stroke-width="1"/>
+        <text x="490" y="440" text-anchor="middle" font-size="15" fill="var(--forest-deep)" font-weight="600">拝殿</text>
+
+        <circle cx="740" cy="264" r="4.5" fill="var(--gold)"/>
+        <line x1="740" y1="264" x2="740" y2="424" stroke="var(--f-line)" stroke-width="1"/>
+        <text x="740" y="440" text-anchor="middle" font-size="15" fill="var(--forest-deep)" font-weight="600">鎮守の森</text>
+
+        <circle cx="1090" cy="164" r="4.5" fill="var(--gold)"/>
+        <line x1="1090" y1="164" x2="1090" y2="424" stroke="var(--f-line)" stroke-width="1"/>
+        <text x="1090" y="440" text-anchor="middle" font-size="15" fill="var(--forest-deep)" font-weight="600">御神木</text>
+      </g>
+    </svg>
+  </div>
+  <p class="note">断面構成のイメージ図（概念図・古谷氏「フォレストヘリテージラウンジ構想」より）。海を望む高台の集落・広場から、沢に沿う参道を抜け、収穫植物の境界に囲まれた拝殿、天然林から人工林へと続く鎮守の森を経て、山を登った先のしめ縄を纏う御神木へ。</p>
   <p class="note">※並びの見せ方（図解・順序）は map が入ってから再検討。</p>
 </section>
 
@@ -194,8 +377,14 @@ footer{border-top:1px solid var(--line);padding:26px 0 70px;margin-top:60px;colo
   <ul>
     <li>新ルートは歩きやすく景色も良く、活用しやすい。一方で当初の「野生を紡ぎ直す」テーマからは離れる。→ <b>このコンセプトは棄却する</b>。</li>
     <li>この森の役割は何か、もう一段上のレイヤーから考え直す。結論：<b>境界線・接点</b>。</li>
+  </ul>
+  <h3>なぜ「境界」なのか（古谷氏資料より統合）</h3>
+  <ul>
+    <li>知床が美しく尊いのは、人間が距離を取らざるをえないほど厳しく、飼い慣らせない場所だったから。世界自然遺産区画は日常から切り離された「<b>あちら側</b>」の世界であり、人はそこへ一時的にお邪魔するだけ。</li>
+    <li>北こぶしは、その「あちら側」がちょうど終わる<b>境目</b>に立っている。敷地そのものが知床国立公園の山から海へ下る接続部にある。</li>
+    <li><b>桑島家の70年</b>：70年前、この土地を畑にしようと自然に挑み、挫折した。今その場所は森に還っている。これは悲しい歴史ではなく、人間がこの土地の前で己の小ささを認めた歴史——「全てが手に入ると、思えない。何かを諦めて前に進むことで、進歩する」。</li>
     <li>キーワード：<b>自然と人間の結束点／境界線／神社／適切な距離感／融ける／融合／フロント／知床ディスタンス／鎮守</b>。</li>
-    <li>「近づきすぎる」ではなく、<b>適切な距離感を考えるアプローチを、こぶしから考え直す場所</b>。知床はヒグマと人間の距離が世界でもっとも近い場所のひとつ——問うべきは「どこまで踏み込めるか」ではなく「<b>どの距離で向き合うのが適切か</b>」。</li>
+    <li>「近づきすぎる」ではなく、<b>適切な距離感を考えるアプローチを、こぶしから考え直す場所</b>。問うべきは「どこまで踏み込めるか」ではなく「<b>どの距離で向き合うのが適切か</b>」。</li>
     <li>このテーマ性なら、多様なクリエイターも、今回オーダーしようとしている建築家も乗れるはず。</li>
   </ul>
   <div class="box warn">
@@ -205,25 +394,57 @@ footer{border-top:1px solid var(--line);padding:26px 0 70px;margin-top:60px;colo
 </section>
 
 <section id="s6">
-  <h2><span class="no">06</span>空間コンセプト：神社の空間モデルの転用</h2>
+  <h2><span class="no">06</span>参照事例：Khao Yai Art Forest（タイ）</h2>
+  <div class="box">
+    <div class="label">説明の順番</div>
+    <p>桑島社長たちへの説明は、抽象的な思想からではなく<b>この事例から入る</b>。「タイの財閥は最近、こんな風に森と人との関係を見直しています」→「知床でやると、ちなみにこんな感じ？」の順。</p>
+  </div>
+  <ul>
+    <li><b>Khao Yai Art Forest</b>——バンコクから車で約3時間、カオヤイ国立公園の近くに2025年2月に開業した約48haの野外美術館。CP グループ（タイ最大級の財閥）のアートパトロン <b>Marisa Chearavanont</b> が主宰、ディレクターは元 Hauser &amp; Wirth の Stefano Rabolli Pansera。</li>
+    <li>コンセプトは「<b>healing through art（アートによる癒し）</b>」。<b>傷ついた土地を、アートとともに森へ戻していく</b>プロジェクト。</li>
+    <li>ルイーズ・ブルジョワ《ママン》、中谷芙二子の霧の作品、リチャード・ロングの彫刻などを森に点在させ、<b>ハイキングで作品に辿り着く過程全体が鑑賞体験</b>。天候や季節で環境が変わり、体験は毎回新鮮になる。</li>
+    <li>レストランを備え、将来は宿泊施設も計画——ホスピタリティとの接続まで含めて同型。</li>
+    <li>リンク：<a href="https://brutus.jp/post-445912/">BRUTUS 記事</a>／<a href="https://www.instagram.com/khaoyai_art_forest/">Instagram</a></li>
+  </ul>
+  <h3>北こぶしとの共通構造</h3>
+  <div class="tblwrap">
+  <table class="loose">
+    <thead><tr><th>Khao Yai Art Forest</th><th>北こぶしの森</th></tr></thead>
+    <tbody>
+      <tr><td>傷ついた土地をアートとともに森へ戻す</td><td>畑にしようとして諦め、森に還った創業の地</td></tr>
+      <tr><td>財閥のパトロンが私有地から始めた文化事業</td><td>桑島家の私有林から始める森づくり</td></tr>
+      <tr><td>歩いて作品に辿り着く過程が体験</td><td>広場→参道→bar→森と歩いて深まる体験</td></tr>
+      <tr><td>天候・季節で毎回変わる</td><td>知床の季節・気配とともに変わる</td></tr>
+      <tr><td>レストラン・将来は宿泊</td><td>bar・北こぶしのホテルと接続</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">※bar（ラウンジ）の建築・空間リファレンスとしても Khao Yai を参照する。</p>
+</section>
+
+<section id="s7">
+  <h2><span class="no">07</span>空間コンセプト：神社の空間モデルの転用</h2>
   <div class="box plain">
     <div class="label">前提</div>
-    <p><b>宗教的な意味を持たせるものではない。</b>境内や鳥居を建てたいわけではない。「人間の領域と、人間を超えたものの領域の境界」を作る知恵として日本人が千年以上かけて辿り着いたのが神社空間であり、その構成要素はこの土地の4つの場面と対応している——あくまで「境界のモデル」として転用する。</p>
+    <p><b>宗教的な意味を持たせるものではない。</b>境内や鳥居を建てたいわけではない。「人間の領域と、人間を超えたものの領域の境界」を作る知恵として日本人が千年以上かけて辿り着いたのが神社空間であり、その構成要素はこの土地の5つの場面と対応している——あくまで「境界のモデル」として転用する。</p>
   </div>
   <div class="tblwrap">
   <table>
-    <thead><tr><th>この土地</th><th>神社の言葉</th><th>意味</th></tr></thead>
+    <thead><tr><th>この土地</th><th>神社の言葉</th><th>意味</th><th>体験（古谷氏資料より）</th></tr></thead>
     <tbody>
-      <tr><td>広場</td><td>境内・公園</td><td>人が集い、遊び、催しをする開かれた場</td></tr>
-      <tr><td>天然林の道</td><td>参道</td><td>境界の内側へ入っていく移行の道</td></tr>
-      <tr><td>bar</td><td>拝殿</td><td>御神体を覗き・感じるための接点</td></tr>
-      <tr><td>裏手の森</td><td>御神体・鎮守の森</td><td>立ち入らず、守り、感じる対象</td></tr>
+      <tr><td>広場（集落側）</td><td>境内・公園</td><td>人が集い、遊び、催しをする開かれた場</td><td>年に1〜2回、野生をテーマにした催しを開催</td></tr>
+      <tr><td>天然林の道</td><td>参道</td><td>境界の内側へ入っていく移行の道</td><td>車・バギー・徒歩を組み合わせ、来訪者専用動線を林業用と分離</td></tr>
+      <tr><td>bar（ラウンジ）</td><td>拝殿</td><td>御神体を覗き・感じるための接点</td><td>飲料中心・レストラン機能なし。内省を促す静かな滞在</td></tr>
+      <tr><td>裏手の森</td><td>御神体・鎮守の森</td><td>立ち入らず、守り、感じる対象</td><td>ガイド付きの徒歩区間。野生を誇張せず問いを生む余白</td></tr>
+      <tr><td>御神木</td><td>御神木</td><td>一体の空間の要</td><td>沢沿いを歩いた先の桂の巨木。徒歩でしか辿り着けない終着点</td></tr>
     </tbody>
   </table>
   </div>
   <ul>
     <li><b>公園と神社は日本では地続き</b>。日本最初の公園は明治6年（1873）太政官布達第16号で社寺の境内地を転用して生まれた（上野=寛永寺、浅草=浅草寺、芝=増上寺、深川=富岡八幡宮、飛鳥山=王子権現）。「神社の手前の開かれた広場」は日本の公園の祖形。</li>
-    <li><b>bar は拝殿</b>。拝殿は奥にある御神体を覗き・感じるための接点として建てられた建物。今回の御神体は裏手の森。<b>森を感じながら酒を味わう体験そのものが、本質的に拝殿と同じ</b>。</li>
+    <li><b>bar は拝殿</b>。拝殿は奥にある御神体を覗き・感じるための接点として建てられた建物。今回の御神体は裏手の森。<b>森を感じながら酒を味わう体験そのものが、本質的に拝殿と同じ</b>。屋内空間という安心感が、外の森で感じる緊張感を浮き彫りにする。</li>
+    <li><b>境内フォレジング</b>——拝殿の周囲に限って収穫用の道内植物を移植し、年間を通して収穫を可能にする。人為の範囲を拝殿側に閉じ込め切ることで、<b>森の非人為性をむしろ際立たせる</b>仕掛け。「70年前、この土地を畑にしようとして諦めた。境内という一角にだけ、限定的に、その記憶を戻す」。季節は樹液（厳冬）→新芽・山菜（春）→花・最初の実（初夏）→小果実（盛夏）→蔓・木の実・種（秋）→保存・発酵・香り（冬）と移る。22種の収穫暦は古谷氏資料に整備済み。</li>
+    <li><b>与えすぎない</b>——知床のリッチさは「与えすぎない」ことにある。絶景を確実に見せる→見えない日も受け入れる／豊富な選択肢→今日の一つを受け取る／ガイドが理解させる→分からなさを残す／遭遇を価値にする→不在や気配も価値にする／予定どおり完遂する→森の事情で諦める／満たしきる→小さな欠落を持ち帰らせる。</li>
   </ul>
   <div class="box">
     <div class="label">コラム案：鎮守の森と南方熊楠</div>
@@ -231,29 +452,36 @@ footer{border-top:1px solid var(--line);padding:26px 0 70px;margin-top:60px;colo
   </div>
 </section>
 
-<section id="s7">
-  <h2><span class="no">07</span>空間の意味性の再解釈</h2>
-  <p class="note">神社モデルを踏まえ、4つの場面それぞれの意味とデザインを再解釈する。事例込みで説明する。</p>
+<section id="s8">
+  <h2><span class="no">08</span>空間の意味性の再解釈</h2>
+  <p class="note">神社モデルを踏まえ、それぞれの場面の意味とデザインを再解釈する。事例込みで説明する。</p>
 
   <h3>広場（境内）——ネイチャー×アートの最先端</h3>
   <ul>
     <li>神社でいえば境内にあるもの＝神楽殿・土俵。奉納の舞や相撲——境内は聖なるものに向けて<b>表現が行われる場</b>でもあった。神聖さではなく<b>アートとの親和性</b>として引き取る。</li>
     <li>方針：<b>ネイチャー×アートの最先端（知床は日本の最先端）を広場に実装する</b>。
       <ul>
-        <li>参考：<a href="https://www.tokyoartbeat.com/articles/-/kyoto-experiment-2025-news-202507">Kyoto Experiment 2025</a>——京都の国際舞台芸術祭。2025年は超音波・電磁波など「人間以外のものの知覚」で都市を探究するリサーチ等を展開。ポストヒューマン的な表現の潮流はこの森のテーマと正面から重なる。演劇の上演や委嘱作品の制作も良い。</li>
+        <li>参考：<a href="#s6">Khao Yai Art Forest（§06）</a>——森×アート×ホスピタリティの先行事例。</li>
+        <li>参考：<a href="https://www.tokyoartbeat.com/articles/-/kyoto-experiment-2025-news-202507">Kyoto Experiment 2025</a>——京都の国際舞台芸術祭。2025年は超音波・電磁波など「人間以外のものの知覚」で都市を探究するリサーチ等を展開。ポストヒューマン的な表現の潮流はこの森のテーマと正面から重なる。演劇の上演や委嘱作品の制作も考えられる。</li>
         <li><b>森のセンシング</b>——奥の森（立ち入らない御神体の森）にセンサーやカメラを置き、広場からその気配を感じられる体験（<a href="https://docs.google.com/document/d/11BCNcatysZHkPDTB-tbU9nkAiCXjJ2S9C6KEB3Fp10g/edit?tab=t.0#heading=h.x47qtld6504n">構想メモ</a>）。ライブビューでも良い。「立ち入らずに感じる」の実装＝拝殿の現代版。</li>
-        <li><b>彫刻</b>の設置——箱根 彫刻の森美術館（1969年開館・日本初の野外美術館）のように、自然の中で作品に出会う形式。</li>
+        <li><b>彫刻</b>の設置——箱根 彫刻の森美術館（1969年開館・日本初の野外美術館）や Khao Yai のように、自然の中で作品に出会う形式。</li>
       </ul>
     </li>
+    <li>古谷氏資料の「集落」体験（年1〜2回の野生をテーマにした催し）と接続——広場は催事の舞台でもある。</li>
     <li>一方で、<b>バギー・BBQ・サウナ</b>などのアクティビティ側もイラストとしては載せておく（公園はみんなの遊び場でもある）。アートとアクティビティのバランスは提案しながら好みを聞く。</li>
   </ul>
 
   <h3>参道（天然林の道）</h3>
-  <p>何も足さなくていい。天然林の間を歩く約100mは、それだけで境界の内側へ入っていく移行体験として成立している。</p>
+  <ul>
+    <li>何も足さなくていい。天然林の間を歩く約100mは、それだけで境界の内側へ入っていく移行体験として成立している。</li>
+    <li>動線設計：車・バギー・徒歩を組み合わせ、来訪者専用の動線を林業用と分離する。</li>
+  </ul>
 
-  <h3>拝殿（bar）</h3>
+  <h3>拝殿（bar／ラウンジ）</h3>
   <ul>
     <li>沢と斜面に挟まれた地形を生かして建てる（詳細は古谷パート・本資料では割愛）。</li>
+    <li>体験の性格：飲料中心・レストラン機能を持たない。歩行後にお茶を楽しむような静かな時間。フェス的な賑わいではなく<b>内省を促す滞在</b>。</li>
+    <li>空間リファレンス：<a href="https://brutus.jp/post-445912/">Khao Yai Art Forest（BRUTUS）</a>／<a href="https://www.instagram.com/khaoyai_art_forest/">Instagram</a>。</li>
     <li>ネクスト：方向性に合意できたら<b>建築家を交えた検討</b>へ。</li>
   </ul>
 
@@ -273,30 +501,66 @@ footer{border-top:1px solid var(--line);padding:26px 0 70px;margin-top:60px;colo
     </div>
   </div>
   <p class="note">→ 高野ランドスケープデザインと打ち合わせのうえ方向づけ。資料上は両論併記でクライアントと議論する形でも良い。</p>
+
+  <h3>御神木（桂の巨木）</h3>
+  <ul>
+    <li>bar から沢沿いを歩いた先。建物からは直接見えないが、一体の空間の要。</li>
+    <li>徒歩でしか辿り着けない終着点として、「距離を歩いて縮める」体験の到達点に置く。</li>
+  </ul>
 </section>
 
-<section id="s8">
-  <h2><span class="no">08</span>ご相談事項</h2>
+<section id="s9">
+  <h2><span class="no">09</span>この森がもたらす価値</h2>
+  <p class="note">古谷氏資料より。</p>
+  <div class="opts">
+    <div class="opt">
+      <div class="h"><span class="n">01</span>ブランド価値</div>
+      <p>創業家と土地の70年を、過去のものではなく未来の資産と物語へ。北こぶしにしか語れない、複製不可能な事業の物語。</p>
+    </div>
+    <div class="opt">
+      <div class="h"><span class="n">02</span>地域価値</div>
+      <p>知床の自然の唯一無二性を体現する場所へ。知床の新たな名所としてファイナルディスティネーション化。</p>
+    </div>
+    <div class="opt">
+      <div class="h"><span class="n">03</span>宿泊価値</div>
+      <p>森で欠け、ホテルで満たされる。森の緊張感と異世界観が、ホテルの食・温泉・ベッド・温かさをより有難くする。</p>
+    </div>
+    <div class="opt">
+      <div class="h"><span class="n">04</span>再訪価値</div>
+      <p>季節ごとに森から受け取るものが変わり、「もっと見たかった」という未完の感覚が再訪の理由になる。</p>
+    </div>
+  </div>
+  <div class="box plain">
+    <div class="label">ビジョン</div>
+    <p><b>理解できなかったことを、身体に残して帰る。</b>——人間が自然を所有しきれないことを、安心して思い出すための場所。</p>
+  </div>
+</section>
+
+<section id="s10">
+  <h2><span class="no">10</span>ご相談事項</h2>
   <p>方針のまとめ：</p>
   <ul>
-    <li>森へは<b>南から</b>入る。広場 → 天然林の道 → 沢の bar という動線。</li>
+    <li>森へは<b>南から</b>入る。広場 → 天然林の道 → 沢の bar（→徒歩で御神木）という動線。</li>
     <li>コンセプトは「野生」から<b>「境界」</b>へ。適切な距離感を考え直す場所——知床ディスタンス。</li>
-    <li>空間の下敷きは<b>神社の構成</b>（境内・参道・拝殿・御神体）。宗教ではなく境界を作る知恵として。</li>
+    <li>空間の下敷きは<b>神社の構成</b>（境内・参道・拝殿・御神体・御神木）。宗教ではなく境界を作る知恵として。</li>
     <li>裏手の森は<b>創業の地として、立ち入らずに守る森</b>にする。</li>
   </ul>
   <div class="box">
     <div class="label">ご相談したいこと</div>
     <p>1. この方向性（南アプローチ＋境界のコンセプト）で進めて良いか。<br>
-       2. 広場の色——アート寄りか、アクティビティ寄りか、その配合。<br>
+       2. <b>境目に置くものは何か</b>——あっちの世界とこっちの世界の境目に置くのは、<b>先端アート</b>なのか、それとも<b>神社的な原始的体験</b>なのか。広場の色（アート寄り／アクティビティ寄り）の議論もこの問いの中にある。※チーム内でもう少し話し合いたい論点。<br>
        3. 森の関わり方——①皆伐からの天然更新か、②実験の森か。</p>
   </div>
   <p>今後の進め方：方向性合意後、建築家を交えた bar の検討と、高野ランドスケープデザインの map をもとにした空間設計の具体化へ。</p>
-  <p class="note">※継続未決：森の名前。コンセプト（境界・鎮守）が決まった今が命名のチャンス。</p>
+  <p class="note">※継続未決：森の名前。コンセプト（境界・鎮守）が決まった今が命名のチャンス。<br>
+  ※桑島社長たちへの説明順は<b>事例先行</b>（<a href="#s6">§06</a>）——抽象・思想から入ると「？」となるため、Khao Yai の具体例を詳しく見せてから「知床でやるとこんな感じ」と繋ぐ。</p>
 
   <ul class="sources" style="list-style:none;margin:28px 0 0;">
-    <li>出典：公園制度の起点——<a href="https://www.posa.or.jp/wp/wp-content/uploads/2023/01/posa_150th_panel.pdf">日本公園緑地協会 都市公園150年</a></li>
+    <li>出典：Khao Yai Art Forest——<a href="https://brutus.jp/post-445912/">BRUTUS</a>／<a href="https://en.wikipedia.org/wiki/Khao_Yai_Art_Forest">Wikipedia</a>／<a href="https://www.artnews.com/art-news/news/marisa-chearavanont-khao-yai-art-forest-bangkok-kunsthalle-thailand-1234731174/">ARTnews</a></li>
+    <li>公園制度の起点——<a href="https://www.posa.or.jp/wp/wp-content/uploads/2023/01/posa_150th_panel.pdf">日本公園緑地協会 都市公園150年</a></li>
     <li>南方熊楠の神社合祀反対運動——<a href="https://www.minakatakumagusu-kinenkan.jp/kumagusu/life/goushihantai">南方熊楠記念館</a>／<a href="https://www.minakatakumagusu-kinenkan.jp/exhibition-guide/corner4/corner4-2">同・展示解説</a></li>
     <li>Kyoto Experiment 2025——<a href="https://www.tokyoartbeat.com/articles/-/kyoto-experiment-2025-news-202507">Tokyo Art Beat</a></li>
+    <li>古谷氏「フォレストヘリテージラウンジ構想」（2026-08-13 受領・断面図はじめ本資料へ統合）</li>
   </ul>
 </section>
 
