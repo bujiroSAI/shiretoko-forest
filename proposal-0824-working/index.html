@@ -495,6 +495,16 @@
 .idea-card .num{font-size:0.66rem;letter-spacing:0.18em;color:var(--gold-soft);display:block;margin-bottom:0.6rem;text-transform:uppercase;}
 .idea-card h4{font-family:'Shippori Mincho',serif;font-size:1.08rem;color:var(--cream);margin-bottom:0.6rem;}
 .idea-card p{font-size:0.82rem;line-height:1.8;color:var(--cream-soft);font-weight:300;}
+/* ヒアリング候補者 */
+.hearing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2.2rem;}
+.hearing-card{text-align:center;}
+.hearing-ph{width:132px;height:132px;border-radius:50%;margin:0 auto 1.1rem;background:rgba(246,241,230,0.06);border:1px solid rgba(216,189,138,0.45);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.hearing-ph img{width:100%;height:100%;object-fit:cover;display:block;}
+.hearing-ph span{font-family:'Shippori Mincho',serif;font-size:1.15rem;color:var(--gold-soft);letter-spacing:0.12em;}
+.hearing-card h5{font-family:'Shippori Mincho',serif;font-size:1.14rem;color:var(--cream);margin-bottom:0.35rem;letter-spacing:0.04em;}
+.hearing-card .role{font-size:0.71rem;color:var(--gold-soft);letter-spacing:0.07em;line-height:1.7;display:block;margin-bottom:0.8rem;}
+.hearing-card p{font-size:0.8rem;line-height:1.85;color:var(--cream-soft);font-weight:300;text-align:left;}
+@media(max-width:760px){.hearing-grid{grid-template-columns:1fr;gap:2.4rem;}}
 .idea-card .refs{font-size:0.7rem;color:var(--gold-soft);margin-top:0.8rem;padding-top:0.7rem;border-top:1px solid rgba(216,189,138,0.25);line-height:1.8;}
 </style>
 </head>
@@ -1040,7 +1050,35 @@
     </div>
   </div>
 
-  <p class="fade in" style="font-size:0.92rem;color:var(--cream-soft);max-width:680px;margin-top:2rem;">構想を深めるため、北方文化・クマ送り研究の第一人者である煎本孝氏（北海道大学名誉教授・札幌在住）や、和人で熊を弔う儀式を行うマタギやマタギ研修者へのヒアリングを予定しています。</p>
+  <div class="fade in" style="margin-top:4rem;">
+    <span class="eyebrow" style="color:var(--gold-soft);">Hearing</span>
+    <h2 style="font-size:clamp(1.5rem,2.6vw,1.9rem);margin-top:0.6rem;">ガチでやるための、ヒアリング候補者案</h2>
+    <p class="lead" style="margin-top:0.8rem;">思いつきの祭りにしないために、北方文化とクマ儀礼の研究者に構想段階から当たる。三名を候補として想定している。</p>
+    <div class="hearing-grid">
+      <div class="hearing-card">
+        <!-- 顔写真を入れるときは下の <span> を <img src="…" alt="煎本 孝"> に差し替える -->
+        <div class="hearing-ph"><span>煎本</span></div>
+        <h5>煎本 孝</h5>
+        <span class="role">北海道大学 名誉教授<br>文化人類学</span>
+        <p>北方狩猟民の儀礼と精神文化を半世紀にわたり研究。『アイヌの熊祭り』の著者で、クマ送りを「人と自然の距離の測り方」として読み解いてきた第一人者。札幌在住。</p>
+      </div>
+      <div class="hearing-card">
+        <!-- 顔写真を入れるときは下の <span> を <img src="…" alt="佐藤 孝雄"> に差し替える -->
+        <div class="hearing-ph"><span>佐藤</span></div>
+        <h5>佐藤 孝雄</h5>
+        <span class="role">慶應義塾大学 文学部 教授<br>動物考古学</span>
+        <p>遺跡から出土する獣骨を読み解き、クマ送り儀礼がいつ・どう成立したかを実証的に追う。北海道から北東北・シベリアでの調査に基づき、儀礼の「かたち」に裏付けを与えられる。</p>
+      </div>
+      <div class="hearing-card">
+        <!-- 顔写真を入れるときは下の <span> を <img src="…" alt="石倉 敏明"> に差し替える -->
+        <div class="hearing-ph"><span>石倉</span></div>
+        <h5>石倉 敏明</h5>
+        <span class="role">秋田公立美術大学 教授<br>芸術人類学・神話学</span>
+        <p>環太平洋の比較神話から「山の神」やクマの表象を研究し、美術家との協働で展示・作品化まで手がける。儀礼を現代の表現へ翻訳する段階の相談相手。</p>
+      </div>
+    </div>
+    <p class="lead" style="margin-top:2rem;font-size:0.92rem;">あわせて、和人側の実践としてマタギ・マタギ研修者へのヒアリングも予定している。</p>
+  </div>
 
   </div>
 </section>
